@@ -8,9 +8,9 @@
 </head>
 <body>
 <div id="contenedor">
-        <div id="encabezado">
+        <div id="encabezado" class="Cap">
                         
-            <h1>"Los Pinos" Abarrotes</h1>
+            <h1 class="titulo">"Los Pinos" Abarrotes</h1>
          
             <button class="btn"><a href="iniciosesion.php" class="btn1">Iniciar sesion</a></button>
             <button class="btn"><a href="registro.php" class="btn1">Registrarse</a></button>
@@ -18,9 +18,11 @@
         </div>
         <div id="menu">
             <ul class="mnu">
-                <li id="mn"><a href="index.php">Inicio</a></li>
-                <li id="mn"><a href="#">Contenido</a></li>
-                <li id="mn"><a href="#">Ventas</a></li>
+                <li id="mn"><a href="index.php">Cobro</a></li>
+                <li id="mn"><a href="Contenido.php">Empleados</a></li>
+                <li id="mn"><a href="#">Proveedores</a></li>
+                <li id="mn"><a href="#">Inventario</a></li>
+                <li id="mn"><a href="Ventas.php">Ventas</a></li>
+               
             </ul>
         </div>
-    
