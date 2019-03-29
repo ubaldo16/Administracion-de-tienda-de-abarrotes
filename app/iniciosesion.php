@@ -4,8 +4,8 @@
                <br><br>
                 <div class="formu">
                 <form method="POST">
-                <label id="l1">Correo</label><br><br>
-                <input type="email" id="inpc" name="username"><br><br>
+                <label id="l1">Usiario</label><br><br>
+                <input id="inpc" name="username"><br><br>
                 <label id="l2">Contraseña</label><br><br>
                 <input type="password" id="inpcn" name="password"><br><br>
                 <input type="submit" value="Iniciar">

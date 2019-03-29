@@ -1,5 +1,5 @@
     <?php include('encabezado.php'); ?>
-    <link rel="stylesheet" href="estilos/estilo1.css">
+    <link rel="stylesheet" href="Estilos/index.css">
         <div id="contenido">
             
             
