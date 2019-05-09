@@ -1,0 +1,13 @@
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.exe.config
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.exe
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.pdb
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csprojAssemblyReference.cache
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Menu.resources
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Login.resources
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Properties.Resources.resources
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csproj.GenerateResource.cache
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csproj.CoreCompileInputs.cache
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.exe
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.pdb
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.FormularioUsuarios.resources
+C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.UsuariosL.resources
