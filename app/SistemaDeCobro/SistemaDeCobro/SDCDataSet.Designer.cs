@@ -1445,6 +1445,8 @@ namespace SistemaDeCobro {
             
             private global::System.Data.DataColumn columnNumero_Telefonico;
             
+            private global::System.Data.DataColumn columnCalle;
+            
             private global::System.Data.DataColumn columnColonia;
             
             private global::System.Data.DataColumn columnNumero_Exterior;
@@ -1530,6 +1532,14 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CalleColumn {
+                get {
+                    return this.columnCalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ColoniaColumn {
                 get {
                     return this.columnColonia;
@@ -1605,7 +1615,7 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoRow AddEmpleadoRow(string RFC, string Nombre, string Apellido_Materno, string Apellido_Paterno, int Numero_Telefonico, string Colonia, int Numero_Exterior, int CP, string Contraseña, int Privilegio) {
+            public EmpleadoRow AddEmpleadoRow(string RFC, string Nombre, string Apellido_Materno, string Apellido_Paterno, string Numero_Telefonico, string Calle, string Colonia, int Numero_Exterior, int CP, string Contraseña, int Privilegio) {
                 EmpleadoRow rowEmpleadoRow = ((EmpleadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RFC,
@@ -1613,6 +1623,7 @@ namespace SistemaDeCobro {
                         Apellido_Materno,
                         Apellido_Paterno,
                         Numero_Telefonico,
+                        Calle,
                         Colonia,
                         Numero_Exterior,
                         CP,
@@ -1652,6 +1663,7 @@ namespace SistemaDeCobro {
                 this.columnApellido_Materno = base.Columns["Apellido Materno"];
                 this.columnApellido_Paterno = base.Columns["Apellido Paterno"];
                 this.columnNumero_Telefonico = base.Columns["Numero_Telefonico"];
+                this.columnCalle = base.Columns["Calle"];
                 this.columnColonia = base.Columns["Colonia"];
                 this.columnNumero_Exterior = base.Columns["Numero_Exterior"];
                 this.columnCP = base.Columns["CP"];
@@ -1670,8 +1682,10 @@ namespace SistemaDeCobro {
                 base.Columns.Add(this.columnApellido_Materno);
                 this.columnApellido_Paterno = new global::System.Data.DataColumn("Apellido Paterno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApellido_Paterno);
-                this.columnNumero_Telefonico = new global::System.Data.DataColumn("Numero_Telefonico", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnNumero_Telefonico = new global::System.Data.DataColumn("Numero_Telefonico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumero_Telefonico);
+                this.columnCalle = new global::System.Data.DataColumn("Calle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCalle);
                 this.columnColonia = new global::System.Data.DataColumn("Colonia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnColonia);
                 this.columnNumero_Exterior = new global::System.Data.DataColumn("Numero_Exterior", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1690,6 +1704,8 @@ namespace SistemaDeCobro {
                 this.columnNombre.MaxLength = 536870910;
                 this.columnApellido_Materno.MaxLength = 536870910;
                 this.columnApellido_Paterno.MaxLength = 536870910;
+                this.columnNumero_Telefonico.MaxLength = 536870910;
+                this.columnCalle.MaxLength = 536870910;
                 this.columnColonia.MaxLength = 536870910;
                 this.columnContraseña.MaxLength = 536870910;
             }
@@ -3326,10 +3342,10 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Numero_Telefonico {
+            public string Numero_Telefonico {
                 get {
                     try {
-                        return ((int)(this[this.tableEmpleado.Numero_TelefonicoColumn]));
+                        return ((string)(this[this.tableEmpleado.Numero_TelefonicoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'Numero_Telefonico\' de la tabla \'Empleado\' es DBNull.", e);
@@ -3337,6 +3353,22 @@ namespace SistemaDeCobro {
                 }
                 set {
                     this[this.tableEmpleado.Numero_TelefonicoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Calle {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmpleado.CalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Calle\' de la tabla \'Empleado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmpleado.CalleColumn] = value;
                 }
             }
             
@@ -3466,6 +3498,18 @@ namespace SistemaDeCobro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNumero_TelefonicoNull() {
                 this[this.tableEmpleado.Numero_TelefonicoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCalleNull() {
+                return this.IsNull(this.tableEmpleado.CalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCalleNull() {
+                this[this.tableEmpleado.CalleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5352,6 +5396,7 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Apellido Materno", "Apellido Materno");
             tableMapping.ColumnMappings.Add("Apellido Paterno", "Apellido Paterno");
             tableMapping.ColumnMappings.Add("Numero_Telefonico", "Numero_Telefonico");
+            tableMapping.ColumnMappings.Add("Calle", "Calle");
             tableMapping.ColumnMappings.Add("Colonia", "Colonia");
             tableMapping.ColumnMappings.Add("Numero_Exterior", "Numero_Exterior");
             tableMapping.ColumnMappings.Add("CP", "CP");
@@ -5361,14 +5406,15 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Empleado` (`RFC`, `Nombre`, `Apellido Materno`, `Apellido Paterno`, " +
-                "`Numero_Telefonico`, `Colonia`, `Numero_Exterior`, `CP`, `Contraseña`, `Privileg" +
-                "io`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "`Numero_Telefonico`, `Calle`, `Colonia`, `Numero_Exterior`, `CP`, `Contraseña`, " +
+                "`Privilegio`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RFC", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RFC", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Apellido_Materno", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Apellido Materno", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Apellido_Paterno", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Apellido Paterno", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Numero_Telefonico", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numero_Telefonico", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Numero_Telefonico", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numero_Telefonico", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Calle", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Calle", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Colonia", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Colonia", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Numero_Exterior", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numero_Exterior", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CP", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CP", global::System.Data.DataRowVersion.Current, false, null));
@@ -5389,8 +5435,8 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT RFC, Nombre, [Apellido Materno], [Apellido Paterno], Numero_Telefonico, Co" +
-                "lonia, Numero_Exterior, CP, Contraseña, Privilegio FROM Empleado";
+            this._commandCollection[0].CommandText = "SELECT RFC, Nombre, [Apellido Materno], [Apellido Paterno], Numero_Telefonico, Ca" +
+                "lle, Colonia, Numero_Exterior, CP, Contraseña, Privilegio FROM Empleado";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5451,7 +5497,7 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RFC, string Nombre, string Apellido_Materno, string Apellido_Paterno, global::System.Nullable<int> Numero_Telefonico, string Colonia, global::System.Nullable<int> Numero_Exterior, global::System.Nullable<int> CP, string Contraseña, global::System.Nullable<int> Privilegio) {
+        public virtual int Insert(string RFC, string Nombre, string Apellido_Materno, string Apellido_Paterno, string Numero_Telefonico, string Calle, string Colonia, global::System.Nullable<int> Numero_Exterior, global::System.Nullable<int> CP, string Contraseña, global::System.Nullable<int> Privilegio) {
             if ((RFC == null)) {
                 throw new global::System.ArgumentNullException("RFC");
             }
@@ -5476,41 +5522,47 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Apellido_Paterno));
             }
-            if ((Numero_Telefonico.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Numero_Telefonico.Value));
-            }
-            else {
+            if ((Numero_Telefonico == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Colonia == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Numero_Telefonico));
+            }
+            if ((Calle == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Colonia));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Calle));
             }
-            if ((Numero_Exterior.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Numero_Exterior.Value));
-            }
-            else {
+            if ((Colonia == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((CP.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(CP.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Colonia));
+            }
+            if ((Numero_Exterior.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Numero_Exterior.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Contraseña == null)) {
+            if ((CP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(CP.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((Contraseña == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Contraseña));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Contraseña));
             }
             if ((Privilegio.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Privilegio.Value));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Privilegio.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -34,5 +34,10 @@ namespace SistemaDeCobro
 		{
 			AbrirForm(new FormularioUsuarios());
 		}
-	}
+
+        private void buttonUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
