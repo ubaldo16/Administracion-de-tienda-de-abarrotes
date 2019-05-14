@@ -39,5 +39,10 @@ namespace SistemaDeCobro
         {
 
         }
+
+        private void buttonInventario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

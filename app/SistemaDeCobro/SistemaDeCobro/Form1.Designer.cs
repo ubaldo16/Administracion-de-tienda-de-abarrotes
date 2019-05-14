@@ -89,6 +89,7 @@
             this.buttonInventario.TabIndex = 10;
             this.buttonInventario.Text = "Inventario";
             this.buttonInventario.UseVisualStyleBackColor = false;
+            this.buttonInventario.Click += new System.EventHandler(this.buttonInventario_Click);
             // 
             // buttonUsuarios
             // 

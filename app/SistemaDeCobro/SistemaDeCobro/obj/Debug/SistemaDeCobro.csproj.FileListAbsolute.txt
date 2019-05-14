@@ -11,7 +11,6 @@ C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\Siste
 C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.pdb
 C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.FormularioUsuarios.resources
 C:\Users\Efrain\Documents\Ing SW B\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.UsuariosL.resources
-C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SDC.mdb
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.exe.config
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.exe
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.pdb
@@ -25,3 +24,4 @@ C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csproj.CoreCompileInputs.cache
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.exe
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.pdb
+C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SDC.mdb
