@@ -37,7 +37,7 @@ namespace SistemaDeCobro
 
         private void buttonUsuarios_Click(object sender, EventArgs e)
         {
-
+            AbrirForm(new UsuariosL());
         }
 
         private void buttonInventario_Click(object sender, EventArgs e)
