@@ -177,6 +177,7 @@
             this.Controls.Add(this.PanelMenu);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

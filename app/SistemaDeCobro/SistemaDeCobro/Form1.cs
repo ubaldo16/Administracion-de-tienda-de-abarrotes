@@ -12,9 +12,15 @@ namespace SistemaDeCobro
 {
 	public partial class Menu : Form
 	{
-		public Menu()
+		public Menu(int who)
 		{
 			InitializeComponent();
+
+            if (who == 1)
+            {
+                buttonUsuarios.Visible = false;
+                buttonRegistro.Visible = false;
+            }
 		}
 
 		private void AbrirForm(object formHijo)
@@ -41,6 +47,11 @@ namespace SistemaDeCobro
         }
 
         private void buttonInventario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
         {
 
         }
