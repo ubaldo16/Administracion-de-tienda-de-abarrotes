@@ -48,5 +48,29 @@ namespace SistemaDeCobro
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ButDelete_Click(object sender, EventArgs e)
+        {
+            try
+
+             {
+                using(OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
+
+                {
+                    conexion.Open();
+                   string SqlActions = "DELETE * FROM  Empleado WHERE RFC = @parametro";
+                    OleDbCommand cmd = new OleDbCommand(SqlActions, conexion);
+                    cmd.Parameters.AddWithValue("@parametro", dataGridView1.CurrentRow.Cells["RFC"].Value);
+                    cmd.ExecuteNonQuery();
+                    conexion.Close();
+                    MessageBox.Show("Registro Eliminado");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            generateTable();
+        }
     }
 }

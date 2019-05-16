@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SDCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.cs" />
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>

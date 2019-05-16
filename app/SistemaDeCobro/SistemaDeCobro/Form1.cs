@@ -12,10 +12,10 @@ namespace SistemaDeCobro
 {
 	public partial class Menu : Form
 	{
+        private Usuario usu;
 		public Menu(int who)
 		{
 			InitializeComponent();
-
             if (who == 1)
             {
                 buttonUsuarios.Visible = false;
