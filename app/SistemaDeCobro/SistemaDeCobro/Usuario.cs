@@ -24,10 +24,11 @@ namespace SistemaDeCobro
  
 
 
-        public Usuario(string id, int p)
+        public Usuario(string id, int p,string n)
         {
             rfc = id;
             privilegio = p;
+			nombre = n;
         }
 
         public string  RFC  // Esta es su propiedad 

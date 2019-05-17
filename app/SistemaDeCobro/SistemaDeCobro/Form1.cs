@@ -15,6 +15,7 @@ namespace SistemaDeCobro
         private Usuario usu;
 		public Menu(Usuario u)
 		{
+			
             usu = u;
 			InitializeComponent();
             if (u.Privilegio == 1)
@@ -22,6 +23,8 @@ namespace SistemaDeCobro
                 buttonUsuarios.Visible = false;
                 buttonRegistro.Visible = false;
             }
+			label1.Text = u.Nombre;
+			label1.Visible = true;
 		}
 
 		private void AbrirForm(object formHijo)
@@ -56,5 +59,10 @@ namespace SistemaDeCobro
         {
 
         }
-    }
+
+		private void PanelMenu_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+	}
 }

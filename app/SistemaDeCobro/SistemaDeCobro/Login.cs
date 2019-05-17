@@ -32,7 +32,7 @@ namespace SistemaDeCobro
                 if (result > 0)
                 {
                     MessageBox.Show("Login Successful");
-                    string comprobacion = "SELECT Privilegio FROM Empleado WHERE RFC = @rfc";
+                    string comprobacion = "SELECT Privilegio, Nombre  FROM Empleado WHERE RFC = @rfc";
                     OleDbCommand comando = new OleDbCommand(comprobacion, con);
                     comando.Parameters.AddWithValue("@rfc", textboxUser.Text);
 
@@ -41,7 +41,7 @@ namespace SistemaDeCobro
                     if (lector.Read())
                     {
                         
-                        Menu m = new Menu(new Usuario(textboxUser.Text, Int32.Parse(lector["Privilegio"].ToString())));//checar logeo si es usuario o administrador
+                        Menu m = new Menu(new Usuario(textboxUser.Text, Int32.Parse(lector["Privilegio"].ToString()), lector["Nombre"].ToString()));//checar logeo si es usuario o administrador
                         m.Show();
                         this.Visible = false;
                     }
