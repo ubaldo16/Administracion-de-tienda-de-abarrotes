@@ -13,6 +13,7 @@ namespace SistemaDeCobro
 {
 	public partial class Login : Form
 	{
+        Usuario usu;
 		public Login()
 		{
 			InitializeComponent();
@@ -39,7 +40,8 @@ namespace SistemaDeCobro
 
                     if (lector.Read())
                     {
-                        Menu m = new Menu(Int32.Parse(lector["Privilegio"].ToString()));//checar logeo si es usuario o administrador
+                        
+                        Menu m = new Menu(new Usuario(textboxUser.Text, Int32.Parse(lector["Privilegio"].ToString())));//checar logeo si es usuario o administrador
                         m.Show();
                         this.Visible = false;
                     }

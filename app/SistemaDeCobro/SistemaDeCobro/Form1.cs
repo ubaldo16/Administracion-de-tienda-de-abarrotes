@@ -13,10 +13,11 @@ namespace SistemaDeCobro
 	public partial class Menu : Form
 	{
         private Usuario usu;
-		public Menu(int who)
+		public Menu(Usuario u)
 		{
+            usu = u;
 			InitializeComponent();
-            if (who == 1)
+            if (u.Privilegio == 1)
             {
                 buttonUsuarios.Visible = false;
                 buttonRegistro.Visible = false;
