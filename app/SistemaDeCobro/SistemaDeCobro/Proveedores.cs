@@ -26,8 +26,8 @@ namespace SistemaDeCobro
 
 		private void buttonBuscar_Click(object sender, EventArgs e)
 		{
-			Menu M = new Menu();
-			M.AbrirForm(new ProveedoresL());
+			
+
 		}
 	}
 }

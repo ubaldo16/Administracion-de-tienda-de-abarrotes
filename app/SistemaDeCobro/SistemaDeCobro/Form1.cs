@@ -28,7 +28,7 @@ namespace SistemaDeCobro
 		}
 		public Menu()
 		{
-
+			InitializeComponent();
 		}
 
 		public void AbrirForm(object formHijo)
