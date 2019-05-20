@@ -2185,7 +2185,7 @@ namespace SistemaDeCobro {
             
             private global::System.Data.DataColumn columnCP;
             
-            private global::System.Data.DataColumn columnCorreo;
+            private global::System.Data.DataColumn columnNumero_Telefonico;
             
             private global::System.Data.DataColumn columnInventario_Id;
             
@@ -2272,9 +2272,9 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CorreoColumn {
+            public global::System.Data.DataColumn Numero_TelefonicoColumn {
                 get {
-                    return this.columnCorreo;
+                    return this.columnNumero_Telefonico;
                 }
             }
             
@@ -2323,7 +2323,7 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProveedorRow AddProveedorRow(string RFC, string Nombre, string Calle, string Colonia, int Numero, int CP, string Correo, InventarioRow parentInventarioRowByInventarioProveedor) {
+            public ProveedorRow AddProveedorRow(string RFC, string Nombre, string Calle, string Colonia, int Numero, int CP, string Numero_Telefonico, InventarioRow parentInventarioRowByInventarioProveedor) {
                 ProveedorRow rowProveedorRow = ((ProveedorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RFC,
@@ -2332,7 +2332,7 @@ namespace SistemaDeCobro {
                         Colonia,
                         Numero,
                         CP,
-                        Correo,
+                        Numero_Telefonico,
                         null};
                 if ((parentInventarioRowByInventarioProveedor != null)) {
                     columnValuesArray[7] = parentInventarioRowByInventarioProveedor[0];
@@ -2372,7 +2372,7 @@ namespace SistemaDeCobro {
                 this.columnColonia = base.Columns["Colonia"];
                 this.columnNumero = base.Columns["Numero"];
                 this.columnCP = base.Columns["CP"];
-                this.columnCorreo = base.Columns["Correo"];
+                this.columnNumero_Telefonico = base.Columns["Numero_Telefonico"];
                 this.columnInventario_Id = base.Columns["Inventario_Id"];
             }
             
@@ -2391,8 +2391,8 @@ namespace SistemaDeCobro {
                 base.Columns.Add(this.columnNumero);
                 this.columnCP = new global::System.Data.DataColumn("CP", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCP);
-                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCorreo);
+                this.columnNumero_Telefonico = new global::System.Data.DataColumn("Numero_Telefonico", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero_Telefonico);
                 this.columnInventario_Id = new global::System.Data.DataColumn("Inventario_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInventario_Id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -2403,7 +2403,7 @@ namespace SistemaDeCobro {
                 this.columnNombre.MaxLength = 536870910;
                 this.columnCalle.MaxLength = 536870910;
                 this.columnColonia.MaxLength = 536870910;
-                this.columnCorreo.MaxLength = 536870910;
+                this.columnNumero_Telefonico.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3890,17 +3890,17 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Correo {
+            public string Numero_Telefonico {
                 get {
                     try {
-                        return ((string)(this[this.tableProveedor.CorreoColumn]));
+                        return ((string)(this[this.tableProveedor.Numero_TelefonicoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Correo\' de la tabla \'Proveedor\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Numero_Telefonico\' de la tabla \'Proveedor\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProveedor.CorreoColumn] = value;
+                    this[this.tableProveedor.Numero_TelefonicoColumn] = value;
                 }
             }
             
@@ -3993,14 +3993,14 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCorreoNull() {
-                return this.IsNull(this.tableProveedor.CorreoColumn);
+            public bool IsNumero_TelefonicoNull() {
+                return this.IsNull(this.tableProveedor.Numero_TelefonicoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCorreoNull() {
-                this[this.tableProveedor.CorreoColumn] = global::System.Convert.DBNull;
+            public void SetNumero_TelefonicoNull() {
+                this[this.tableProveedor.Numero_TelefonicoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6139,7 +6139,7 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Colonia", "Colonia");
             tableMapping.ColumnMappings.Add("Numero", "Numero");
             tableMapping.ColumnMappings.Add("CP", "CP");
-            tableMapping.ColumnMappings.Add("Correo", "Correo");
+            tableMapping.ColumnMappings.Add("Correo", "Numero_Telefonico");
             tableMapping.ColumnMappings.Add("Inventario_Id", "Inventario_Id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();

@@ -66,7 +66,7 @@
 			this.textRFC.MaxLength = 20;
 			this.textRFC.Name = "textRFC";
 			this.textRFC.Size = new System.Drawing.Size(189, 20);
-			this.textRFC.TabIndex = 120;
+			this.textRFC.TabIndex = 1;
 			// 
 			// label2
 			// 
@@ -85,7 +85,7 @@
 			this.textNombre.MaxLength = 20;
 			this.textNombre.Name = "textNombre";
 			this.textNombre.Size = new System.Drawing.Size(189, 20);
-			this.textNombre.TabIndex = 118;
+			this.textNombre.TabIndex = 2;
 			// 
 			// label5
 			// 
@@ -104,7 +104,7 @@
 			this.textCalle.MaxLength = 20;
 			this.textCalle.Name = "textCalle";
 			this.textCalle.Size = new System.Drawing.Size(189, 20);
-			this.textCalle.TabIndex = 128;
+			this.textCalle.TabIndex = 4;
 			// 
 			// label10
 			// 
@@ -123,7 +123,7 @@
 			this.textCP.MaxLength = 20;
 			this.textCP.Name = "textCP";
 			this.textCP.Size = new System.Drawing.Size(189, 20);
-			this.textCP.TabIndex = 126;
+			this.textCP.TabIndex = 7;
 			// 
 			// label9
 			// 
@@ -142,7 +142,7 @@
 			this.textNumExt.MaxLength = 20;
 			this.textNumExt.Name = "textNumExt";
 			this.textNumExt.Size = new System.Drawing.Size(189, 20);
-			this.textNumExt.TabIndex = 124;
+			this.textNumExt.TabIndex = 6;
 			// 
 			// label8
 			// 
@@ -161,7 +161,7 @@
 			this.textCol.MaxLength = 20;
 			this.textCol.Name = "textCol";
 			this.textCol.Size = new System.Drawing.Size(189, 20);
-			this.textCol.TabIndex = 122;
+			this.textCol.TabIndex = 5;
 			// 
 			// label7
 			// 
@@ -180,7 +180,7 @@
 			this.textTel.MaxLength = 20;
 			this.textTel.Name = "textTel";
 			this.textTel.Size = new System.Drawing.Size(189, 20);
-			this.textTel.TabIndex = 130;
+			this.textTel.TabIndex = 3;
 			// 
 			// ButAdd
 			// 
@@ -191,9 +191,10 @@
 			this.ButAdd.Location = new System.Drawing.Point(321, 387);
 			this.ButAdd.Name = "ButAdd";
 			this.ButAdd.Size = new System.Drawing.Size(87, 34);
-			this.ButAdd.TabIndex = 133;
+			this.ButAdd.TabIndex = 8;
 			this.ButAdd.Text = "Agregar";
 			this.ButAdd.UseVisualStyleBackColor = false;
+			this.ButAdd.Click += new System.EventHandler(this.ButAdd_Click);
 			// 
 			// pictureBox1
 			// 
@@ -213,7 +214,7 @@
 			this.buttonBuscar.Location = new System.Drawing.Point(624, 34);
 			this.buttonBuscar.Name = "buttonBuscar";
 			this.buttonBuscar.Size = new System.Drawing.Size(87, 34);
-			this.buttonBuscar.TabIndex = 135;
+			this.buttonBuscar.TabIndex = 9;
 			this.buttonBuscar.Text = "Buscar";
 			this.buttonBuscar.UseVisualStyleBackColor = false;
 			this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);

@@ -70,7 +70,7 @@
 			this.MemberLab.Name = "MemberLab";
 			this.MemberLab.Size = new System.Drawing.Size(149, 27);
 			this.MemberLab.TabIndex = 82;
-			this.MemberLab.Text = "Inicia Sesion";
+			this.MemberLab.Text = "Inicia Sesión";
 			// 
 			// PasLabel
 			// 
