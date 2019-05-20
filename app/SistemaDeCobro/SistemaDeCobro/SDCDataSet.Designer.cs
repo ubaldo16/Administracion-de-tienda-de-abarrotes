@@ -392,11 +392,11 @@ namespace SistemaDeCobro {
                         this.tableDetalle_Compra.Compra_IdCompraColumn}, false);
             this.Relations.Add(this.relationCompraDetalle_Compra);
             this.relationInventarioDetalle_Compra = new global::System.Data.DataRelation("InventarioDetalle_Compra", new global::System.Data.DataColumn[] {
-                        this.tableInventario.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInventario.Id_InventarioColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetalle_Compra.Inventario_IdColumn}, false);
             this.Relations.Add(this.relationInventarioDetalle_Compra);
             this.relationInventarioDetalle_venta = new global::System.Data.DataRelation("InventarioDetalle_venta", new global::System.Data.DataColumn[] {
-                        this.tableInventario.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInventario.Id_InventarioColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetalle_venta.Inventario_IdColumn}, false);
             this.Relations.Add(this.relationInventarioDetalle_venta);
             this.relationVentaDetalle_venta = new global::System.Data.DataRelation("VentaDetalle_venta", new global::System.Data.DataColumn[] {
@@ -404,7 +404,7 @@ namespace SistemaDeCobro {
                         this.tableDetalle_venta.Venta_IdVentaColumn}, false);
             this.Relations.Add(this.relationVentaDetalle_venta);
             this.relationInventarioProveedor = new global::System.Data.DataRelation("InventarioProveedor", new global::System.Data.DataColumn[] {
-                        this.tableInventario.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInventario.Id_InventarioColumn}, new global::System.Data.DataColumn[] {
                         this.tableProveedor.Inventario_IdColumn}, false);
             this.Relations.Add(this.relationInventarioProveedor);
             this.relationEmpleadoVenta = new global::System.Data.DataRelation("EmpleadoVenta", new global::System.Data.DataColumn[] {
@@ -1841,7 +1841,7 @@ namespace SistemaDeCobro {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class InventarioDataTable : global::System.Data.TypedTableBase<InventarioRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnId_Inventario;
             
             private global::System.Data.DataColumn columnNombre;
             
@@ -1888,9 +1888,9 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn Id_InventarioColumn {
                 get {
-                    return this.columnId;
+                    return this.columnId_Inventario;
                 }
             }
             
@@ -1987,9 +1987,9 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InventarioRow FindById(int Id) {
+            public InventarioRow FindById_Inventario(int Id_Inventario) {
                 return ((InventarioRow)(this.Rows.Find(new object[] {
-                            Id})));
+                            Id_Inventario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2009,7 +2009,7 @@ namespace SistemaDeCobro {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
+                this.columnId_Inventario = base.Columns["Id_Inventario"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnCaducidad = base.Columns["Caducidad"];
@@ -2020,8 +2020,8 @@ namespace SistemaDeCobro {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
+                this.columnId_Inventario = new global::System.Data.DataColumn("Id_Inventario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Inventario);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2033,12 +2033,12 @@ namespace SistemaDeCobro {
                 this.columnPerecedero = new global::System.Data.DataColumn("Perecedero", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPerecedero);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
+                                this.columnId_Inventario}, true));
+                this.columnId_Inventario.AutoIncrement = true;
+                this.columnId_Inventario.AutoIncrementSeed = -1;
+                this.columnId_Inventario.AutoIncrementStep = -1;
+                this.columnId_Inventario.AllowDBNull = false;
+                this.columnId_Inventario.Unique = true;
                 this.columnNombre.MaxLength = 536870910;
             }
             
@@ -3600,12 +3600,12 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Id {
+            public int Id_Inventario {
                 get {
-                    return ((int)(this[this.tableInventario.IdColumn]));
+                    return ((int)(this[this.tableInventario.Id_InventarioColumn]));
                 }
                 set {
-                    this[this.tableInventario.IdColumn] = value;
+                    this[this.tableInventario.Id_InventarioColumn] = value;
                 }
             }
             
@@ -5702,7 +5702,7 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Inventario";
-            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Id", "Id_Inventario");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
             tableMapping.ColumnMappings.Add("Caducidad", "Caducidad");
