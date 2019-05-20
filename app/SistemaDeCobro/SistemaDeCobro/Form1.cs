@@ -26,8 +26,12 @@ namespace SistemaDeCobro
 			label1.Text = u.Nombre;
 			label1.Visible = true;
 		}
+		public Menu()
+		{
 
-		private void AbrirForm(object formHijo)
+		}
+
+		public void AbrirForm(object formHijo)
 		{
 			if (this.panelForm.Controls.Count > 0)
 				this.panelForm.Controls.RemoveAt(0);
@@ -63,6 +67,11 @@ namespace SistemaDeCobro
 		private void PanelMenu_Paint(object sender, PaintEventArgs e)
 		{
 
+		}
+
+		private void buttonProveedores_Click(object sender, EventArgs e)
+		{
+			AbrirForm(new Proveedores());
 		}
 	}
 }

@@ -96,7 +96,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(352, 344);
+			this.label6.Location = new System.Drawing.Point(431, 346);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(67, 14);
 			this.label6.TabIndex = 98;
@@ -105,7 +105,7 @@
 			// Pass
 			// 
 			this.Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.Pass.Location = new System.Drawing.Point(425, 338);
+			this.Pass.Location = new System.Drawing.Point(504, 340);
 			this.Pass.MaxLength = 20;
 			this.Pass.Name = "Pass";
 			this.Pass.Size = new System.Drawing.Size(189, 20);
@@ -116,7 +116,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(178, 391);
+			this.label4.Location = new System.Drawing.Point(193, 394);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(89, 14);
 			this.label4.TabIndex = 96;
@@ -126,7 +126,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(74, 232);
+			this.label2.Location = new System.Drawing.Point(98, 232);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(47, 14);
 			this.label2.TabIndex = 95;
@@ -135,7 +135,7 @@
 			// textNombre
 			// 
 			this.textNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNombre.Location = new System.Drawing.Point(127, 226);
+			this.textNombre.Location = new System.Drawing.Point(151, 226);
 			this.textNombre.MaxLength = 20;
 			this.textNombre.Name = "textNombre";
 			this.textNombre.Size = new System.Drawing.Size(189, 20);
@@ -144,7 +144,7 @@
 			// textApellidoM
 			// 
 			this.textApellidoM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textApellidoM.Location = new System.Drawing.Point(127, 267);
+			this.textApellidoM.Location = new System.Drawing.Point(151, 267);
 			this.textApellidoM.MaxLength = 20;
 			this.textApellidoM.Name = "textApellidoM";
 			this.textApellidoM.Size = new System.Drawing.Size(189, 20);
@@ -154,7 +154,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(27, 273);
+			this.label1.Location = new System.Drawing.Point(51, 273);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(94, 14);
 			this.label1.TabIndex = 103;
@@ -164,7 +164,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(32, 309);
+			this.label3.Location = new System.Drawing.Point(56, 309);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(92, 14);
 			this.label3.TabIndex = 105;
@@ -173,7 +173,7 @@
 			// textApellidoP
 			// 
 			this.textApellidoP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textApellidoP.Location = new System.Drawing.Point(127, 303);
+			this.textApellidoP.Location = new System.Drawing.Point(151, 303);
 			this.textApellidoP.MaxLength = 20;
 			this.textApellidoP.Name = "textApellidoP";
 			this.textApellidoP.Size = new System.Drawing.Size(189, 20);
@@ -183,7 +183,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(70, 344);
+			this.label7.Location = new System.Drawing.Point(94, 344);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(51, 14);
 			this.label7.TabIndex = 107;
@@ -192,7 +192,7 @@
 			// textTel
 			// 
 			this.textTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textTel.Location = new System.Drawing.Point(127, 338);
+			this.textTel.Location = new System.Drawing.Point(151, 338);
 			this.textTel.MaxLength = 20;
 			this.textTel.Name = "textTel";
 			this.textTel.Size = new System.Drawing.Size(189, 20);
@@ -202,7 +202,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(374, 232);
+			this.label8.Location = new System.Drawing.Point(453, 234);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(45, 14);
 			this.label8.TabIndex = 109;
@@ -211,7 +211,7 @@
 			// textCol
 			// 
 			this.textCol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textCol.Location = new System.Drawing.Point(425, 226);
+			this.textCol.Location = new System.Drawing.Point(504, 228);
 			this.textCol.MaxLength = 20;
 			this.textCol.Name = "textCol";
 			this.textCol.Size = new System.Drawing.Size(189, 20);
@@ -221,7 +221,7 @@
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(326, 273);
+			this.label9.Location = new System.Drawing.Point(405, 275);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(93, 14);
 			this.label9.TabIndex = 111;
@@ -230,7 +230,7 @@
 			// textNumExt
 			// 
 			this.textNumExt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textNumExt.Location = new System.Drawing.Point(425, 267);
+			this.textNumExt.Location = new System.Drawing.Point(504, 269);
 			this.textNumExt.MaxLength = 20;
 			this.textNumExt.Name = "textNumExt";
 			this.textNumExt.Size = new System.Drawing.Size(189, 20);
@@ -240,7 +240,7 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(342, 309);
+			this.label10.Location = new System.Drawing.Point(421, 311);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(77, 14);
 			this.label10.TabIndex = 113;
@@ -250,7 +250,7 @@
 			// textCP
 			// 
 			this.textCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textCP.Location = new System.Drawing.Point(425, 303);
+			this.textCP.Location = new System.Drawing.Point(504, 305);
 			this.textCP.MaxLength = 20;
 			this.textCP.Name = "textCP";
 			this.textCP.Size = new System.Drawing.Size(189, 20);
@@ -260,7 +260,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(387, 196);
+			this.label5.Location = new System.Drawing.Point(466, 198);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(32, 14);
 			this.label5.TabIndex = 115;
@@ -269,7 +269,7 @@
 			// textCalle
 			// 
 			this.textCalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textCalle.Location = new System.Drawing.Point(425, 192);
+			this.textCalle.Location = new System.Drawing.Point(504, 194);
 			this.textCalle.MaxLength = 20;
 			this.textCalle.Name = "textCalle";
 			this.textCalle.Size = new System.Drawing.Size(189, 20);
@@ -279,7 +279,7 @@
 			// 
 			this.label11.AutoSize = true;
 			this.label11.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.Location = new System.Drawing.Point(93, 200);
+			this.label11.Location = new System.Drawing.Point(117, 200);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(28, 14);
 			this.label11.TabIndex = 117;
@@ -288,7 +288,7 @@
 			// textRFC
 			// 
 			this.textRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textRFC.Location = new System.Drawing.Point(127, 194);
+			this.textRFC.Location = new System.Drawing.Point(151, 194);
 			this.textRFC.MaxLength = 20;
 			this.textRFC.Name = "textRFC";
 			this.textRFC.Size = new System.Drawing.Size(189, 20);

@@ -46,9 +46,9 @@
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			this.panel1.Controls.Add(this.pictureBox1);
 			this.panel1.Controls.Add(this.MemberLab);
-			this.panel1.Location = new System.Drawing.Point(3, 3);
+			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(176, 239);
+			this.panel1.Size = new System.Drawing.Size(179, 244);
 			this.panel1.TabIndex = 90;
 			// 
 			// pictureBox1

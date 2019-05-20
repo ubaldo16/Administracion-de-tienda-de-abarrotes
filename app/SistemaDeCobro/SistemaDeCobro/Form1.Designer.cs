@@ -30,6 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
 			this.PanelMenu = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.buttonRegistro = new System.Windows.Forms.Button();
 			this.buttonInventario = new System.Windows.Forms.Button();
 			this.buttonUsuarios = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
 			this.labelUsuario = new System.Windows.Forms.Label();
 			this.buttonVenta = new System.Windows.Forms.Button();
 			this.panelForm = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.PanelMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -59,6 +59,17 @@
 			this.PanelMenu.Size = new System.Drawing.Size(161, 556);
 			this.PanelMenu.TabIndex = 1;
 			this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.ForeColor = System.Drawing.SystemColors.Info;
+			this.label1.Location = new System.Drawing.Point(79, 151);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(35, 13);
+			this.label1.TabIndex = 12;
+			this.label1.Text = "label1";
+			this.label1.Visible = false;
 			// 
 			// buttonRegistro
 			// 
@@ -126,6 +137,7 @@
 			this.buttonProveedores.TabIndex = 8;
 			this.buttonProveedores.Text = "Proveedores";
 			this.buttonProveedores.UseVisualStyleBackColor = false;
+			this.buttonProveedores.Click += new System.EventHandler(this.buttonProveedores_Click);
 			// 
 			// pictureBox1
 			// 
@@ -171,17 +183,6 @@
 			this.panelForm.Name = "panelForm";
 			this.panelForm.Size = new System.Drawing.Size(787, 534);
 			this.panelForm.TabIndex = 2;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.ForeColor = System.Drawing.SystemColors.Info;
-			this.label1.Location = new System.Drawing.Point(79, 151);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(35, 13);
-			this.label1.TabIndex = 12;
-			this.label1.Text = "label1";
-			this.label1.Visible = false;
 			// 
 			// Menu
 			// 
