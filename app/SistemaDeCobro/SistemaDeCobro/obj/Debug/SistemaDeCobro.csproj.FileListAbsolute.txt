@@ -40,3 +40,4 @@ C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\Siste
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.pdb
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Proveedores.resources
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.ProveedoresL.resources
+C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SDC.mdb
