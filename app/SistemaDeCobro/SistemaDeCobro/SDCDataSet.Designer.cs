@@ -48,8 +48,6 @@ namespace SistemaDeCobro {
         
         private global::System.Data.DataRelation relationVentaDetalle_venta;
         
-        private global::System.Data.DataRelation relationInventarioProveedor;
-        
         private global::System.Data.DataRelation relationEmpleadoVenta;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -357,7 +355,6 @@ namespace SistemaDeCobro {
             this.relationInventarioDetalle_Compra = this.Relations["InventarioDetalle_Compra"];
             this.relationInventarioDetalle_venta = this.Relations["InventarioDetalle_venta"];
             this.relationVentaDetalle_venta = this.Relations["VentaDetalle_venta"];
-            this.relationInventarioProveedor = this.Relations["InventarioProveedor"];
             this.relationEmpleadoVenta = this.Relations["EmpleadoVenta"];
         }
         
@@ -403,10 +400,6 @@ namespace SistemaDeCobro {
                         this.tableVenta.IdVentaColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetalle_venta.Venta_IdVentaColumn}, false);
             this.Relations.Add(this.relationVentaDetalle_venta);
-            this.relationInventarioProveedor = new global::System.Data.DataRelation("InventarioProveedor", new global::System.Data.DataColumn[] {
-                        this.tableInventario.Id_InventarioColumn}, new global::System.Data.DataColumn[] {
-                        this.tableProveedor.Inventario_IdColumn}, false);
-            this.Relations.Add(this.relationInventarioProveedor);
             this.relationEmpleadoVenta = new global::System.Data.DataRelation("EmpleadoVenta", new global::System.Data.DataColumn[] {
                         this.tableEmpleado.RFCColumn}, new global::System.Data.DataColumn[] {
                         this.tableVenta.Empleado_RFCColumn}, false);
@@ -656,7 +649,7 @@ namespace SistemaDeCobro {
                         Fecha,
                         null};
                 if ((parentProveedorRowByProveedorCompra != null)) {
-                    columnValuesArray[3] = parentProveedorRowByProveedorCompra[0];
+                    columnValuesArray[3] = parentProveedorRowByProveedorCompra[1];
                 }
                 rowCompraRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCompraRow);
@@ -1843,6 +1836,8 @@ namespace SistemaDeCobro {
             
             private global::System.Data.DataColumn columnId_Inventario;
             
+            private global::System.Data.DataColumn columnId_Proveedor;
+            
             private global::System.Data.DataColumn columnNombre;
             
             private global::System.Data.DataColumn columnCantidad;
@@ -1891,6 +1886,14 @@ namespace SistemaDeCobro {
             public global::System.Data.DataColumn Id_InventarioColumn {
                 get {
                     return this.columnId_Inventario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Id_ProveedorColumn {
+                get {
+                    return this.columnId_Proveedor;
                 }
             }
             
@@ -1971,10 +1974,11 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InventarioRow AddInventarioRow(string Nombre, int Cantidad, System.DateTime Caducidad, decimal Precio, int Perecedero) {
+            public InventarioRow AddInventarioRow(string Id_Proveedor, string Nombre, int Cantidad, System.DateTime Caducidad, decimal Precio, int Perecedero) {
                 InventarioRow rowInventarioRow = ((InventarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        Id_Proveedor,
                         Nombre,
                         Cantidad,
                         Caducidad,
@@ -2010,6 +2014,7 @@ namespace SistemaDeCobro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId_Inventario = base.Columns["Id_Inventario"];
+                this.columnId_Proveedor = base.Columns["Id_Proveedor"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnCaducidad = base.Columns["Caducidad"];
@@ -2022,6 +2027,8 @@ namespace SistemaDeCobro {
             private void InitClass() {
                 this.columnId_Inventario = new global::System.Data.DataColumn("Id_Inventario", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId_Inventario);
+                this.columnId_Proveedor = new global::System.Data.DataColumn("Id_Proveedor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Proveedor);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2039,6 +2046,7 @@ namespace SistemaDeCobro {
                 this.columnId_Inventario.AutoIncrementStep = -1;
                 this.columnId_Inventario.AllowDBNull = false;
                 this.columnId_Inventario.Unique = true;
+                this.columnId_Proveedor.MaxLength = 255;
                 this.columnNombre.MaxLength = 536870910;
             }
             
@@ -2173,6 +2181,8 @@ namespace SistemaDeCobro {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ProveedorDataTable : global::System.Data.TypedTableBase<ProveedorRow> {
             
+            private global::System.Data.DataColumn columnId_Proveedor;
+            
             private global::System.Data.DataColumn columnRFC;
             
             private global::System.Data.DataColumn columnNombre;
@@ -2186,8 +2196,6 @@ namespace SistemaDeCobro {
             private global::System.Data.DataColumn columnCP;
             
             private global::System.Data.DataColumn columnNumero_Telefonico;
-            
-            private global::System.Data.DataColumn columnInventario_Id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -2220,6 +2228,14 @@ namespace SistemaDeCobro {
             protected ProveedorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Id_ProveedorColumn {
+                get {
+                    return this.columnId_Proveedor;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2280,14 +2296,6 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Inventario_IdColumn {
-                get {
-                    return this.columnInventario_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2323,20 +2331,17 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProveedorRow AddProveedorRow(string RFC, string Nombre, string Calle, string Colonia, int Numero, int CP, string Numero_Telefonico, InventarioRow parentInventarioRowByInventarioProveedor) {
+            public ProveedorRow AddProveedorRow(string RFC, string Nombre, string Calle, string Colonia, int Numero, int CP, string Numero_Telefonico) {
                 ProveedorRow rowProveedorRow = ((ProveedorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         RFC,
                         Nombre,
                         Calle,
                         Colonia,
                         Numero,
                         CP,
-                        Numero_Telefonico,
-                        null};
-                if ((parentInventarioRowByInventarioProveedor != null)) {
-                    columnValuesArray[7] = parentInventarioRowByInventarioProveedor[0];
-                }
+                        Numero_Telefonico};
                 rowProveedorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProveedorRow);
                 return rowProveedorRow;
@@ -2366,6 +2371,7 @@ namespace SistemaDeCobro {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnId_Proveedor = base.Columns["Id_Proveedor"];
                 this.columnRFC = base.Columns["RFC"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnCalle = base.Columns["Calle"];
@@ -2373,12 +2379,13 @@ namespace SistemaDeCobro {
                 this.columnNumero = base.Columns["Numero"];
                 this.columnCP = base.Columns["CP"];
                 this.columnNumero_Telefonico = base.Columns["Numero_Telefonico"];
-                this.columnInventario_Id = base.Columns["Inventario_Id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnId_Proveedor = new global::System.Data.DataColumn("Id_Proveedor", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Proveedor);
                 this.columnRFC = new global::System.Data.DataColumn("RFC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRFC);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2393,10 +2400,11 @@ namespace SistemaDeCobro {
                 base.Columns.Add(this.columnCP);
                 this.columnNumero_Telefonico = new global::System.Data.DataColumn("Numero_Telefonico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumero_Telefonico);
-                this.columnInventario_Id = new global::System.Data.DataColumn("Inventario_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInventario_Id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRFC}, true));
+                this.columnId_Proveedor.AutoIncrement = true;
+                this.columnId_Proveedor.AutoIncrementSeed = -1;
+                this.columnId_Proveedor.AutoIncrementStep = -1;
                 this.columnRFC.AllowDBNull = false;
                 this.columnRFC.Unique = true;
                 this.columnRFC.MaxLength = 536870910;
@@ -3611,6 +3619,22 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Id_Proveedor {
+                get {
+                    try {
+                        return ((string)(this[this.tableInventario.Id_ProveedorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Id_Proveedor\' de la tabla \'Inventario\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventario.Id_ProveedorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Nombre {
                 get {
                     try {
@@ -3687,6 +3711,18 @@ namespace SistemaDeCobro {
                 set {
                     this[this.tableInventario.PerecederoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsId_ProveedorNull() {
+                return this.IsNull(this.tableInventario.Id_ProveedorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetId_ProveedorNull() {
+                this[this.tableInventario.Id_ProveedorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3770,17 +3806,6 @@ namespace SistemaDeCobro {
                     return ((Detalle_ventaRow[])(base.GetChildRows(this.Table.ChildRelations["InventarioDetalle_venta"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProveedorRow[] GetProveedorRows() {
-                if ((this.Table.ChildRelations["InventarioProveedor"] == null)) {
-                    return new ProveedorRow[0];
-                }
-                else {
-                    return ((ProveedorRow[])(base.GetChildRows(this.Table.ChildRelations["InventarioProveedor"])));
-                }
-            }
         }
         
         /// <summary>
@@ -3795,6 +3820,22 @@ namespace SistemaDeCobro {
             internal ProveedorRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableProveedor = ((ProveedorDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Id_Proveedor {
+                get {
+                    try {
+                        return ((int)(this[this.tableProveedor.Id_ProveedorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Id_Proveedor\' de la tabla \'Proveedor\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedor.Id_ProveedorColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3906,29 +3947,14 @@ namespace SistemaDeCobro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Inventario_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tableProveedor.Inventario_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Inventario_Id\' de la tabla \'Proveedor\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProveedor.Inventario_IdColumn] = value;
-                }
+            public bool IsId_ProveedorNull() {
+                return this.IsNull(this.tableProveedor.Id_ProveedorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InventarioRow InventarioRow {
-                get {
-                    return ((InventarioRow)(this.GetParentRow(this.Table.ParentRelations["InventarioProveedor"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["InventarioProveedor"]);
-                }
+            public void SetId_ProveedorNull() {
+                this[this.tableProveedor.Id_ProveedorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4001,18 +4027,6 @@ namespace SistemaDeCobro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNumero_TelefonicoNull() {
                 this[this.tableProveedor.Numero_TelefonicoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsInventario_IdNull() {
-                return this.IsNull(this.tableProveedor.Inventario_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetInventario_IdNull() {
-                this[this.tableProveedor.Inventario_IdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5702,7 +5716,8 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Inventario";
-            tableMapping.ColumnMappings.Add("Id", "Id_Inventario");
+            tableMapping.ColumnMappings.Add("Id_Inventario", "Id_Inventario");
+            tableMapping.ColumnMappings.Add("Id_Proveedor", "Id_Proveedor");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
             tableMapping.ColumnMappings.Add("Caducidad", "Caducidad");
@@ -5711,9 +5726,11 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Inventario` WHERE ((`Id` = ?) AND ((? = 1 AND `Cantidad` IS NULL) OR (`Cantidad` = ?)) AND ((? = 1 AND `Caducidad` IS NULL) OR (`Caducidad` = ?)) AND ((? = 1 AND `Precio` IS NULL) OR (`Precio` = ?)) AND ((? = 1 AND `Perecedero` IS NULL) OR (`Perecedero` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Inventario` WHERE ((`Id_Inventario` = ?) AND ((? = 1 AND `Id_Proveedor` IS NULL) OR (`Id_Proveedor` = ?)) AND ((? = 1 AND `Cantidad` IS NULL) OR (`Cantidad` = ?)) AND ((? = 1 AND `Caducidad` IS NULL) OR (`Caducidad` = ?)) AND ((? = 1 AND `Precio` IS NULL) OR (`Precio` = ?)) AND ((? = 1 AND `Perecedero` IS NULL) OR (`Perecedero` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_Inventario", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Inventario", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Id_Proveedor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Proveedor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_Proveedor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Proveedor", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Cantidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cantidad", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Cantidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cantidad", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Caducidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caducidad", global::System.Data.DataRowVersion.Original, true, null));
@@ -5724,9 +5741,10 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Perecedero", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perecedero", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Inventario` (`Nombre`, `Cantidad`, `Caducidad`, `Precio`, `Pereceder" +
-                "o`) VALUES (?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Inventario` (`Id_Proveedor`, `Nombre`, `Cantidad`, `Caducidad`, `Pre" +
+                "cio`, `Perecedero`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_Proveedor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Proveedor", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cantidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cantidad", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Caducidad", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caducidad", global::System.Data.DataRowVersion.Current, false, null));
@@ -5734,14 +5752,17 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Perecedero", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perecedero", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Inventario` SET `Nombre` = ?, `Cantidad` = ?, `Caducidad` = ?, `Precio` = ?, `Perecedero` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `Cantidad` IS NULL) OR (`Cantidad` = ?)) AND ((? = 1 AND `Caducidad` IS NULL) OR (`Caducidad` = ?)) AND ((? = 1 AND `Precio` IS NULL) OR (`Precio` = ?)) AND ((? = 1 AND `Perecedero` IS NULL) OR (`Perecedero` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Inventario` SET `Id_Proveedor` = ?, `Nombre` = ?, `Cantidad` = ?, `Caducidad` = ?, `Precio` = ?, `Perecedero` = ? WHERE ((`Id_Inventario` = ?) AND ((? = 1 AND `Id_Proveedor` IS NULL) OR (`Id_Proveedor` = ?)) AND ((? = 1 AND `Cantidad` IS NULL) OR (`Cantidad` = ?)) AND ((? = 1 AND `Caducidad` IS NULL) OR (`Caducidad` = ?)) AND ((? = 1 AND `Precio` IS NULL) OR (`Precio` = ?)) AND ((? = 1 AND `Perecedero` IS NULL) OR (`Perecedero` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_Proveedor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Proveedor", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cantidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cantidad", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Caducidad", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caducidad", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Precio", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Precio", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Perecedero", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perecedero", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_Inventario", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Inventario", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Id_Proveedor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Proveedor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_Proveedor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Proveedor", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Cantidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cantidad", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Cantidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cantidad", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Caducidad", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caducidad", global::System.Data.DataRowVersion.Original, true, null));
@@ -5765,7 +5786,8 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Nombre, Cantidad, Caducidad, Precio, Perecedero FROM Inventario";
+            this._commandCollection[0].CommandText = "SELECT Id_Inventario, Id_Proveedor, Nombre, Cantidad, Caducidad, Precio, Perecede" +
+                "ro FROM Inventario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5826,39 +5848,47 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, global::System.Nullable<int> Original_Cantidad, global::System.Nullable<global::System.DateTime> Original_Caducidad, global::System.Nullable<decimal> Original_Precio, global::System.Nullable<int> Original_Perecedero) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Cantidad.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Cantidad.Value));
-            }
-            else {
+        public virtual int Delete(int Original_Id_Inventario, string Original_Id_Proveedor, global::System.Nullable<int> Original_Cantidad, global::System.Nullable<global::System.DateTime> Original_Caducidad, global::System.Nullable<decimal> Original_Precio, global::System.Nullable<int> Original_Perecedero) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Inventario));
+            if ((Original_Id_Proveedor == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_Caducidad.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Id_Proveedor));
+            }
+            if ((Original_Cantidad.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_Caducidad.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Cantidad.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_Precio.HasValue == true)) {
+            if ((Original_Caducidad.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_Precio.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Caducidad.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_Perecedero.HasValue == true)) {
+            if ((Original_Precio.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Perecedero.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_Precio.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Perecedero.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Perecedero.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5880,36 +5910,42 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nombre, global::System.Nullable<int> Cantidad, global::System.Nullable<global::System.DateTime> Caducidad, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Perecedero) {
-            if ((Nombre == null)) {
+        public virtual int Insert(string Id_Proveedor, string Nombre, global::System.Nullable<int> Cantidad, global::System.Nullable<global::System.DateTime> Caducidad, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Perecedero) {
+            if ((Id_Proveedor == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nombre));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Id_Proveedor));
             }
-            if ((Cantidad.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Cantidad.Value));
-            }
-            else {
+            if ((Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Caducidad.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Caducidad.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nombre));
+            }
+            if ((Cantidad.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Cantidad.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Precio.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Precio.Value));
+            if ((Caducidad.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Caducidad.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Perecedero.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Perecedero.Value));
+            if ((Precio.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(Precio.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Perecedero.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Perecedero.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5931,69 +5967,83 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, global::System.Nullable<int> Cantidad, global::System.Nullable<global::System.DateTime> Caducidad, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Perecedero, int Original_Id, global::System.Nullable<int> Original_Cantidad, global::System.Nullable<global::System.DateTime> Original_Caducidad, global::System.Nullable<decimal> Original_Precio, global::System.Nullable<int> Original_Perecedero) {
-            if ((Nombre == null)) {
+        public virtual int Update(string Id_Proveedor, string Nombre, global::System.Nullable<int> Cantidad, global::System.Nullable<global::System.DateTime> Caducidad, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Perecedero, int Original_Id_Inventario, string Original_Id_Proveedor, global::System.Nullable<int> Original_Cantidad, global::System.Nullable<global::System.DateTime> Original_Caducidad, global::System.Nullable<decimal> Original_Precio, global::System.Nullable<int> Original_Perecedero) {
+            if ((Id_Proveedor == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nombre));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Id_Proveedor));
             }
-            if ((Cantidad.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Cantidad.Value));
-            }
-            else {
+            if ((Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Caducidad.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Caducidad.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nombre));
+            }
+            if ((Cantidad.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Cantidad.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Precio.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Precio.Value));
+            if ((Caducidad.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Caducidad.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Perecedero.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Perecedero.Value));
+            if ((Precio.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Precio.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
-            if ((Original_Cantidad.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Cantidad.Value));
+            if ((Perecedero.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Perecedero.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id_Inventario));
+            if ((Original_Id_Proveedor == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Id_Proveedor));
+            }
+            if ((Original_Cantidad.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Cantidad.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_Caducidad.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Caducidad.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Caducidad.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((Original_Precio.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Precio.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_Precio.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_Perecedero.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Perecedero.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Perecedero.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6133,19 +6183,19 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Proveedor";
+            tableMapping.ColumnMappings.Add("Id_Proveedor", "Id_Proveedor");
             tableMapping.ColumnMappings.Add("RFC", "RFC");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Calle", "Calle");
             tableMapping.ColumnMappings.Add("Colonia", "Colonia");
             tableMapping.ColumnMappings.Add("Numero", "Numero");
             tableMapping.ColumnMappings.Add("CP", "CP");
-            tableMapping.ColumnMappings.Add("Correo", "Numero_Telefonico");
-            tableMapping.ColumnMappings.Add("Inventario_Id", "Inventario_Id");
+            tableMapping.ColumnMappings.Add("Numero_Telefonico", "Numero_Telefonico");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Proveedor` (`RFC`, `Nombre`, `Calle`, `Colonia`, `Numero`, `CP`, `Co" +
-                "rreo`, `Inventario_Id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Proveedor` (`RFC`, `Nombre`, `Calle`, `Colonia`, `Numero`, `CP`, `Nu" +
+                "mero_Telefonico`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RFC", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RFC", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
@@ -6153,8 +6203,7 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Colonia", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Colonia", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Numero", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numero", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CP", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CP", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Correo", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Correo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Inventario_Id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Inventario_Id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Numero_Telefonico", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Numero_Telefonico", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6170,8 +6219,8 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT RFC, Nombre, Calle, Colonia, Numero, CP, Correo, Inventario_Id FROM Provee" +
-                "dor";
+            this._commandCollection[0].CommandText = "SELECT Id_Proveedor, RFC, Nombre, Calle, Colonia, Numero, CP, Numero_Telefonico F" +
+                "ROM Proveedor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6232,7 +6281,7 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RFC, string Nombre, string Calle, string Colonia, global::System.Nullable<int> Numero, global::System.Nullable<int> CP, string Correo, global::System.Nullable<int> Inventario_Id) {
+        public virtual int Insert(string RFC, string Nombre, string Calle, string Colonia, global::System.Nullable<int> Numero, global::System.Nullable<int> CP, string Numero_Telefonico) {
             if ((RFC == null)) {
                 throw new global::System.ArgumentNullException("RFC");
             }
@@ -6269,17 +6318,11 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Correo == null)) {
+            if ((Numero_Telefonico == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Correo));
-            }
-            if ((Inventario_Id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Inventario_Id.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Numero_Telefonico));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6892,15 +6935,6 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(SDCDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._inventarioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._inventarioTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._empleadoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Empleado.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6925,6 +6959,15 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._compraTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._inventarioTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._inventarioTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6965,14 +7008,6 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(SDCDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._inventarioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._inventarioTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._empleadoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Empleado.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -6994,6 +7029,14 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._compraTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._inventarioTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._inventarioTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7055,6 +7098,14 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._inventarioTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._inventarioTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._compraTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Compra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7076,14 +7127,6 @@ namespace SistemaDeCobro.SDCDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._empleadoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._inventarioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._inventarioTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

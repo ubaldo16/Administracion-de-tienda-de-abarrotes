@@ -194,6 +194,7 @@
 			this.Controls.Add(this.PanelMenu);
 			this.Name = "Menu";
 			this.Text = "Menu";
+			this.Activated += new System.EventHandler(this.Menu_Activated);
 			this.Load += new System.EventHandler(this.Menu_Load);
 			this.PanelMenu.ResumeLayout(false);
 			this.PanelMenu.PerformLayout();

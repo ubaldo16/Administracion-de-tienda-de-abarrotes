@@ -62,9 +62,9 @@
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(150, 108);
+			this.dataGridView1.Location = new System.Drawing.Point(118, 109);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(480, 272);
+			this.dataGridView1.Size = new System.Drawing.Size(540, 272);
 			this.dataGridView1.TabIndex = 90;
 			// 
 			// ButDelete

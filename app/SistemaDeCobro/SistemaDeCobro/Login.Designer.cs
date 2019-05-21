@@ -101,7 +101,7 @@
 			this.buttonLog.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
 			this.buttonLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.buttonLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.buttonLog.Location = new System.Drawing.Point(231, 179);
+			this.buttonLog.Location = new System.Drawing.Point(250, 178);
 			this.buttonLog.Name = "buttonLog";
 			this.buttonLog.Size = new System.Drawing.Size(120, 53);
 			this.buttonLog.TabIndex = 89;

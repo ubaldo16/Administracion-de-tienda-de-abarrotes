@@ -13,6 +13,8 @@ namespace SistemaDeCobro
 	public partial class Menu : Form
 	{
         private Usuario usu;
+		private bool ProvL;
+
 		public Menu(Usuario u)
 		{
 			
@@ -28,7 +30,21 @@ namespace SistemaDeCobro
 		}
 		public Menu()
 		{
+
 			InitializeComponent();
+		}
+
+		public bool ProveeL
+		{
+			get
+			{
+				return ProvL;
+			}
+			set
+			{
+				ProvL = value;
+			}
+
 		}
 
 		public void AbrirForm(object formHijo)
@@ -72,6 +88,17 @@ namespace SistemaDeCobro
 		private void buttonProveedores_Click(object sender, EventArgs e)
 		{
 			AbrirForm(new Proveedores());
+		}
+
+		private void Menu_Activated(object sender, EventArgs e)
+		{
+
+			if (ProvL)
+			{
+				AbrirForm(new ProveedoresL());
+			}
+
+			ProvL = false;
 		}
 	}
 }

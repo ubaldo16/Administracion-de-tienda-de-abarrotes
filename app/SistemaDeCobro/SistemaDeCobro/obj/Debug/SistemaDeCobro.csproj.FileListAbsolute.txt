@@ -25,7 +25,6 @@ C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.exe
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.pdb
 C:\Users\zacke\Desktop\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SDC.mdb
-C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SDC.mdb
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.exe.config
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.exe
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\SistemaDeCobro.pdb
