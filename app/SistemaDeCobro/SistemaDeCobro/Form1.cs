@@ -100,5 +100,10 @@ namespace SistemaDeCobro
 
 			ProvL = false;
 		}
+
+		private void panelForm_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
 	}
 }

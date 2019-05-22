@@ -83,7 +83,7 @@
 			this.buttonRegistro.Location = new System.Drawing.Point(3, 397);
 			this.buttonRegistro.Name = "buttonRegistro";
 			this.buttonRegistro.Size = new System.Drawing.Size(152, 30);
-			this.buttonRegistro.TabIndex = 11;
+			this.buttonRegistro.TabIndex = 5;
 			this.buttonRegistro.Text = "Registro";
 			this.buttonRegistro.UseVisualStyleBackColor = false;
 			this.buttonRegistro.Click += new System.EventHandler(this.buttonRegistro_Click);
@@ -100,7 +100,7 @@
 			this.buttonInventario.Location = new System.Drawing.Point(3, 250);
 			this.buttonInventario.Name = "buttonInventario";
 			this.buttonInventario.Size = new System.Drawing.Size(152, 30);
-			this.buttonInventario.TabIndex = 10;
+			this.buttonInventario.TabIndex = 2;
 			this.buttonInventario.Text = "Inventario";
 			this.buttonInventario.UseVisualStyleBackColor = false;
 			this.buttonInventario.Click += new System.EventHandler(this.buttonInventario_Click);
@@ -117,7 +117,7 @@
 			this.buttonUsuarios.Location = new System.Drawing.Point(3, 346);
 			this.buttonUsuarios.Name = "buttonUsuarios";
 			this.buttonUsuarios.Size = new System.Drawing.Size(152, 30);
-			this.buttonUsuarios.TabIndex = 9;
+			this.buttonUsuarios.TabIndex = 4;
 			this.buttonUsuarios.Text = "Usuarios";
 			this.buttonUsuarios.UseVisualStyleBackColor = false;
 			this.buttonUsuarios.Click += new System.EventHandler(this.buttonUsuarios_Click);
@@ -134,7 +134,7 @@
 			this.buttonProveedores.Location = new System.Drawing.Point(3, 299);
 			this.buttonProveedores.Name = "buttonProveedores";
 			this.buttonProveedores.Size = new System.Drawing.Size(152, 30);
-			this.buttonProveedores.TabIndex = 8;
+			this.buttonProveedores.TabIndex = 3;
 			this.buttonProveedores.Text = "Proveedores";
 			this.buttonProveedores.UseVisualStyleBackColor = false;
 			this.buttonProveedores.Click += new System.EventHandler(this.buttonProveedores_Click);
@@ -183,6 +183,7 @@
 			this.panelForm.Name = "panelForm";
 			this.panelForm.Size = new System.Drawing.Size(787, 534);
 			this.panelForm.TabIndex = 2;
+			this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
 			// 
 			// Menu
 			// 
