@@ -72,7 +72,7 @@ namespace SistemaDeCobro
 
         private void buttonInventario_Click(object sender, EventArgs e)
         {
-
+            AbrirForm(new Inventario());
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -105,5 +105,10 @@ namespace SistemaDeCobro
 		{
 
 		}
-	}
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+    }
 }
