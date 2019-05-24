@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedores));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label11 = new System.Windows.Forms.Label();
 			this.textRFC = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
 			// 
 			this.textRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textRFC.Location = new System.Drawing.Point(134, 193);
-			this.textRFC.MaxLength = 20;
+			this.textRFC.MaxLength = 13;
 			this.textRFC.Name = "textRFC";
 			this.textRFC.Size = new System.Drawing.Size(189, 20);
 			this.textRFC.TabIndex = 1;
@@ -126,11 +126,12 @@
 			// textCP
 			// 
 			this.textCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textCP.Location = new System.Drawing.Point(482, 300);
+			this.textCP.Location = new System.Drawing.Point(482, 299);
 			this.textCP.MaxLength = 20;
 			this.textCP.Name = "textCP";
 			this.textCP.Size = new System.Drawing.Size(189, 20);
 			this.textCP.TabIndex = 7;
+			this.textCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCP_KeyPress);
 			// 
 			// label9
 			// 
@@ -150,6 +151,7 @@
 			this.textNumExt.Name = "textNumExt";
 			this.textNumExt.Size = new System.Drawing.Size(189, 20);
 			this.textNumExt.TabIndex = 6;
+			this.textNumExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNumExt_KeyPress);
 			// 
 			// label8
 			// 
@@ -188,6 +190,7 @@
 			this.textTel.Name = "textTel";
 			this.textTel.Size = new System.Drawing.Size(189, 20);
 			this.textTel.TabIndex = 3;
+			this.textTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTel_KeyPress);
 			// 
 			// ButAdd
 			// 
@@ -273,14 +276,14 @@
 			// dataGridView1
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(145, 73);
 			this.dataGridView1.Name = "dataGridView1";

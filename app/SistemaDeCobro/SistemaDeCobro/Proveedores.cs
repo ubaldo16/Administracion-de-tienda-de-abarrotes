@@ -152,6 +152,21 @@ namespace SistemaDeCobro
 			ButAdd.Visible = true;
 		}
 
+		private void textTel_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloNumeros(e);
+		}
+
+		private void textNumExt_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloNumeros(e);
+		}
+
+		private void textCP_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloNumeros(e);
+		}
+
 		private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();

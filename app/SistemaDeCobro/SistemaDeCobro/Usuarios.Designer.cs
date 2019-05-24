@@ -197,6 +197,7 @@
 			this.textTel.Name = "textTel";
 			this.textTel.Size = new System.Drawing.Size(138, 20);
 			this.textTel.TabIndex = 9;
+			this.textTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTel_KeyPress);
 			// 
 			// label8
 			// 
@@ -235,6 +236,8 @@
 			this.textNumExt.Name = "textNumExt";
 			this.textNumExt.Size = new System.Drawing.Size(138, 20);
 			this.textNumExt.TabIndex = 6;
+			this.textNumExt.TextChanged += new System.EventHandler(this.textNumExt_TextChanged);
+			this.textNumExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNumExt_KeyPress);
 			// 
 			// label10
 			// 
@@ -255,6 +258,8 @@
 			this.textCP.Name = "textCP";
 			this.textCP.Size = new System.Drawing.Size(138, 20);
 			this.textCP.TabIndex = 8;
+			this.textCP.TextChanged += new System.EventHandler(this.textCP_TextChanged);
+			this.textCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCP_KeyPress);
 			// 
 			// label5
 			// 
@@ -289,7 +294,7 @@
 			// 
 			this.textRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textRFC.Location = new System.Drawing.Point(85, 186);
-			this.textRFC.MaxLength = 20;
+			this.textRFC.MaxLength = 13;
 			this.textRFC.Name = "textRFC";
 			this.textRFC.Size = new System.Drawing.Size(138, 20);
 			this.textRFC.TabIndex = 1;

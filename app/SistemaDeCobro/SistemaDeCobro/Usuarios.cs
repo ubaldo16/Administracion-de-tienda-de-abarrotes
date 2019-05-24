@@ -61,5 +61,30 @@ namespace SistemaDeCobro
         {
             WorkedRegister();
         }
-    }
+
+		private void textTel_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloNumeros(e);
+		}
+
+		private void textNumExt_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textNumExt_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloNumeros(e);
+		}
+
+		private void textCP_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textCP_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloNumeros(e);
+		}
+	}
 }
