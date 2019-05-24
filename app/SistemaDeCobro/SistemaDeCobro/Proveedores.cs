@@ -167,6 +167,11 @@ namespace SistemaDeCobro
 			Validacion.SoloNumeros(e);
 		}
 
+		private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloLetras(e);
+		}
+
 		private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();

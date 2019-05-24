@@ -140,6 +140,7 @@
 			this.textNombre.Name = "textNombre";
 			this.textNombre.Size = new System.Drawing.Size(138, 20);
 			this.textNombre.TabIndex = 2;
+			this.textNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNombre_KeyPress);
 			// 
 			// textApellidoM
 			// 
@@ -149,6 +150,8 @@
 			this.textApellidoM.Name = "textApellidoM";
 			this.textApellidoM.Size = new System.Drawing.Size(138, 20);
 			this.textApellidoM.TabIndex = 4;
+			this.textApellidoM.TextChanged += new System.EventHandler(this.textApellidoM_TextChanged);
+			this.textApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApellidoM_KeyPress);
 			// 
 			// label1
 			// 
@@ -178,6 +181,8 @@
 			this.textApellidoP.Name = "textApellidoP";
 			this.textApellidoP.Size = new System.Drawing.Size(138, 20);
 			this.textApellidoP.TabIndex = 3;
+			this.textApellidoP.TextChanged += new System.EventHandler(this.textApellidoP_TextChanged);
+			this.textApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApellidoP_KeyPress);
 			// 
 			// label7
 			// 

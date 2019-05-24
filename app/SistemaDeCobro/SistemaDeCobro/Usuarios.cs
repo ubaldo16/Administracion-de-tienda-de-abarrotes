@@ -86,5 +86,30 @@ namespace SistemaDeCobro
 		{
 			Validacion.SoloNumeros(e);
 		}
+
+		private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloLetras(e);
+		}
+
+		private void textApellidoP_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textApellidoP_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloLetras(e);
+		}
+
+		private void textApellidoM_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textApellidoM_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Validacion.SoloLetras(e);
+		}
 	}
 }
