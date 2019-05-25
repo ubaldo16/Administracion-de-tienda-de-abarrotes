@@ -298,6 +298,7 @@
 			// textRFC
 			// 
 			this.textRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.textRFC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
 			this.textRFC.Location = new System.Drawing.Point(85, 186);
 			this.textRFC.MaxLength = 13;
 			this.textRFC.Name = "textRFC";

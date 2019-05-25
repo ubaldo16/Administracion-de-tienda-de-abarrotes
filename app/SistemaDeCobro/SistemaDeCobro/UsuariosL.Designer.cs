@@ -28,11 +28,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.buttonSelection = new System.Windows.Forms.Button();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.ButDelete = new System.Windows.Forms.Button();
 			this.Modificar = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -43,7 +44,7 @@
 			this.buttonSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonSelection.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.buttonSelection.ForeColor = System.Drawing.Color.White;
-			this.buttonSelection.Location = new System.Drawing.Point(172, 417);
+			this.buttonSelection.Location = new System.Drawing.Point(210, 417);
 			this.buttonSelection.Name = "buttonSelection";
 			this.buttonSelection.Size = new System.Drawing.Size(93, 39);
 			this.buttonSelection.TabIndex = 91;
@@ -53,18 +54,18 @@
 			// dataGridView1
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(118, 109);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(540, 272);
+			this.dataGridView1.Size = new System.Drawing.Size(599, 272);
 			this.dataGridView1.TabIndex = 90;
 			// 
 			// ButDelete
@@ -73,7 +74,7 @@
 			this.ButDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.ButDelete.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ButDelete.ForeColor = System.Drawing.Color.White;
-			this.ButDelete.Location = new System.Drawing.Point(337, 417);
+			this.ButDelete.Location = new System.Drawing.Point(374, 417);
 			this.ButDelete.Name = "ButDelete";
 			this.ButDelete.Size = new System.Drawing.Size(94, 39);
 			this.ButDelete.TabIndex = 103;
@@ -87,13 +88,25 @@
 			this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Modificar.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Modificar.ForeColor = System.Drawing.Color.White;
-			this.Modificar.Location = new System.Drawing.Point(494, 417);
+			this.Modificar.Location = new System.Drawing.Point(521, 417);
 			this.Modificar.Name = "Modificar";
 			this.Modificar.Size = new System.Drawing.Size(94, 39);
 			this.Modificar.TabIndex = 104;
 			this.Modificar.Text = "Modificar";
 			this.Modificar.UseVisualStyleBackColor = false;
+			this.Modificar.Visible = false;
 			this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+			this.label1.Location = new System.Drawing.Point(311, 50);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(224, 31);
+			this.label1.TabIndex = 105;
+			this.label1.Text = "Lista de Usuarios";
 			// 
 			// UsuariosL
 			// 
@@ -101,6 +114,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlDark;
 			this.ClientSize = new System.Drawing.Size(787, 534);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.Modificar);
 			this.Controls.Add(this.ButDelete);
 			this.Controls.Add(this.buttonSelection);
@@ -111,6 +125,7 @@
 			this.Load += new System.EventHandler(this.UsuariosL_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -119,5 +134,6 @@
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button ButDelete;
         private System.Windows.Forms.Button Modificar;
-    }
+		private System.Windows.Forms.Label label1;
+	}
 }

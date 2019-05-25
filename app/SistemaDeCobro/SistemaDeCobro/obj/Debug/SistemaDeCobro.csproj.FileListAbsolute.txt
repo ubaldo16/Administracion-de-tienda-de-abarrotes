@@ -57,3 +57,4 @@ C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\Sistem
 C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.UsuariosL.resources
 C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csproj.GenerateResource.Cache
 C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Inventario.resources
+C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Inventario.resources

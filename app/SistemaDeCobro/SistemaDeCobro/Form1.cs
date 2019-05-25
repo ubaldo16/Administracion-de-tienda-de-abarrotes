@@ -36,6 +36,7 @@ namespace SistemaDeCobro
 
 		public bool ProveeL
 		{
+		
 			get
 			{
 				return ProvL;
@@ -62,17 +63,20 @@ namespace SistemaDeCobro
 
 		private void buttonRegistro_Click(object sender, EventArgs e)
 		{
+			this.Text = "Registro";
 			AbrirForm(new FormularioUsuarios());
 		}
 
         private void buttonUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirForm(new UsuariosL());
+			this.Text = "Lista de usuarios";
+			AbrirForm(new UsuariosL());
         }
 
         private void buttonInventario_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Inventario());
+			this.Text = "Inventario";
+			AbrirForm(new Inventario());
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -87,6 +91,7 @@ namespace SistemaDeCobro
 
 		private void buttonProveedores_Click(object sender, EventArgs e)
 		{
+			this.Text = "Proveedores";
 			AbrirForm(new Proveedores());
 		}
 

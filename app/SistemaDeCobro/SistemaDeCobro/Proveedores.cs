@@ -104,6 +104,7 @@ namespace SistemaDeCobro
 			textTel.Visible = false;
 			buttonBuscar.Visible = false;
 			ButAdd.Visible = false;
+			label1.Visible = false;
 		}
 
 
@@ -150,6 +151,7 @@ namespace SistemaDeCobro
 			textTel.Visible = true;
 			buttonBuscar.Visible = true;
 			ButAdd.Visible = true;
+			label1.Visible = true;
 		}
 
 		private void textTel_KeyPress(object sender, KeyPressEventArgs e)

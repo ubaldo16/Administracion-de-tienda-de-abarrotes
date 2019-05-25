@@ -33,6 +33,7 @@
 			this.ButDelete = new System.Windows.Forms.Button();
 			this.buttonSelection = new System.Windows.Forms.Button();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -42,12 +43,13 @@
 			this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Modificar.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Modificar.ForeColor = System.Drawing.Color.White;
-			this.Modificar.Location = new System.Drawing.Point(512, 382);
+			this.Modificar.Location = new System.Drawing.Point(536, 382);
 			this.Modificar.Name = "Modificar";
 			this.Modificar.Size = new System.Drawing.Size(94, 39);
 			this.Modificar.TabIndex = 108;
 			this.Modificar.Text = "Modificar";
 			this.Modificar.UseVisualStyleBackColor = false;
+			this.Modificar.Visible = false;
 			// 
 			// ButDelete
 			// 
@@ -55,7 +57,7 @@
 			this.ButDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.ButDelete.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ButDelete.ForeColor = System.Drawing.Color.White;
-			this.ButDelete.Location = new System.Drawing.Point(343, 382);
+			this.ButDelete.Location = new System.Drawing.Point(371, 382);
 			this.ButDelete.Name = "ButDelete";
 			this.ButDelete.Size = new System.Drawing.Size(94, 39);
 			this.ButDelete.TabIndex = 107;
@@ -69,7 +71,7 @@
 			this.buttonSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonSelection.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.buttonSelection.ForeColor = System.Drawing.Color.White;
-			this.buttonSelection.Location = new System.Drawing.Point(172, 382);
+			this.buttonSelection.Location = new System.Drawing.Point(223, 382);
 			this.buttonSelection.Name = "buttonSelection";
 			this.buttonSelection.Size = new System.Drawing.Size(93, 39);
 			this.buttonSelection.TabIndex = 106;
@@ -90,8 +92,19 @@
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(145, 73);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(480, 272);
+			this.dataGridView1.Size = new System.Drawing.Size(526, 272);
 			this.dataGridView1.TabIndex = 105;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+			this.label1.Location = new System.Drawing.Point(270, 18);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(270, 31);
+			this.label1.TabIndex = 109;
+			this.label1.Text = "Lista de Proveedores";
 			// 
 			// ProveedoresL
 			// 
@@ -99,6 +112,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlDark;
 			this.ClientSize = new System.Drawing.Size(771, 495);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.Modificar);
 			this.Controls.Add(this.ButDelete);
 			this.Controls.Add(this.buttonSelection);
@@ -108,6 +122,7 @@
 			this.Text = "ProveedoresL";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -117,5 +132,6 @@
 		private System.Windows.Forms.Button ButDelete;
 		private System.Windows.Forms.Button buttonSelection;
 		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.Label label1;
 	}
 }
