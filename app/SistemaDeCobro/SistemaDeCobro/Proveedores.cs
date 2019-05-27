@@ -82,7 +82,7 @@ namespace SistemaDeCobro
 			dataGridView1.Visible = true;
 			buttonSelection.Visible = true;
 			ButDelete.Visible = true;
-			Modificar.Visible = true;
+			//Modificar.Visible = true;
 			button1.Visible = true;
 		}
 		private void Provee()
