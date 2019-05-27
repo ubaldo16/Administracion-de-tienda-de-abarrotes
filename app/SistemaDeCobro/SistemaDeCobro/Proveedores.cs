@@ -59,7 +59,7 @@ namespace SistemaDeCobro
 				DataTable results = new DataTable();
 				using (OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
 				{
-					OleDbCommand cmd = new OleDbCommand(@"Select * from Proveedor", conexion);
+					OleDbCommand cmd = new OleDbCommand(@"Select * from PRoveedor", conexion);
 					conexion.Open();
 					OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
 					adapter.Fill(results);
@@ -82,7 +82,7 @@ namespace SistemaDeCobro
 			dataGridView1.Visible = true;
 			buttonSelection.Visible = true;
 			ButDelete.Visible = true;
-			//Modificar.Visible = true;
+			Modificar.Visible = true;
 			button1.Visible = true;
 		}
 		private void Provee()
@@ -174,49 +174,12 @@ namespace SistemaDeCobro
 			Validacion.SoloLetras(e);
 		}
 
-		private void Modificar_Click(object sender, EventArgs e)
-		{
-			// variable que guardara el valor de la casilla seleccionada
-			string Select = dataGridView1.CurrentCell.Value.ToString();
-			string aux = "1";
-			// ciclo que compara el valor selccionado con todos los elementos
-			for (int i = 0; i < dataGridView1.RowCount -1; i++)
-			{
-				for (int j = 0; j < dataGridView1.ColumnCount; j++)
-					if (Select == dataGridView1.Rows[i].Cells[j].Value.ToString())
-					{
-						aux = dataGridView1.Rows[i].Cells[0].Value.ToString();
+        private void Modificar_Click(object sender, EventArgs e)
+        {
 
-					}
- 			}
-			
-		}
+        }
 
-		private void ButDelete_Click(object sender, EventArgs e)
-		{
-			try
-
-			{
-				using (OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
-
-				{
-					conexion.Open();
-					string SqlActions = "DELETE * FROM  Proveedor WHERE RFC = @parametro";
-					OleDbCommand cmd = new OleDbCommand(SqlActions, conexion);
-					cmd.Parameters.AddWithValue("@parametro", dataGridView1.CurrentRow.Cells["RFC"].Value);
-					cmd.ExecuteNonQuery();
-					conexion.Close();
-					MessageBox.Show("Registro Eliminado");
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-			generateTable();
-		}
-
-		private void ButAdd_Click(object sender, EventArgs e)
+        private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();
 		}

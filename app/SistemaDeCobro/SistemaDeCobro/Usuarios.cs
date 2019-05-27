@@ -62,6 +62,7 @@ namespace SistemaDeCobro
             WorkedRegister();
         }
 
+
 		private void textTel_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			Validacion.SoloNumeros(e);
