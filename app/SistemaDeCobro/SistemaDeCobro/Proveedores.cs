@@ -174,7 +174,12 @@ namespace SistemaDeCobro
 			Validacion.SoloLetras(e);
 		}
 
-		private void ButAdd_Click(object sender, EventArgs e)
+        private void Modificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();
 		}
