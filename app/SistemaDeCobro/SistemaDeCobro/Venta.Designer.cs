@@ -28,118 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inventario_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalleventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sDCDataSet = new SistemaDeCobro.SDCDataSet();
-            this.detalle_ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.Detalle_ventaTableAdapter();
-            this.tabla_uso = new System.Windows.Forms.DataGridView();
-            this.idInventarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caducidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perecederoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventarioTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.InventarioTableAdapter();
-            this.Subtotal_lab = new System.Windows.Forms.Label();
-            this.Subtotal_box = new System.Windows.Forms.TextBox();
-            this.Cambio_tex = new System.Windows.Forms.TextBox();
-            this.efectiv_tex = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.ID_emp_tex = new System.Windows.Forms.TextBox();
-            this.Id_venta_tex = new System.Windows.Forms.TextBox();
-            this.Cambio_label = new System.Windows.Forms.Label();
-            this.Efectivo_label = new System.Windows.Forms.Label();
-            this.Fecha_label = new System.Windows.Forms.Label();
-            this.ID_venta_label = new System.Windows.Forms.Label();
-            this.ID_empl_label = new System.Windows.Forms.Label();
-            this.Cancelar = new System.Windows.Forms.Button();
-            this.Modificar = new System.Windows.Forms.Button();
-            this.Insertar = new System.Windows.Forms.Button();
-            this.Precio_lab = new System.Windows.Forms.Label();
-            this.Cantidad_labe = new System.Windows.Forms.Label();
-            this.Nombre_lab = new System.Windows.Forms.Label();
-            this.ID_labe = new System.Windows.Forms.Label();
-            this.Precio = new System.Windows.Forms.TextBox();
-            this.Cantidad = new System.Windows.Forms.TextBox();
-            this.Nombre = new System.Windows.Forms.TextBox();
-            this.Id_producto = new System.Windows.Forms.TextBox();
-            this.total_box = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.idVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleadoRFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetalleVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.VentaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_uso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.components = new System.ComponentModel.Container();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.subtotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Inventario_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.detalleventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.sDCDataSet = new SistemaDeCobro.SDCDataSet();
+			this.detalle_ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.Detalle_ventaTableAdapter();
+			this.tabla_uso = new System.Windows.Forms.DataGridView();
+			this.idInventarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.idProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.caducidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.perecederoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.inventarioTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.InventarioTableAdapter();
+			this.Subtotal_lab = new System.Windows.Forms.Label();
+			this.Subtotal_box = new System.Windows.Forms.TextBox();
+			this.Cambio_tex = new System.Windows.Forms.TextBox();
+			this.efectiv_tex = new System.Windows.Forms.TextBox();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.ID_emp_tex = new System.Windows.Forms.TextBox();
+			this.Id_venta_tex = new System.Windows.Forms.TextBox();
+			this.Cambio_label = new System.Windows.Forms.Label();
+			this.Efectivo_label = new System.Windows.Forms.Label();
+			this.Fecha_label = new System.Windows.Forms.Label();
+			this.ID_venta_label = new System.Windows.Forms.Label();
+			this.ID_empl_label = new System.Windows.Forms.Label();
+			this.Cancelar = new System.Windows.Forms.Button();
+			this.Modificar = new System.Windows.Forms.Button();
+			this.Insertar = new System.Windows.Forms.Button();
+			this.Precio_lab = new System.Windows.Forms.Label();
+			this.Cantidad_labe = new System.Windows.Forms.Label();
+			this.Nombre_lab = new System.Windows.Forms.Label();
+			this.ID_labe = new System.Windows.Forms.Label();
+			this.Precio = new System.Windows.Forms.TextBox();
+			this.Cantidad = new System.Windows.Forms.TextBox();
+			this.Nombre = new System.Windows.Forms.TextBox();
+			this.Id_producto = new System.Windows.Forms.TextBox();
+			this.total_box = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.idVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.empleadoRFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.idDetalleVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.VentaTableAdapter();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tabla_uso)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cantidadDataGridViewTextBoxColumn,
             this.subtotalDataGridViewTextBoxColumn,
             this.Inventario_Id});
-            this.dataGridView1.DataSource = this.detalleventaBindingSource;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(345, 353);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // subtotalDataGridViewTextBoxColumn
-            // 
-            this.subtotalDataGridViewTextBoxColumn.DataPropertyName = "Subtotal";
-            this.subtotalDataGridViewTextBoxColumn.HeaderText = "Subtotal";
-            this.subtotalDataGridViewTextBoxColumn.Name = "subtotalDataGridViewTextBoxColumn";
-            // 
-            // Inventario_Id
-            // 
-            this.Inventario_Id.DataPropertyName = "Inventario_Id";
-            this.Inventario_Id.HeaderText = "Inventario_Id";
-            this.Inventario_Id.Name = "Inventario_Id";
-            // 
-            // detalleventaBindingSource
-            // 
-            this.detalleventaBindingSource.DataMember = "Detalle_venta";
-            this.detalleventaBindingSource.DataSource = this.sDCDataSet;
-            // 
-            // sDCDataSet
-            // 
-            this.sDCDataSet.DataSetName = "SDCDataSet";
-            this.sDCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // detalle_ventaTableAdapter
-            // 
-            this.detalle_ventaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tabla_uso
-            // 
-            this.tabla_uso.AutoGenerateColumns = false;
-            this.tabla_uso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_uso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.dataGridView1.DataSource = this.detalleventaBindingSource;
+			this.dataGridView1.Enabled = false;
+			this.dataGridView1.Location = new System.Drawing.Point(77, 21);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(345, 353);
+			this.dataGridView1.TabIndex = 0;
+			// 
+			// cantidadDataGridViewTextBoxColumn
+			// 
+			this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+			this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+			this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+			// 
+			// subtotalDataGridViewTextBoxColumn
+			// 
+			this.subtotalDataGridViewTextBoxColumn.DataPropertyName = "Subtotal";
+			this.subtotalDataGridViewTextBoxColumn.HeaderText = "Subtotal";
+			this.subtotalDataGridViewTextBoxColumn.Name = "subtotalDataGridViewTextBoxColumn";
+			// 
+			// Inventario_Id
+			// 
+			this.Inventario_Id.DataPropertyName = "Inventario_Id";
+			this.Inventario_Id.HeaderText = "Inventario_Id";
+			this.Inventario_Id.Name = "Inventario_Id";
+			// 
+			// detalleventaBindingSource
+			// 
+			this.detalleventaBindingSource.DataMember = "Detalle_venta";
+			this.detalleventaBindingSource.DataSource = this.sDCDataSet;
+			// 
+			// sDCDataSet
+			// 
+			this.sDCDataSet.DataSetName = "SDCDataSet";
+			this.sDCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// detalle_ventaTableAdapter
+			// 
+			this.detalle_ventaTableAdapter.ClearBeforeFill = true;
+			// 
+			// tabla_uso
+			// 
+			this.tabla_uso.AutoGenerateColumns = false;
+			this.tabla_uso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.tabla_uso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idInventarioDataGridViewTextBoxColumn,
             this.idProveedorDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
@@ -147,395 +148,396 @@
             this.caducidadDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
             this.perecederoDataGridViewTextBoxColumn});
-            this.tabla_uso.DataSource = this.inventarioBindingSource;
-            this.tabla_uso.Location = new System.Drawing.Point(461, 433);
-            this.tabla_uso.Name = "tabla_uso";
-            this.tabla_uso.Size = new System.Drawing.Size(241, 45);
-            this.tabla_uso.TabIndex = 1;
-            this.tabla_uso.Visible = false;
-            // 
-            // idInventarioDataGridViewTextBoxColumn
-            // 
-            this.idInventarioDataGridViewTextBoxColumn.DataPropertyName = "Id_Inventario";
-            this.idInventarioDataGridViewTextBoxColumn.HeaderText = "Id_Inventario";
-            this.idInventarioDataGridViewTextBoxColumn.Name = "idInventarioDataGridViewTextBoxColumn";
-            // 
-            // idProveedorDataGridViewTextBoxColumn
-            // 
-            this.idProveedorDataGridViewTextBoxColumn.DataPropertyName = "Id_Proveedor";
-            this.idProveedorDataGridViewTextBoxColumn.HeaderText = "Id_Proveedor";
-            this.idProveedorDataGridViewTextBoxColumn.Name = "idProveedorDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // cantidadDataGridViewTextBoxColumn1
-            // 
-            this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
-            // 
-            // caducidadDataGridViewTextBoxColumn
-            // 
-            this.caducidadDataGridViewTextBoxColumn.DataPropertyName = "Caducidad";
-            this.caducidadDataGridViewTextBoxColumn.HeaderText = "Caducidad";
-            this.caducidadDataGridViewTextBoxColumn.Name = "caducidadDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // perecederoDataGridViewTextBoxColumn
-            // 
-            this.perecederoDataGridViewTextBoxColumn.DataPropertyName = "Perecedero";
-            this.perecederoDataGridViewTextBoxColumn.HeaderText = "Perecedero";
-            this.perecederoDataGridViewTextBoxColumn.Name = "perecederoDataGridViewTextBoxColumn";
-            // 
-            // inventarioBindingSource
-            // 
-            this.inventarioBindingSource.DataMember = "Inventario";
-            this.inventarioBindingSource.DataSource = this.sDCDataSet;
-            // 
-            // inventarioTableAdapter
-            // 
-            this.inventarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // Subtotal_lab
-            // 
-            this.Subtotal_lab.AutoSize = true;
-            this.Subtotal_lab.Location = new System.Drawing.Point(454, 224);
-            this.Subtotal_lab.Name = "Subtotal_lab";
-            this.Subtotal_lab.Size = new System.Drawing.Size(49, 13);
-            this.Subtotal_lab.TabIndex = 202;
-            this.Subtotal_lab.Text = "Subtotal:";
-            // 
-            // Subtotal_box
-            // 
-            this.Subtotal_box.Enabled = false;
-            this.Subtotal_box.Location = new System.Drawing.Point(505, 221);
-            this.Subtotal_box.Name = "Subtotal_box";
-            this.Subtotal_box.Size = new System.Drawing.Size(100, 20);
-            this.Subtotal_box.TabIndex = 201;
-            // 
-            // Cambio_tex
-            // 
-            this.Cambio_tex.Enabled = false;
-            this.Cambio_tex.Location = new System.Drawing.Point(665, 274);
-            this.Cambio_tex.Name = "Cambio_tex";
-            this.Cambio_tex.Size = new System.Drawing.Size(76, 20);
-            this.Cambio_tex.TabIndex = 200;
-            // 
-            // efectiv_tex
-            // 
-            this.efectiv_tex.Location = new System.Drawing.Point(665, 234);
-            this.efectiv_tex.Name = "efectiv_tex";
-            this.efectiv_tex.Size = new System.Drawing.Size(76, 20);
-            this.efectiv_tex.TabIndex = 199;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 432);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 198;
-            // 
-            // ID_emp_tex
-            // 
-            this.ID_emp_tex.Enabled = false;
-            this.ID_emp_tex.Location = new System.Drawing.Point(150, 401);
-            this.ID_emp_tex.Name = "ID_emp_tex";
-            this.ID_emp_tex.Size = new System.Drawing.Size(69, 20);
-            this.ID_emp_tex.TabIndex = 197;
-            // 
-            // Id_venta_tex
-            // 
-            this.Id_venta_tex.Enabled = false;
-            this.Id_venta_tex.Location = new System.Drawing.Point(150, 375);
-            this.Id_venta_tex.Name = "Id_venta_tex";
-            this.Id_venta_tex.Size = new System.Drawing.Size(69, 20);
-            this.Id_venta_tex.TabIndex = 196;
-            // 
-            // Cambio_label
-            // 
-            this.Cambio_label.AutoSize = true;
-            this.Cambio_label.Location = new System.Drawing.Point(617, 277);
-            this.Cambio_label.Name = "Cambio_label";
-            this.Cambio_label.Size = new System.Drawing.Size(45, 13);
-            this.Cambio_label.TabIndex = 195;
-            this.Cambio_label.Text = "Cambio:";
-            // 
-            // Efectivo_label
-            // 
-            this.Efectivo_label.AutoSize = true;
-            this.Efectivo_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Efectivo_label.Location = new System.Drawing.Point(656, 204);
-            this.Efectivo_label.Name = "Efectivo_label";
-            this.Efectivo_label.Size = new System.Drawing.Size(89, 13);
-            this.Efectivo_label.TabIndex = 194;
-            this.Efectivo_label.Text = "Efectivo recibido:";
-            // 
-            // Fecha_label
-            // 
-            this.Fecha_label.AutoSize = true;
-            this.Fecha_label.Location = new System.Drawing.Point(74, 433);
-            this.Fecha_label.Name = "Fecha_label";
-            this.Fecha_label.Size = new System.Drawing.Size(40, 13);
-            this.Fecha_label.TabIndex = 193;
-            this.Fecha_label.Text = "Fecha:";
-            // 
-            // ID_venta_label
-            // 
-            this.ID_venta_label.AutoSize = true;
-            this.ID_venta_label.Location = new System.Drawing.Point(74, 380);
-            this.ID_venta_label.Name = "ID_venta_label";
-            this.ID_venta_label.Size = new System.Drawing.Size(51, 13);
-            this.ID_venta_label.TabIndex = 192;
-            this.ID_venta_label.Text = "ID venta:";
-            // 
-            // ID_empl_label
-            // 
-            this.ID_empl_label.AutoSize = true;
-            this.ID_empl_label.Location = new System.Drawing.Point(74, 404);
-            this.ID_empl_label.Name = "ID_empl_label";
-            this.ID_empl_label.Size = new System.Drawing.Size(70, 13);
-            this.ID_empl_label.TabIndex = 191;
-            this.ID_empl_label.Text = "ID empleado:";
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancelar.ForeColor = System.Drawing.Color.White;
-            this.Cancelar.Location = new System.Drawing.Point(676, 404);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Cancelar.TabIndex = 190;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = false;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
-            // 
-            // Modificar
-            // 
-            this.Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Modificar.ForeColor = System.Drawing.Color.White;
-            this.Modificar.Location = new System.Drawing.Point(659, 346);
-            this.Modificar.Name = "Modificar";
-            this.Modificar.Size = new System.Drawing.Size(92, 23);
-            this.Modificar.TabIndex = 189;
-            this.Modificar.Text = "Pagar";
-            this.Modificar.UseVisualStyleBackColor = false;
-            this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
-            // 
-            // Insertar
-            // 
-            this.Insertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Insertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Insertar.ForeColor = System.Drawing.Color.White;
-            this.Insertar.Location = new System.Drawing.Point(555, 168);
-            this.Insertar.Name = "Insertar";
-            this.Insertar.Size = new System.Drawing.Size(113, 23);
-            this.Insertar.TabIndex = 188;
-            this.Insertar.Text = "Agregar producto";
-            this.Insertar.UseVisualStyleBackColor = false;
-            this.Insertar.Click += new System.EventHandler(this.Insertar_Click);
-            // 
-            // Precio_lab
-            // 
-            this.Precio_lab.AutoSize = true;
-            this.Precio_lab.Location = new System.Drawing.Point(606, 125);
-            this.Precio_lab.Name = "Precio_lab";
-            this.Precio_lab.Size = new System.Drawing.Size(40, 13);
-            this.Precio_lab.TabIndex = 187;
-            this.Precio_lab.Text = "Precio:";
-            // 
-            // Cantidad_labe
-            // 
-            this.Cantidad_labe.AutoSize = true;
-            this.Cantidad_labe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Cantidad_labe.Location = new System.Drawing.Point(470, 99);
-            this.Cantidad_labe.Name = "Cantidad_labe";
-            this.Cantidad_labe.Size = new System.Drawing.Size(99, 13);
-            this.Cantidad_labe.TabIndex = 186;
-            this.Cantidad_labe.Text = "Introduce cantidad:";
-            // 
-            // Nombre_lab
-            // 
-            this.Nombre_lab.AutoSize = true;
-            this.Nombre_lab.Location = new System.Drawing.Point(606, 95);
-            this.Nombre_lab.Name = "Nombre_lab";
-            this.Nombre_lab.Size = new System.Drawing.Size(47, 13);
-            this.Nombre_lab.TabIndex = 185;
-            this.Nombre_lab.Text = "Nombre:";
-            // 
-            // ID_labe
-            // 
-            this.ID_labe.AutoSize = true;
-            this.ID_labe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ID_labe.Location = new System.Drawing.Point(445, 37);
-            this.ID_labe.Name = "ID_labe";
-            this.ID_labe.Size = new System.Drawing.Size(146, 13);
-            this.ID_labe.TabIndex = 184;
-            this.ID_labe.Text = "Introduce clave del producto:";
-            // 
-            // Precio
-            // 
-            this.Precio.Enabled = false;
-            this.Precio.Location = new System.Drawing.Point(659, 122);
-            this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(100, 20);
-            this.Precio.TabIndex = 183;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.Location = new System.Drawing.Point(469, 123);
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Size = new System.Drawing.Size(100, 20);
-            this.Cantidad.TabIndex = 182;
-            this.Cantidad.TextChanged += new System.EventHandler(this.Cantidad_TextChanged);
-            // 
-            // Nombre
-            // 
-            this.Nombre.Enabled = false;
-            this.Nombre.Location = new System.Drawing.Point(659, 92);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(100, 20);
-            this.Nombre.TabIndex = 181;
-            // 
-            // Id_producto
-            // 
-            this.Id_producto.Location = new System.Drawing.Point(471, 65);
-            this.Id_producto.Name = "Id_producto";
-            this.Id_producto.Size = new System.Drawing.Size(100, 20);
-            this.Id_producto.TabIndex = 180;
-            this.Id_producto.TextChanged += new System.EventHandler(this.Id_producto_TextChanged);
-            // 
-            // total_box
-            // 
-            this.total_box.Enabled = false;
-            this.total_box.Location = new System.Drawing.Point(505, 257);
-            this.total_box.Name = "total_box";
-            this.total_box.Size = new System.Drawing.Size(100, 20);
-            this.total_box.TabIndex = 203;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(458, 260);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 204;
-            this.label1.Text = "Total:";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.tabla_uso.DataSource = this.inventarioBindingSource;
+			this.tabla_uso.Location = new System.Drawing.Point(461, 433);
+			this.tabla_uso.Name = "tabla_uso";
+			this.tabla_uso.Size = new System.Drawing.Size(241, 45);
+			this.tabla_uso.TabIndex = 1;
+			this.tabla_uso.Visible = false;
+			// 
+			// idInventarioDataGridViewTextBoxColumn
+			// 
+			this.idInventarioDataGridViewTextBoxColumn.DataPropertyName = "Id_Inventario";
+			this.idInventarioDataGridViewTextBoxColumn.HeaderText = "Id_Inventario";
+			this.idInventarioDataGridViewTextBoxColumn.Name = "idInventarioDataGridViewTextBoxColumn";
+			// 
+			// idProveedorDataGridViewTextBoxColumn
+			// 
+			this.idProveedorDataGridViewTextBoxColumn.DataPropertyName = "Id_Proveedor";
+			this.idProveedorDataGridViewTextBoxColumn.HeaderText = "Id_Proveedor";
+			this.idProveedorDataGridViewTextBoxColumn.Name = "idProveedorDataGridViewTextBoxColumn";
+			// 
+			// nombreDataGridViewTextBoxColumn
+			// 
+			this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+			this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+			this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+			// 
+			// cantidadDataGridViewTextBoxColumn1
+			// 
+			this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "Cantidad";
+			this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cantidad";
+			this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
+			// 
+			// caducidadDataGridViewTextBoxColumn
+			// 
+			this.caducidadDataGridViewTextBoxColumn.DataPropertyName = "Caducidad";
+			this.caducidadDataGridViewTextBoxColumn.HeaderText = "Caducidad";
+			this.caducidadDataGridViewTextBoxColumn.Name = "caducidadDataGridViewTextBoxColumn";
+			// 
+			// precioDataGridViewTextBoxColumn
+			// 
+			this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+			this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+			this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+			// 
+			// perecederoDataGridViewTextBoxColumn
+			// 
+			this.perecederoDataGridViewTextBoxColumn.DataPropertyName = "Perecedero";
+			this.perecederoDataGridViewTextBoxColumn.HeaderText = "Perecedero";
+			this.perecederoDataGridViewTextBoxColumn.Name = "perecederoDataGridViewTextBoxColumn";
+			// 
+			// inventarioBindingSource
+			// 
+			this.inventarioBindingSource.DataMember = "Inventario";
+			this.inventarioBindingSource.DataSource = this.sDCDataSet;
+			// 
+			// inventarioTableAdapter
+			// 
+			this.inventarioTableAdapter.ClearBeforeFill = true;
+			// 
+			// Subtotal_lab
+			// 
+			this.Subtotal_lab.AutoSize = true;
+			this.Subtotal_lab.Location = new System.Drawing.Point(454, 224);
+			this.Subtotal_lab.Name = "Subtotal_lab";
+			this.Subtotal_lab.Size = new System.Drawing.Size(46, 13);
+			this.Subtotal_lab.TabIndex = 202;
+			this.Subtotal_lab.Text = "Subtotal";
+			// 
+			// Subtotal_box
+			// 
+			this.Subtotal_box.Enabled = false;
+			this.Subtotal_box.Location = new System.Drawing.Point(505, 221);
+			this.Subtotal_box.Name = "Subtotal_box";
+			this.Subtotal_box.Size = new System.Drawing.Size(100, 20);
+			this.Subtotal_box.TabIndex = 201;
+			// 
+			// Cambio_tex
+			// 
+			this.Cambio_tex.Enabled = false;
+			this.Cambio_tex.Location = new System.Drawing.Point(665, 274);
+			this.Cambio_tex.Name = "Cambio_tex";
+			this.Cambio_tex.Size = new System.Drawing.Size(76, 20);
+			this.Cambio_tex.TabIndex = 200;
+			// 
+			// efectiv_tex
+			// 
+			this.efectiv_tex.Location = new System.Drawing.Point(665, 234);
+			this.efectiv_tex.Name = "efectiv_tex";
+			this.efectiv_tex.Size = new System.Drawing.Size(76, 20);
+			this.efectiv_tex.TabIndex = 199;
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.Location = new System.Drawing.Point(131, 432);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+			this.dateTimePicker1.TabIndex = 198;
+			// 
+			// ID_emp_tex
+			// 
+			this.ID_emp_tex.Enabled = false;
+			this.ID_emp_tex.Location = new System.Drawing.Point(150, 401);
+			this.ID_emp_tex.Name = "ID_emp_tex";
+			this.ID_emp_tex.Size = new System.Drawing.Size(69, 20);
+			this.ID_emp_tex.TabIndex = 197;
+			// 
+			// Id_venta_tex
+			// 
+			this.Id_venta_tex.Enabled = false;
+			this.Id_venta_tex.Location = new System.Drawing.Point(150, 375);
+			this.Id_venta_tex.Name = "Id_venta_tex";
+			this.Id_venta_tex.Size = new System.Drawing.Size(69, 20);
+			this.Id_venta_tex.TabIndex = 196;
+			// 
+			// Cambio_label
+			// 
+			this.Cambio_label.AutoSize = true;
+			this.Cambio_label.Location = new System.Drawing.Point(617, 277);
+			this.Cambio_label.Name = "Cambio_label";
+			this.Cambio_label.Size = new System.Drawing.Size(42, 13);
+			this.Cambio_label.TabIndex = 195;
+			this.Cambio_label.Text = "Cambio";
+			// 
+			// Efectivo_label
+			// 
+			this.Efectivo_label.AutoSize = true;
+			this.Efectivo_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.Efectivo_label.Location = new System.Drawing.Point(656, 204);
+			this.Efectivo_label.Name = "Efectivo_label";
+			this.Efectivo_label.Size = new System.Drawing.Size(89, 13);
+			this.Efectivo_label.TabIndex = 194;
+			this.Efectivo_label.Text = "Efectivo recibido:";
+			// 
+			// Fecha_label
+			// 
+			this.Fecha_label.AutoSize = true;
+			this.Fecha_label.Location = new System.Drawing.Point(74, 433);
+			this.Fecha_label.Name = "Fecha_label";
+			this.Fecha_label.Size = new System.Drawing.Size(40, 13);
+			this.Fecha_label.TabIndex = 193;
+			this.Fecha_label.Text = "Fecha:";
+			// 
+			// ID_venta_label
+			// 
+			this.ID_venta_label.AutoSize = true;
+			this.ID_venta_label.Location = new System.Drawing.Point(74, 380);
+			this.ID_venta_label.Name = "ID_venta_label";
+			this.ID_venta_label.Size = new System.Drawing.Size(48, 13);
+			this.ID_venta_label.TabIndex = 192;
+			this.ID_venta_label.Text = "ID venta";
+			// 
+			// ID_empl_label
+			// 
+			this.ID_empl_label.AutoSize = true;
+			this.ID_empl_label.Location = new System.Drawing.Point(74, 404);
+			this.ID_empl_label.Name = "ID_empl_label";
+			this.ID_empl_label.Size = new System.Drawing.Size(67, 13);
+			this.ID_empl_label.TabIndex = 191;
+			this.ID_empl_label.Text = "ID empleado";
+			// 
+			// Cancelar
+			// 
+			this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Cancelar.ForeColor = System.Drawing.Color.White;
+			this.Cancelar.Location = new System.Drawing.Point(676, 404);
+			this.Cancelar.Name = "Cancelar";
+			this.Cancelar.Size = new System.Drawing.Size(75, 23);
+			this.Cancelar.TabIndex = 190;
+			this.Cancelar.Text = "Cancelar";
+			this.Cancelar.UseVisualStyleBackColor = false;
+			this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+			// 
+			// Modificar
+			// 
+			this.Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Modificar.ForeColor = System.Drawing.Color.White;
+			this.Modificar.Location = new System.Drawing.Point(659, 346);
+			this.Modificar.Name = "Modificar";
+			this.Modificar.Size = new System.Drawing.Size(92, 23);
+			this.Modificar.TabIndex = 189;
+			this.Modificar.Text = "Pagar";
+			this.Modificar.UseVisualStyleBackColor = false;
+			this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
+			// 
+			// Insertar
+			// 
+			this.Insertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			this.Insertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Insertar.ForeColor = System.Drawing.Color.White;
+			this.Insertar.Location = new System.Drawing.Point(555, 168);
+			this.Insertar.Name = "Insertar";
+			this.Insertar.Size = new System.Drawing.Size(113, 23);
+			this.Insertar.TabIndex = 188;
+			this.Insertar.Text = "Agregar producto";
+			this.Insertar.UseVisualStyleBackColor = false;
+			this.Insertar.Click += new System.EventHandler(this.Insertar_Click);
+			// 
+			// Precio_lab
+			// 
+			this.Precio_lab.AutoSize = true;
+			this.Precio_lab.Location = new System.Drawing.Point(606, 98);
+			this.Precio_lab.Name = "Precio_lab";
+			this.Precio_lab.Size = new System.Drawing.Size(37, 13);
+			this.Precio_lab.TabIndex = 187;
+			this.Precio_lab.Text = "Precio";
+			// 
+			// Cantidad_labe
+			// 
+			this.Cantidad_labe.AutoSize = true;
+			this.Cantidad_labe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.Cantidad_labe.Location = new System.Drawing.Point(470, 99);
+			this.Cantidad_labe.Name = "Cantidad_labe";
+			this.Cantidad_labe.Size = new System.Drawing.Size(99, 13);
+			this.Cantidad_labe.TabIndex = 186;
+			this.Cantidad_labe.Text = "Introduce cantidad:";
+			// 
+			// Nombre_lab
+			// 
+			this.Nombre_lab.AutoSize = true;
+			this.Nombre_lab.Location = new System.Drawing.Point(606, 68);
+			this.Nombre_lab.Name = "Nombre_lab";
+			this.Nombre_lab.Size = new System.Drawing.Size(44, 13);
+			this.Nombre_lab.TabIndex = 185;
+			this.Nombre_lab.Text = "Nombre";
+			// 
+			// ID_labe
+			// 
+			this.ID_labe.AutoSize = true;
+			this.ID_labe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.ID_labe.Location = new System.Drawing.Point(445, 37);
+			this.ID_labe.Name = "ID_labe";
+			this.ID_labe.Size = new System.Drawing.Size(146, 13);
+			this.ID_labe.TabIndex = 184;
+			this.ID_labe.Text = "Introduce clave del producto:";
+			// 
+			// Precio
+			// 
+			this.Precio.Enabled = false;
+			this.Precio.Location = new System.Drawing.Point(659, 95);
+			this.Precio.Name = "Precio";
+			this.Precio.Size = new System.Drawing.Size(100, 20);
+			this.Precio.TabIndex = 183;
+			// 
+			// Cantidad
+			// 
+			this.Cantidad.Location = new System.Drawing.Point(469, 123);
+			this.Cantidad.Name = "Cantidad";
+			this.Cantidad.Size = new System.Drawing.Size(100, 20);
+			this.Cantidad.TabIndex = 182;
+			this.Cantidad.TextChanged += new System.EventHandler(this.Cantidad_TextChanged);
+			// 
+			// Nombre
+			// 
+			this.Nombre.Enabled = false;
+			this.Nombre.Location = new System.Drawing.Point(659, 65);
+			this.Nombre.Name = "Nombre";
+			this.Nombre.Size = new System.Drawing.Size(100, 20);
+			this.Nombre.TabIndex = 181;
+			// 
+			// Id_producto
+			// 
+			this.Id_producto.Location = new System.Drawing.Point(471, 65);
+			this.Id_producto.Name = "Id_producto";
+			this.Id_producto.Size = new System.Drawing.Size(100, 20);
+			this.Id_producto.TabIndex = 180;
+			this.Id_producto.TextChanged += new System.EventHandler(this.Id_producto_TextChanged);
+			// 
+			// total_box
+			// 
+			this.total_box.Enabled = false;
+			this.total_box.Location = new System.Drawing.Point(505, 257);
+			this.total_box.Name = "total_box";
+			this.total_box.Size = new System.Drawing.Size(100, 20);
+			this.total_box.TabIndex = 203;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(458, 260);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(31, 13);
+			this.label1.TabIndex = 204;
+			this.label1.Text = "Total";
+			// 
+			// dataGridView2
+			// 
+			this.dataGridView2.AutoGenerateColumns = false;
+			this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idVentaDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn,
             this.empleadoRFCDataGridViewTextBoxColumn,
             this.idDetalleVentaDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.ventaBindingSource;
-            this.dataGridView2.Enabled = false;
-            this.dataGridView2.Location = new System.Drawing.Point(42, 92);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(380, 277);
-            this.dataGridView2.TabIndex = 205;
-            this.dataGridView2.Visible = false;
-            // 
-            // idVentaDataGridViewTextBoxColumn
-            // 
-            this.idVentaDataGridViewTextBoxColumn.DataPropertyName = "IdVenta";
-            this.idVentaDataGridViewTextBoxColumn.HeaderText = "IdVenta";
-            this.idVentaDataGridViewTextBoxColumn.Name = "idVentaDataGridViewTextBoxColumn";
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            // 
-            // empleadoRFCDataGridViewTextBoxColumn
-            // 
-            this.empleadoRFCDataGridViewTextBoxColumn.DataPropertyName = "Empleado_RFC";
-            this.empleadoRFCDataGridViewTextBoxColumn.HeaderText = "Empleado_RFC";
-            this.empleadoRFCDataGridViewTextBoxColumn.Name = "empleadoRFCDataGridViewTextBoxColumn";
-            // 
-            // idDetalleVentaDataGridViewTextBoxColumn1
-            // 
-            this.idDetalleVentaDataGridViewTextBoxColumn1.DataPropertyName = "Id_DetalleVenta";
-            this.idDetalleVentaDataGridViewTextBoxColumn1.HeaderText = "Id_DetalleVenta";
-            this.idDetalleVentaDataGridViewTextBoxColumn1.Name = "idDetalleVentaDataGridViewTextBoxColumn1";
-            // 
-            // ventaBindingSource
-            // 
-            this.ventaBindingSource.DataMember = "Venta";
-            this.ventaBindingSource.DataSource = this.sDCDataSet;
-            // 
-            // ventaTableAdapter
-            // 
-            this.ventaTableAdapter.ClearBeforeFill = true;
-            // 
-            // Venta
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(771, 496);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.total_box);
-            this.Controls.Add(this.Subtotal_lab);
-            this.Controls.Add(this.Subtotal_box);
-            this.Controls.Add(this.Cambio_tex);
-            this.Controls.Add(this.efectiv_tex);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.ID_emp_tex);
-            this.Controls.Add(this.Id_venta_tex);
-            this.Controls.Add(this.Cambio_label);
-            this.Controls.Add(this.Efectivo_label);
-            this.Controls.Add(this.Fecha_label);
-            this.Controls.Add(this.ID_venta_label);
-            this.Controls.Add(this.ID_empl_label);
-            this.Controls.Add(this.Cancelar);
-            this.Controls.Add(this.Modificar);
-            this.Controls.Add(this.Insertar);
-            this.Controls.Add(this.Precio_lab);
-            this.Controls.Add(this.Cantidad_labe);
-            this.Controls.Add(this.Nombre_lab);
-            this.Controls.Add(this.ID_labe);
-            this.Controls.Add(this.Precio);
-            this.Controls.Add(this.Cantidad);
-            this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.Id_producto);
-            this.Controls.Add(this.tabla_uso);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dataGridView2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Venta";
-            this.Text = "Venta";
-            this.Load += new System.EventHandler(this.Venta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_uso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.dataGridView2.DataSource = this.ventaBindingSource;
+			this.dataGridView2.Enabled = false;
+			this.dataGridView2.Location = new System.Drawing.Point(42, 92);
+			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.Size = new System.Drawing.Size(380, 277);
+			this.dataGridView2.TabIndex = 205;
+			this.dataGridView2.Visible = false;
+			// 
+			// idVentaDataGridViewTextBoxColumn
+			// 
+			this.idVentaDataGridViewTextBoxColumn.DataPropertyName = "IdVenta";
+			this.idVentaDataGridViewTextBoxColumn.HeaderText = "IdVenta";
+			this.idVentaDataGridViewTextBoxColumn.Name = "idVentaDataGridViewTextBoxColumn";
+			// 
+			// totalDataGridViewTextBoxColumn
+			// 
+			this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+			this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+			this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+			// 
+			// fechaDataGridViewTextBoxColumn
+			// 
+			this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+			this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+			this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+			// 
+			// empleadoRFCDataGridViewTextBoxColumn
+			// 
+			this.empleadoRFCDataGridViewTextBoxColumn.DataPropertyName = "Empleado_RFC";
+			this.empleadoRFCDataGridViewTextBoxColumn.HeaderText = "Empleado_RFC";
+			this.empleadoRFCDataGridViewTextBoxColumn.Name = "empleadoRFCDataGridViewTextBoxColumn";
+			// 
+			// idDetalleVentaDataGridViewTextBoxColumn1
+			// 
+			this.idDetalleVentaDataGridViewTextBoxColumn1.DataPropertyName = "Id_DetalleVenta";
+			this.idDetalleVentaDataGridViewTextBoxColumn1.HeaderText = "Id_DetalleVenta";
+			this.idDetalleVentaDataGridViewTextBoxColumn1.Name = "idDetalleVentaDataGridViewTextBoxColumn1";
+			// 
+			// ventaBindingSource
+			// 
+			this.ventaBindingSource.DataMember = "Venta";
+			this.ventaBindingSource.DataSource = this.sDCDataSet;
+			// 
+			// ventaTableAdapter
+			// 
+			this.ventaTableAdapter.ClearBeforeFill = true;
+			// 
+			// Venta
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.ClientSize = new System.Drawing.Size(771, 495);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.total_box);
+			this.Controls.Add(this.Subtotal_lab);
+			this.Controls.Add(this.Subtotal_box);
+			this.Controls.Add(this.Cambio_tex);
+			this.Controls.Add(this.efectiv_tex);
+			this.Controls.Add(this.dateTimePicker1);
+			this.Controls.Add(this.ID_emp_tex);
+			this.Controls.Add(this.Id_venta_tex);
+			this.Controls.Add(this.Cambio_label);
+			this.Controls.Add(this.Efectivo_label);
+			this.Controls.Add(this.Fecha_label);
+			this.Controls.Add(this.ID_venta_label);
+			this.Controls.Add(this.ID_empl_label);
+			this.Controls.Add(this.Cancelar);
+			this.Controls.Add(this.Modificar);
+			this.Controls.Add(this.Insertar);
+			this.Controls.Add(this.Precio_lab);
+			this.Controls.Add(this.Cantidad_labe);
+			this.Controls.Add(this.Nombre_lab);
+			this.Controls.Add(this.ID_labe);
+			this.Controls.Add(this.Precio);
+			this.Controls.Add(this.Cantidad);
+			this.Controls.Add(this.Nombre);
+			this.Controls.Add(this.Id_producto);
+			this.Controls.Add(this.tabla_uso);
+			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.dataGridView2);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "Venta";
+			this.Text = "Venta";
+			this.Load += new System.EventHandler(this.Venta_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tabla_uso)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).EndInit();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 

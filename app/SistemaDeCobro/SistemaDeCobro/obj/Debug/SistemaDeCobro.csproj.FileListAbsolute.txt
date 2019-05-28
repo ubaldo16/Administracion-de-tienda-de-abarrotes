@@ -79,3 +79,4 @@ C:\Users\azlo\Desktop\Administracion-de-tienda-de-abarrotes-master-3\app\Sistema
 C:\Users\azlo\Desktop\Administracion-de-tienda-de-abarrotes-master-3\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csproj.CoreCompileInputs.cache
 C:\Users\azlo\Desktop\Administracion-de-tienda-de-abarrotes-master-3\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.exe
 C:\Users\azlo\Desktop\Administracion-de-tienda-de-abarrotes-master-3\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.pdb
+C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Venta.resources
