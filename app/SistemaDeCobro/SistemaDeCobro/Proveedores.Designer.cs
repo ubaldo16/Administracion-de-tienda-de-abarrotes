@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedores));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label11 = new System.Windows.Forms.Label();
 			this.textRFC = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.Cancel = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
+			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
@@ -136,7 +137,7 @@
 			this.textCP.MaxLength = 20;
 			this.textCP.Name = "textCP";
 			this.textCP.Size = new System.Drawing.Size(138, 20);
-			this.textCP.TabIndex = 6;
+			this.textCP.TabIndex = 7;
 			this.textCP.TextChanged += new System.EventHandler(this.textCP_TextChanged);
 			this.textCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCP_KeyPress);
 			// 
@@ -208,7 +209,7 @@
 			this.ButAdd.Location = new System.Drawing.Point(321, 449);
 			this.ButAdd.Name = "ButAdd";
 			this.ButAdd.Size = new System.Drawing.Size(87, 34);
-			this.ButAdd.TabIndex = 8;
+			this.ButAdd.TabIndex = 9;
 			this.ButAdd.Text = "Agregar";
 			this.ButAdd.UseVisualStyleBackColor = false;
 			this.ButAdd.Click += new System.EventHandler(this.ButAdd_Click);
@@ -231,7 +232,7 @@
 			this.buttonBuscar.Location = new System.Drawing.Point(656, 53);
 			this.buttonBuscar.Name = "buttonBuscar";
 			this.buttonBuscar.Size = new System.Drawing.Size(87, 34);
-			this.buttonBuscar.TabIndex = 9;
+			this.buttonBuscar.TabIndex = 10;
 			this.buttonBuscar.Text = "Buscar";
 			this.buttonBuscar.UseVisualStyleBackColor = false;
 			this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
@@ -260,7 +261,7 @@
 			this.ButDelete.Location = new System.Drawing.Point(334, 427);
 			this.ButDelete.Name = "ButDelete";
 			this.ButDelete.Size = new System.Drawing.Size(94, 39);
-			this.ButDelete.TabIndex = 137;
+			this.ButDelete.TabIndex = 8;
 			this.ButDelete.Text = "Eliminar";
 			this.ButDelete.UseVisualStyleBackColor = false;
 			this.ButDelete.Visible = false;
@@ -284,14 +285,14 @@
 			// dataGridView1
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(121, 77);
 			this.dataGridView1.Name = "dataGridView1";
@@ -367,12 +368,25 @@
 			this.button2.Visible = false;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+			this.label4.Location = new System.Drawing.Point(198, 0);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(342, 31);
+			this.label4.TabIndex = 146;
+			this.label4.Text = "Moficacion de Proveedores";
+			this.label4.Visible = false;
+			// 
 			// Proveedores
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlDark;
 			this.ClientSize = new System.Drawing.Size(771, 495);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.Cancel);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label3);
@@ -438,5 +452,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button Cancel;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label label4;
 	}
 }

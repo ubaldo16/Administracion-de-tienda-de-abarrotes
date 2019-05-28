@@ -191,6 +191,9 @@ namespace SistemaDeCobro
 			button2.Visible = true;
 			ButAdd.Visible = false;
 			buttonBuscar.Visible = false;
+			label4.Visible = true;
+			label3.Visible = false;
+			label1.Visible = false;
 		}
 
 		private void textCP_TextChanged(object sender, EventArgs e)
@@ -201,6 +204,7 @@ namespace SistemaDeCobro
 		private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();
+			vaciaText();
 		}
 
 		private void Cancel_Click(object sender, EventArgs e)
@@ -210,6 +214,7 @@ namespace SistemaDeCobro
 			Provee();
 			Cancel.Visible = false;
 			button2.Visible = false;
+			label4.Visible = false;
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -220,6 +225,8 @@ namespace SistemaDeCobro
 			ListaProvee();
 			Provee();
 			Cancel.Visible = false;
+			label4.Visible = false;
+
 		}
 
 		private void update()
@@ -247,6 +254,17 @@ namespace SistemaDeCobro
 				MessageBox.Show(ex.Message);
 			}
 
+		}
+
+		private void vaciaText()
+		{
+			textCalle.Text = "";
+			textCol.Text = "";
+			textCP.Text = "";
+			textNombre.Text = "";
+			textRFC.Text = "";
+			textTel.Text = "";
+			textNumExt.Text = "";
 		}
 
 		private void llenarCampos()
