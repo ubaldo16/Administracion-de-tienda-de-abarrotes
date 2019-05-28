@@ -97,6 +97,12 @@
       <DependentUpon>UsuariosL.cs</DependentUpon>
     </Compile>
     <Compile Include="Validacion.cs" />
+    <Compile Include="Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta.Designer.cs">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuariosL.resx">
       <DependentUpon>UsuariosL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta.resx">
+      <DependentUpon>Venta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

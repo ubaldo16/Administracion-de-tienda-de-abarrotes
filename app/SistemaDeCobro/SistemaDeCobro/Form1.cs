@@ -115,5 +115,10 @@ namespace SistemaDeCobro
         {
             Application.Exit();
         }
+
+        private void buttonVenta_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new Venta(usu));
+        }
     }
 }

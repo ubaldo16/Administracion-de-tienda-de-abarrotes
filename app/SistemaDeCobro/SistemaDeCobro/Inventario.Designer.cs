@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonModificarProd = new System.Windows.Forms.Button();
             this.buttonEliminarProd = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -63,7 +63,7 @@
             // 
             this.buttonModificarProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonModificarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModificarProd.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificarProd.ForeColor = System.Drawing.Color.White;
             this.buttonModificarProd.Location = new System.Drawing.Point(381, 442);
             this.buttonModificarProd.Name = "buttonModificarProd";
@@ -78,7 +78,7 @@
             // 
             this.buttonEliminarProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonEliminarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarProd.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarProd.ForeColor = System.Drawing.Color.White;
             this.buttonEliminarProd.Location = new System.Drawing.Point(381, 442);
             this.buttonEliminarProd.Name = "buttonEliminarProd";
@@ -100,7 +100,7 @@
             // 
             this.btn_agregarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_agregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregarProducto.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregarProducto.ForeColor = System.Drawing.Color.White;
             this.btn_agregarProducto.Location = new System.Drawing.Point(352, 442);
             this.btn_agregarProducto.Name = "btn_agregarProducto";
@@ -125,10 +125,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(207, 371);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 14);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 159;
             this.label4.Text = "Precio";
             this.label4.Visible = false;
@@ -147,10 +147,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(181, 397);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 14);
+            this.label5.Size = new System.Drawing.Size(71, 15);
             this.label5.TabIndex = 158;
             this.label5.Text = "Perecedero";
             this.label5.Visible = false;
@@ -158,10 +158,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(187, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 14);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 157;
             this.label3.Text = "Caducidad";
             this.label3.Visible = false;
@@ -180,10 +180,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(149, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 14);
+            this.label1.Size = new System.Drawing.Size(103, 15);
             this.label1.TabIndex = 156;
             this.label1.Text = "Nombre producto";
             this.label1.Visible = false;
@@ -191,10 +191,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(195, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 14);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 155;
             this.label2.Text = "Cantidad";
             this.label2.Visible = false;
@@ -213,14 +213,14 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(128, 112);
             this.dataGridView1.Name = "dataGridView1";
@@ -231,7 +231,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altasToolStripMenuItem,
             this.bajasToolStripMenuItem,
@@ -239,7 +239,7 @@
             this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(787, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(787, 28);
             this.menuStrip1.TabIndex = 164;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -247,7 +247,7 @@
             // 
             this.altasToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.altasToolStripMenuItem.Name = "altasToolStripMenuItem";
-            this.altasToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
+            this.altasToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.altasToolStripMenuItem.Text = "Altas";
             this.altasToolStripMenuItem.Click += new System.EventHandler(this.altasToolStripMenuItem_Click);
             // 
@@ -255,7 +255,7 @@
             // 
             this.bajasToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.bajasToolStripMenuItem.Name = "bajasToolStripMenuItem";
-            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
+            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.bajasToolStripMenuItem.Text = "Bajas";
             this.bajasToolStripMenuItem.Click += new System.EventHandler(this.bajasToolStripMenuItem_Click);
             // 
@@ -263,7 +263,7 @@
             // 
             this.modificacionesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.modificacionesToolStripMenuItem.Name = "modificacionesToolStripMenuItem";
-            this.modificacionesToolStripMenuItem.Size = new System.Drawing.Size(125, 21);
+            this.modificacionesToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.modificacionesToolStripMenuItem.Text = "Modificaciones";
             this.modificacionesToolStripMenuItem.Click += new System.EventHandler(this.modificacionesToolStripMenuItem_Click);
             // 
@@ -271,17 +271,17 @@
             // 
             this.consultasToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(172, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 14);
+            this.label6.Size = new System.Drawing.Size(78, 15);
             this.label6.TabIndex = 166;
             this.label6.Text = "ID Proveedor";
             this.label6.Visible = false;
@@ -311,22 +311,22 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.MediumBlue;
             this.label13.Location = new System.Drawing.Point(281, 45);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 30);
+            this.label13.Size = new System.Drawing.Size(134, 31);
             this.label13.TabIndex = 167;
             this.label13.Text = "Inventario";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label7.Location = new System.Drawing.Point(297, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 21);
+            this.label7.Size = new System.Drawing.Size(212, 24);
             this.label7.TabIndex = 168;
             this.label7.Text = "Seleccione un producto";
             this.label7.Visible = false;

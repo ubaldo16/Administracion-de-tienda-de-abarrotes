@@ -91,9 +91,9 @@ namespace SistemaDeCobro
 
                     {
                         conexion.Open();
-                        string SqlActions = "DELETE * FROM  Inventario WHERE Id_inventario = @parametro";
+                        string SqlActions = "DELETE * FROM  Detalle_venta WHERE Id_inventario = @parametro";
                         OleDbCommand cmd = new OleDbCommand(SqlActions, conexion);
-                        cmd.Parameters.AddWithValue("@parametro", dataGridView1.CurrentRow.Cells["Id_inventario"].Value);
+                       // cmd.Parameters.AddWithValue("@parametro", dataGridView1.SelectedCells);
                         cmd.ExecuteNonQuery();
                         conexion.Close();
                         //MessageBox.Show("Producto Eliminado");
