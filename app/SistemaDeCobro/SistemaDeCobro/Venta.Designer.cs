@@ -79,6 +79,7 @@
 			this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.VentaTableAdapter();
 			this.label2 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).BeginInit();
@@ -209,16 +210,17 @@
 			// Subtotal_lab
 			// 
 			this.Subtotal_lab.AutoSize = true;
-			this.Subtotal_lab.Location = new System.Drawing.Point(440, 237);
+			this.Subtotal_lab.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.Subtotal_lab.Location = new System.Drawing.Point(442, 261);
 			this.Subtotal_lab.Name = "Subtotal_lab";
-			this.Subtotal_lab.Size = new System.Drawing.Size(46, 13);
+			this.Subtotal_lab.Size = new System.Drawing.Size(50, 14);
 			this.Subtotal_lab.TabIndex = 202;
 			this.Subtotal_lab.Text = "Subtotal";
 			// 
 			// Subtotal_box
 			// 
 			this.Subtotal_box.Enabled = false;
-			this.Subtotal_box.Location = new System.Drawing.Point(491, 234);
+			this.Subtotal_box.Location = new System.Drawing.Point(493, 258);
 			this.Subtotal_box.Name = "Subtotal_box";
 			this.Subtotal_box.Size = new System.Drawing.Size(100, 20);
 			this.Subtotal_box.TabIndex = 201;
@@ -226,21 +228,21 @@
 			// Cambio_tex
 			// 
 			this.Cambio_tex.Enabled = false;
-			this.Cambio_tex.Location = new System.Drawing.Point(665, 274);
+			this.Cambio_tex.Location = new System.Drawing.Point(667, 298);
 			this.Cambio_tex.Name = "Cambio_tex";
 			this.Cambio_tex.Size = new System.Drawing.Size(76, 20);
 			this.Cambio_tex.TabIndex = 200;
 			// 
 			// efectiv_tex
 			// 
-			this.efectiv_tex.Location = new System.Drawing.Point(665, 234);
+			this.efectiv_tex.Location = new System.Drawing.Point(667, 258);
 			this.efectiv_tex.Name = "efectiv_tex";
 			this.efectiv_tex.Size = new System.Drawing.Size(76, 20);
 			this.efectiv_tex.TabIndex = 199;
 			// 
 			// dateTimePicker1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(131, 432);
+			this.dateTimePicker1.Location = new System.Drawing.Point(132, 446);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker1.TabIndex = 198;
@@ -248,7 +250,7 @@
 			// ID_emp_tex
 			// 
 			this.ID_emp_tex.Enabled = false;
-			this.ID_emp_tex.Location = new System.Drawing.Point(150, 401);
+			this.ID_emp_tex.Location = new System.Drawing.Point(151, 415);
 			this.ID_emp_tex.Name = "ID_emp_tex";
 			this.ID_emp_tex.Size = new System.Drawing.Size(69, 20);
 			this.ID_emp_tex.TabIndex = 197;
@@ -256,7 +258,7 @@
 			// Id_venta_tex
 			// 
 			this.Id_venta_tex.Enabled = false;
-			this.Id_venta_tex.Location = new System.Drawing.Point(150, 375);
+			this.Id_venta_tex.Location = new System.Drawing.Point(151, 389);
 			this.Id_venta_tex.Name = "Id_venta_tex";
 			this.Id_venta_tex.Size = new System.Drawing.Size(69, 20);
 			this.Id_venta_tex.TabIndex = 196;
@@ -264,36 +266,40 @@
 			// Cambio_label
 			// 
 			this.Cambio_label.AutoSize = true;
-			this.Cambio_label.Location = new System.Drawing.Point(617, 277);
+			this.Cambio_label.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.Cambio_label.Location = new System.Drawing.Point(619, 301);
 			this.Cambio_label.Name = "Cambio_label";
-			this.Cambio_label.Size = new System.Drawing.Size(42, 13);
+			this.Cambio_label.Size = new System.Drawing.Size(45, 14);
 			this.Cambio_label.TabIndex = 195;
 			this.Cambio_label.Text = "Cambio";
 			// 
 			// Fecha_label
 			// 
 			this.Fecha_label.AutoSize = true;
-			this.Fecha_label.Location = new System.Drawing.Point(74, 433);
+			this.Fecha_label.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.Fecha_label.Location = new System.Drawing.Point(75, 447);
 			this.Fecha_label.Name = "Fecha_label";
-			this.Fecha_label.Size = new System.Drawing.Size(40, 13);
+			this.Fecha_label.Size = new System.Drawing.Size(41, 14);
 			this.Fecha_label.TabIndex = 193;
 			this.Fecha_label.Text = "Fecha:";
 			// 
 			// ID_venta_label
 			// 
 			this.ID_venta_label.AutoSize = true;
-			this.ID_venta_label.Location = new System.Drawing.Point(74, 380);
+			this.ID_venta_label.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.ID_venta_label.Location = new System.Drawing.Point(75, 394);
 			this.ID_venta_label.Name = "ID_venta_label";
-			this.ID_venta_label.Size = new System.Drawing.Size(48, 13);
+			this.ID_venta_label.Size = new System.Drawing.Size(51, 14);
 			this.ID_venta_label.TabIndex = 192;
 			this.ID_venta_label.Text = "ID venta";
 			// 
 			// ID_empl_label
 			// 
 			this.ID_empl_label.AutoSize = true;
-			this.ID_empl_label.Location = new System.Drawing.Point(74, 404);
+			this.ID_empl_label.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.ID_empl_label.Location = new System.Drawing.Point(75, 418);
 			this.ID_empl_label.Name = "ID_empl_label";
-			this.ID_empl_label.Size = new System.Drawing.Size(67, 13);
+			this.ID_empl_label.Size = new System.Drawing.Size(73, 14);
 			this.ID_empl_label.TabIndex = 191;
 			this.ID_empl_label.Text = "ID empleado";
 			// 
@@ -301,10 +307,11 @@
 			// 
 			this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Cancelar.Font = new System.Drawing.Font("Britannic Bold", 9.75F);
 			this.Cancelar.ForeColor = System.Drawing.Color.White;
 			this.Cancelar.Location = new System.Drawing.Point(666, 423);
 			this.Cancelar.Name = "Cancelar";
-			this.Cancelar.Size = new System.Drawing.Size(75, 23);
+			this.Cancelar.Size = new System.Drawing.Size(87, 34);
 			this.Cancelar.TabIndex = 190;
 			this.Cancelar.Text = "Cancelar";
 			this.Cancelar.UseVisualStyleBackColor = false;
@@ -314,10 +321,11 @@
 			// 
 			this.Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Modificar.Font = new System.Drawing.Font("Britannic Bold", 9.75F);
 			this.Modificar.ForeColor = System.Drawing.Color.White;
-			this.Modificar.Location = new System.Drawing.Point(558, 346);
+			this.Modificar.Location = new System.Drawing.Point(555, 361);
 			this.Modificar.Name = "Modificar";
-			this.Modificar.Size = new System.Drawing.Size(92, 23);
+			this.Modificar.Size = new System.Drawing.Size(87, 34);
 			this.Modificar.TabIndex = 189;
 			this.Modificar.Text = "Pagar";
 			this.Modificar.UseVisualStyleBackColor = false;
@@ -327,10 +335,11 @@
 			// 
 			this.Insertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			this.Insertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Insertar.Font = new System.Drawing.Font("Britannic Bold", 9.75F);
 			this.Insertar.ForeColor = System.Drawing.Color.White;
 			this.Insertar.Location = new System.Drawing.Point(555, 168);
 			this.Insertar.Name = "Insertar";
-			this.Insertar.Size = new System.Drawing.Size(113, 23);
+			this.Insertar.Size = new System.Drawing.Size(87, 34);
 			this.Insertar.TabIndex = 188;
 			this.Insertar.Text = "Agregar producto";
 			this.Insertar.UseVisualStyleBackColor = false;
@@ -339,40 +348,44 @@
 			// Precio_lab
 			// 
 			this.Precio_lab.AutoSize = true;
+			this.Precio_lab.Font = new System.Drawing.Font("Britannic Bold", 9F);
 			this.Precio_lab.Location = new System.Drawing.Point(606, 98);
 			this.Precio_lab.Name = "Precio_lab";
-			this.Precio_lab.Size = new System.Drawing.Size(37, 13);
+			this.Precio_lab.Size = new System.Drawing.Size(40, 14);
 			this.Precio_lab.TabIndex = 187;
 			this.Precio_lab.Text = "Precio";
 			// 
 			// Cantidad_labe
 			// 
 			this.Cantidad_labe.AutoSize = true;
-			this.Cantidad_labe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.Cantidad_labe.Location = new System.Drawing.Point(470, 99);
+			this.Cantidad_labe.BackColor = System.Drawing.Color.Transparent;
+			this.Cantidad_labe.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.Cantidad_labe.Location = new System.Drawing.Point(444, 98);
 			this.Cantidad_labe.Name = "Cantidad_labe";
-			this.Cantidad_labe.Size = new System.Drawing.Size(99, 13);
+			this.Cantidad_labe.Size = new System.Drawing.Size(52, 14);
 			this.Cantidad_labe.TabIndex = 186;
-			this.Cantidad_labe.Text = "Introduce cantidad:";
+			this.Cantidad_labe.Text = "Cantidad";
 			// 
 			// Nombre_lab
 			// 
 			this.Nombre_lab.AutoSize = true;
+			this.Nombre_lab.Font = new System.Drawing.Font("Britannic Bold", 9F);
 			this.Nombre_lab.Location = new System.Drawing.Point(606, 68);
 			this.Nombre_lab.Name = "Nombre_lab";
-			this.Nombre_lab.Size = new System.Drawing.Size(44, 13);
+			this.Nombre_lab.Size = new System.Drawing.Size(47, 14);
 			this.Nombre_lab.TabIndex = 185;
 			this.Nombre_lab.Text = "Nombre";
 			// 
 			// ID_labe
 			// 
 			this.ID_labe.AutoSize = true;
-			this.ID_labe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.ID_labe.Location = new System.Drawing.Point(445, 37);
+			this.ID_labe.BackColor = System.Drawing.Color.Transparent;
+			this.ID_labe.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.ID_labe.Location = new System.Drawing.Point(428, 71);
 			this.ID_labe.Name = "ID_labe";
-			this.ID_labe.Size = new System.Drawing.Size(146, 13);
+			this.ID_labe.Size = new System.Drawing.Size(76, 14);
 			this.ID_labe.TabIndex = 184;
-			this.ID_labe.Text = "Introduce clave del producto:";
+			this.ID_labe.Text = "Clv. Producto";
 			// 
 			// Precio
 			// 
@@ -384,7 +397,7 @@
 			// 
 			// Cantidad
 			// 
-			this.Cantidad.Location = new System.Drawing.Point(469, 123);
+			this.Cantidad.Location = new System.Drawing.Point(502, 98);
 			this.Cantidad.Name = "Cantidad";
 			this.Cantidad.Size = new System.Drawing.Size(100, 20);
 			this.Cantidad.TabIndex = 182;
@@ -400,16 +413,16 @@
 			// 
 			// Id_producto
 			// 
-			this.Id_producto.Location = new System.Drawing.Point(471, 65);
+			this.Id_producto.Location = new System.Drawing.Point(510, 68);
 			this.Id_producto.Name = "Id_producto";
-			this.Id_producto.Size = new System.Drawing.Size(100, 20);
+			this.Id_producto.Size = new System.Drawing.Size(92, 20);
 			this.Id_producto.TabIndex = 180;
 			this.Id_producto.TextChanged += new System.EventHandler(this.Id_producto_TextChanged);
 			// 
 			// total_box
 			// 
 			this.total_box.Enabled = false;
-			this.total_box.Location = new System.Drawing.Point(491, 270);
+			this.total_box.Location = new System.Drawing.Point(493, 294);
 			this.total_box.Name = "total_box";
 			this.total_box.Size = new System.Drawing.Size(100, 20);
 			this.total_box.TabIndex = 203;
@@ -417,9 +430,10 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(444, 273);
+			this.label1.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.label1.Location = new System.Drawing.Point(446, 297);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(31, 13);
+			this.label1.Size = new System.Drawing.Size(32, 14);
 			this.label1.TabIndex = 204;
 			this.label1.Text = "Total";
 			// 
@@ -484,11 +498,24 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(598, 237);
+			this.label2.Font = new System.Drawing.Font("Britannic Bold", 9F);
+			this.label2.Location = new System.Drawing.Point(600, 261);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(61, 13);
+			this.label2.Size = new System.Drawing.Size(66, 14);
 			this.label2.TabIndex = 206;
 			this.label2.Text = "Efectivo ($)";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+			this.label4.Location = new System.Drawing.Point(568, 9);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(85, 31);
+			this.label4.TabIndex = 207;
+			this.label4.Text = "Venta";
+			this.label4.Visible = false;
 			// 
 			// Venta
 			// 
@@ -496,6 +523,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(771, 495);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.total_box);
@@ -592,5 +620,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inventario_Id;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label4;
 	}
 }
