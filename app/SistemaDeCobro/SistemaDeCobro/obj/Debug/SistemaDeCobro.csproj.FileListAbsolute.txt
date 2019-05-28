@@ -83,3 +83,6 @@ C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\Siste
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\itextsharp.dll
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\itextsharp.xml
 C:\Users\Efrain\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.csproj.CopyComplete
+C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\itextsharp.dll
+C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\bin\Debug\itextsharp.xml
+C:\Users\Jorge\Documents\GitHub\Administracion-de-tienda-de-abarrotes\app\SistemaDeCobro\SistemaDeCobro\obj\Debug\SistemaDeCobro.Venta.resources
