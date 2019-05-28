@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonModificarProd = new System.Windows.Forms.Button();
             this.buttonEliminarProd = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -52,6 +52,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textProveedor = new System.Windows.Forms.TextBox();
             this.cBPerecedero = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -63,7 +65,7 @@
             this.buttonModificarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificarProd.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificarProd.ForeColor = System.Drawing.Color.White;
-            this.buttonModificarProd.Location = new System.Drawing.Point(349, 394);
+            this.buttonModificarProd.Location = new System.Drawing.Point(381, 442);
             this.buttonModificarProd.Name = "buttonModificarProd";
             this.buttonModificarProd.Size = new System.Drawing.Size(87, 39);
             this.buttonModificarProd.TabIndex = 163;
@@ -78,7 +80,7 @@
             this.buttonEliminarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminarProd.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarProd.ForeColor = System.Drawing.Color.White;
-            this.buttonEliminarProd.Location = new System.Drawing.Point(349, 394);
+            this.buttonEliminarProd.Location = new System.Drawing.Point(381, 442);
             this.buttonEliminarProd.Name = "buttonEliminarProd";
             this.buttonEliminarProd.Size = new System.Drawing.Size(87, 39);
             this.buttonEliminarProd.TabIndex = 162;
@@ -89,7 +91,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(221, 147);
+            this.monthCalendar1.Location = new System.Drawing.Point(253, 195);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             this.monthCalendar1.Visible = false;
@@ -100,7 +102,7 @@
             this.btn_agregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregarProducto.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregarProducto.ForeColor = System.Drawing.Color.White;
-            this.btn_agregarProducto.Location = new System.Drawing.Point(324, 383);
+            this.btn_agregarProducto.Location = new System.Drawing.Point(352, 442);
             this.btn_agregarProducto.Name = "btn_agregarProducto";
             this.btn_agregarProducto.Size = new System.Drawing.Size(87, 39);
             this.btn_agregarProducto.TabIndex = 7;
@@ -113,7 +115,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(481, 164);
+            this.pictureBox1.Location = new System.Drawing.Point(513, 212);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(145, 125);
             this.pictureBox1.TabIndex = 160;
@@ -124,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(175, 323);
+            this.label4.Location = new System.Drawing.Point(207, 371);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 14);
             this.label4.TabIndex = 159;
@@ -134,18 +136,19 @@
             // textProducto
             // 
             this.textProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textProducto.Location = new System.Drawing.Point(221, 64);
+            this.textProducto.Location = new System.Drawing.Point(253, 112);
             this.textProducto.MaxLength = 20;
             this.textProducto.Name = "textProducto";
             this.textProducto.Size = new System.Drawing.Size(248, 20);
             this.textProducto.TabIndex = 1;
             this.textProducto.Visible = false;
+            this.textProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textProducto_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(149, 349);
+            this.label5.Location = new System.Drawing.Point(181, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 14);
             this.label5.TabIndex = 158;
@@ -156,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(155, 147);
+            this.label3.Location = new System.Drawing.Point(187, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 14);
             this.label3.TabIndex = 157;
@@ -166,18 +169,19 @@
             // textPrecio
             // 
             this.textPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPrecio.Location = new System.Drawing.Point(221, 321);
+            this.textPrecio.Location = new System.Drawing.Point(253, 369);
             this.textPrecio.MaxLength = 20;
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(248, 20);
             this.textPrecio.TabIndex = 5;
             this.textPrecio.Visible = false;
+            this.textPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPrecio_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 66);
+            this.label1.Location = new System.Drawing.Point(149, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 14);
             this.label1.TabIndex = 156;
@@ -188,7 +192,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(163, 117);
+            this.label2.Location = new System.Drawing.Point(195, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 14);
             this.label2.TabIndex = 155;
@@ -198,26 +202,27 @@
             // textCantidad
             // 
             this.textCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCantidad.Location = new System.Drawing.Point(221, 115);
+            this.textCantidad.Location = new System.Drawing.Point(253, 163);
             this.textCantidad.MaxLength = 20;
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(248, 20);
             this.textCantidad.TabIndex = 3;
             this.textCantidad.Visible = false;
+            this.textCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCantidad_KeyPress);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(128, 112);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(556, 303);
             this.dataGridView1.TabIndex = 154;
@@ -234,7 +239,7 @@
             this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(771, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(787, 25);
             this.menuStrip1.TabIndex = 164;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -274,7 +279,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(140, 91);
+            this.label6.Location = new System.Drawing.Point(172, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 14);
             this.label6.TabIndex = 166;
@@ -284,7 +289,7 @@
             // textProveedor
             // 
             this.textProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textProveedor.Location = new System.Drawing.Point(221, 89);
+            this.textProveedor.Location = new System.Drawing.Point(253, 137);
             this.textProveedor.MaxLength = 20;
             this.textProveedor.Name = "textProveedor";
             this.textProveedor.Size = new System.Drawing.Size(248, 20);
@@ -297,18 +302,43 @@
             this.cBPerecedero.Items.AddRange(new object[] {
             "Sí",
             "No"});
-            this.cBPerecedero.Location = new System.Drawing.Point(221, 347);
+            this.cBPerecedero.Location = new System.Drawing.Point(253, 395);
             this.cBPerecedero.Name = "cBPerecedero";
             this.cBPerecedero.Size = new System.Drawing.Size(248, 21);
             this.cBPerecedero.TabIndex = 6;
             this.cBPerecedero.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label13.Location = new System.Drawing.Point(281, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(134, 30);
+            this.label13.TabIndex = 167;
+            this.label13.Text = "Inventario";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(297, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(204, 21);
+            this.label7.TabIndex = 168;
+            this.label7.Text = "Seleccione un producto";
+            this.label7.Visible = false;
             // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(771, 495);
+            this.ClientSize = new System.Drawing.Size(787, 534);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.cBPerecedero);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textProveedor);
@@ -363,5 +393,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textProveedor;
         private System.Windows.Forms.ComboBox cBPerecedero;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label7;
     }
 }
