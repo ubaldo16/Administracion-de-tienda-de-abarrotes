@@ -21,6 +21,11 @@ namespace SistemaDeCobro
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Muestra los campos de alta producto.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void altasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             label13.Text = "Alta producto";
@@ -30,6 +35,11 @@ namespace SistemaDeCobro
             habilitarAltas();
         }
 
+        /// <summary>
+        /// Muestra tabla de productos para seleccionar producto que se dará de baja.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bajasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             label13.Text = "Eliminar producto";
@@ -40,6 +50,11 @@ namespace SistemaDeCobro
             buttonEliminarProd.Visible = true;
         }
 
+        /// <summary>
+        /// Muestra tabla de productos para seleccionar producto que se modificará.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void modificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             label13.Text = "Modificar producto";
@@ -50,6 +65,11 @@ namespace SistemaDeCobro
             buttonModificarProd.Visible = true;
         }
 
+        /// <summary>
+        /// Muestra tabla de productos para su consulta.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             label13.Text = "Consulta producto";
@@ -59,6 +79,11 @@ namespace SistemaDeCobro
             generateTable();
         }
 
+        /// <summary>
+        /// Botón "Agregar" producto; Registra nuevo producto o lo modifica, según se deseé.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_agregarProducto_Click(object sender, EventArgs e)
         {
             if (bandAltas == 0)
@@ -67,6 +92,11 @@ namespace SistemaDeCobro
                 update();
         }
 
+        /// <summary>
+        /// Botón "Modificar" producto; Muestra los campos de producto con los datos del artículo a modificar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModificarProd_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
@@ -75,6 +105,11 @@ namespace SistemaDeCobro
             bandAltas = 1;
         }
 
+        /// <summary>
+        /// Botón "Eliminar" producto; quita artículo de la tabla de productos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonEliminarProd_Click(object sender, EventArgs e)
         {
             DialogResult respuesta; //Guarda la accion del messageBox.
@@ -108,6 +143,9 @@ namespace SistemaDeCobro
             }
         }
 
+        /// <summary>
+        /// Genera la tabla del inventario donde se muestran todos los productos.
+        /// </summary>
         private void generateTable()
         {
             try
@@ -133,6 +171,9 @@ namespace SistemaDeCobro
             }
         }
 
+        /// <summary>
+        /// Limpia los campos de alta y modifica producto.
+        /// </summary>
         void limpiarAltas()
         {
             textCantidad.Text = "";
@@ -143,6 +184,9 @@ namespace SistemaDeCobro
             monthCalendar1.Update();
         }
 
+        /// <summary>
+        /// Habilita los campos de alta producto.
+        /// </summary>
         void habilitarAltas()
         {
             bandAltas = 0;
@@ -167,6 +211,9 @@ namespace SistemaDeCobro
             buttonEliminarProd.Visible = false;
         }
 
+        /// <summary>
+        /// Deshabilita los campos de alta producto.
+        /// </summary>
         void deshabilitarAltas()
         {
             label1.Visible = false;
@@ -190,6 +237,9 @@ namespace SistemaDeCobro
             buttonModificarProd.Visible = false;
         }
 
+        /// <summary>
+        /// Realiza la conexión a la base de datos para registrar el nuevo producto.
+        /// </summary>
         private void WorkedRegister()
         {
             try
@@ -219,6 +269,9 @@ namespace SistemaDeCobro
 
         }
 
+        /// <summary>
+        /// Rellena los campos de "modifcar producto" con los datos ya existentes en base de datos del producto seleccionado.
+        /// </summary>
         private void llenarDatos()
         {
             habilitarAltas();
@@ -256,6 +309,9 @@ namespace SistemaDeCobro
             }
         }
 
+        /// <summary>
+        /// Realiza conexión con la base de datos y actualiza los datos del producto modificado.
+        /// </summary>
         private void update()
         {
             try
