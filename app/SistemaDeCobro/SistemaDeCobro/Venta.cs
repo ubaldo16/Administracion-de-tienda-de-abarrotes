@@ -354,9 +354,9 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
-			doc.Add(new Paragraph("San Luis Potosi, San Luis Potosi"));
-			doc.Add(new Paragraph("Direccion: Zaragoza #523"));
-			doc.Add(new Paragraph("Telefono: (444)-507-66-83"));
+			doc.Add(new Paragraph("San Luis Potosí, San Luis Potosí"));
+			doc.Add(new Paragraph("Dirección: Zaragoza #523"));
+			doc.Add(new Paragraph("Teléfono: (444)-507-66-83"));
 			doc.Add(new Paragraph("E-mail: LosPinosAbarrotes@gmail.com"));
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
 			doc.Add(new Paragraph("                       "));
@@ -367,7 +367,7 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
-			doc.Add(new Paragraph("cantidad" + "     " + "Articulo" + "     " + "Subtotal"+"     "+ "Total"));
+			doc.Add(new Paragraph("Cantidad" + "     " + "Artículo" + "     " + "Subtotal"+"     "+ "Total"));
 			doc.Add(new Paragraph("                       "));			
 			doc.Add(new Paragraph(articulos));
 			doc.Add(new Paragraph("                       "));
@@ -379,7 +379,7 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
-			doc.Add(new Paragraph("							Gracias Por su preferencia               "));
+			doc.Add(new Paragraph("							Gracias por su preferencia               "));
 			doc.Add(new Paragraph("_______________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
 			doc.Close();
 			Process.Start("Ticket.pdf");//Esta parte se puede omitir, si solo se desea guardar el archivo, y que este no se ejecute al instante
