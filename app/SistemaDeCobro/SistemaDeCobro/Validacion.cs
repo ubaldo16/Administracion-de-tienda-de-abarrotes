@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaDeCobro
-{
+{/// <summary>
+/// Clase utilizada para validaciones
+/// </summary>
 	class Validacion
 	{
 		public static void SoloLetras(KeyPressEventArgs v)
