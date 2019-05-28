@@ -122,7 +122,7 @@
 			// 
 			this.textboxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textboxUser.Location = new System.Drawing.Point(290, 67);
-			this.textboxUser.MaxLength = 20;
+			this.textboxUser.MaxLength = 13;
 			this.textboxUser.Name = "textboxUser";
 			this.textboxUser.Size = new System.Drawing.Size(100, 20);
 			this.textboxUser.TabIndex = 85;
@@ -140,6 +140,7 @@
 			this.Controls.Add(this.textBoxPass);
 			this.Controls.Add(this.textboxUser);
 			this.Name = "Login";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
