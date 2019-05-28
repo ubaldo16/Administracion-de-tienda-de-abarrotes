@@ -23,6 +23,7 @@ namespace SistemaDeCobro
         Usuario usu;
 		int total1;
 		string canti, arti, subt;
+		string articulos = "";
         //private Usuario usu;
         public Venta(Usuario u)
         {
@@ -151,7 +152,8 @@ namespace SistemaDeCobro
 			canti = Cantidad.Text;
 			subt = Precio.Text;
 			arti = Nombre.Text;
-            total_box.Text = Convert.ToString(Total);
+			articulos += "      " + canti + "      " + arti + "     " + subt + "     " + total1.ToString() + "\n";
+			total_box.Text = Convert.ToString(Total);
 			total1 = Int32.Parse(Precio.Text) * Int32.Parse(Cantidad.Text);
 			try
             {
@@ -332,13 +334,13 @@ namespace SistemaDeCobro
 			SaveFileDialog saveFileDialog1 = new SaveFileDialog();//instancia para guardar los datos
 			string path = Directory.GetCurrentDirectory();
 			saveFileDialog1.InitialDirectory = path;
-			saveFileDialog1.Title = "Boleto";//Titulo del documento
+			saveFileDialog1.Title = "Ticket";//Titulo del documento
 			saveFileDialog1.DefaultExt = "pdf";//Extencion del documento
 			saveFileDialog1.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";//Tipo de archivo
 			saveFileDialog1.FilterIndex = 2;
 			saveFileDialog1.RestoreDirectory = true;
 
-			FileStream file = new FileStream("Boleto.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);//Creamos y escribimos en el PDF
+			FileStream file = new FileStream("Ticket.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);//Creamos y escribimos en el PDF
 			PdfWriter.GetInstance(doc, file);
 			doc.Open();//Abrimos el docuemnto
 			string remito = "Empleado: " + ID_emp_tex.Text;
@@ -367,7 +369,7 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("cantidad" + "     " + "Articulo" + "     " + "Subtotal"+"     "+ "Total"));
 			doc.Add(new Paragraph("                       "));			
-			doc.Add(new Paragraph("      " + canti + "      " + arti + "     " + subt + "     " + total1.ToString()));
+			doc.Add(new Paragraph(articulos));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("			Total de la venta: " + Total));
 			doc.Add(new Paragraph("			Pago un total de: " + total_box.Text));
@@ -378,9 +380,9 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("							Gracias Por su preferencia               "));
-			doc.Add(new Paragraph("___________________________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
+			doc.Add(new Paragraph("_______________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
 			doc.Close();
-			Process.Start("Boleto.pdf");//Esta parte se puede omitir, si solo se desea guardar el archivo, y que este no se ejecute al instante
+			Process.Start("Ticket.pdf");//Esta parte se puede omitir, si solo se desea guardar el archivo, y que este no se ejecute al instante
 
 		}
 	}
