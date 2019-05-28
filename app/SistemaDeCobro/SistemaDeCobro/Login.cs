@@ -11,27 +11,14 @@ using System.Windows.Forms;
 
 namespace SistemaDeCobro
 {
-    /// <summary>
-    /// clase utilizada para el login del usuario
-    /// </summary>
 	public partial class Login : Form
 	{
         Usuario usu;
-
-        /// <summary>
-        /// constructor de la form
-        /// </summary>
 		public Login()
 		{
 			InitializeComponent();
 		}
 
-
-        /// <summary>
-        /// metodo utilizado para realizar el logeo del usuario
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 		private void buttonLog_Click(object sender, EventArgs e) //Login
 		{           
             string cmdText = "select Count(*) from Empleado where RFC=? and [Contraseña]=?";

@@ -13,39 +13,19 @@ namespace SistemaDeCobro
 {
     public partial class UsuariosL : Form
     {
-        /// <summary>
-        /// variable auxiliar utilizada para guardar el usuario
-        /// </summary>
         string auxiliar = "";
 
-        /// <summary>
-        ///declaracion de la clase de validaciones
-        /// </summary>
-        Validacion val =new Validacion();
-
-
-        /// <summary>
-        /// constructor de la forma donde inicializa el constructor
-        /// </summary>
         public UsuariosL()
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Metodo utilizado para el cargador de la forma donde se carga la tabla 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void UsuariosL_Load(object sender, EventArgs e)
         {
             generateTable();
             TablaVisible(true, false);
         }
 
-
-        /// <summary>
-        /// Metodo que realiza la consulta de los empleados y lo carga en el datagridview
-        /// </summary>
         private void generateTable()
         {
             try
@@ -72,12 +52,6 @@ namespace SistemaDeCobro
             }
         }
 
-
-        /// <summary>
-        /// metodo utilizado de button delete donde busca un registro y lo elimina de la base
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ButDelete_Click(object sender, EventArgs e)
         {
             try
@@ -102,12 +76,6 @@ namespace SistemaDeCobro
             generateTable();
         }
 
-
-        /// <summary>
-        /// metodo utilizado para cambiar de ventana al modificar
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Modificar_Click(object sender, EventArgs e)
         {
             TablaVisible(false, true);
@@ -115,11 +83,6 @@ namespace SistemaDeCobro
 			Cancel.Visible = true;
         }
 
-
-
-        /// <summary>
-        /// metodo el cual genera la actualizacion del registro en la base de datos
-        /// </summary>
         private void update()
         {
             try
@@ -147,12 +110,6 @@ namespace SistemaDeCobro
 
         }
 
-
-        /// <summary>
-        /// metodo utilizado para habilitar la visibilidad de los componentes
-        /// </summary>
-        /// <param name="ban2">bandera para componente de muestra</param>
-        /// <param name="ban"> bandera para componentes de modificar</param>
         private void TablaVisible(bool ban2,bool ban)
         {
             
@@ -188,16 +145,11 @@ namespace SistemaDeCobro
                 label12.Visible = ban;
                 label13.Visible = ban;
                 ButAdd.Visible = ban;
-                Cancel.Visible = ban;
-
+            
 
 
         }
 
-
-        /// <summary>
-        /// metodo utilizado para el llenado automatico de campos al modificar
-        /// </summary>
         private void llenarCampos()
         {
             try
@@ -237,12 +189,6 @@ namespace SistemaDeCobro
             }
         }
 
-
-        /// <summary>
-        /// realiza la accion de modificar en base de datos
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ButAdd_Click(object sender, EventArgs e)
         {
             update();
@@ -250,86 +196,11 @@ namespace SistemaDeCobro
             TablaVisible(true, false);
         }
 
-        /// <summary>
-        /// realiza la accion de cancelar al modificar
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
         private void Cancel_Click(object sender, EventArgs e)
         {
             generateTable();
             TablaVisible(true, false);
 			Cancel.Visible = false;
 		}
-
-        private void textRFC_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
-
-
-        /// <summary>
-        /// metodo de validar del nombre
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validacion.SoloLetras(e);
-        }
-
-        /// <summary>
-        /// metodo de validar de telefono
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textTel_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validacion.SoloNumeros(e);
-        }
-
-
-        /// <summary>
-        /// metodo de validar numero exterior
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textNumExt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validacion.SoloNumeros(e);
-        }
-
-        /// <summary>
-        /// metodo de validar codigo postal
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textCP_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validacion.SoloNumeros(e);
-        }
-
-
-        /// <summary>
-        /// metodo de validar apellido paterno
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textApellidoP_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validacion.SoloLetras(e);
-        }
-
-
-        /// <summary>
-        /// metodo de validar apellido materno
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textApellidoM_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validacion.SoloLetras(e);
-        }
     }
 }

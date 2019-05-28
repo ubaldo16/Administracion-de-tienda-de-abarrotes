@@ -5,68 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaDeCobro
-{/// <summary>
-/// clase utilizada para el usuario
-/// </summary>
+{
     public class Usuario
     {
-        /// <summary>
-        /// campo uyilizado para el RFC
-        /// </summary>
         private string rfc;
-        /// <summary>
-        /// campo utilizado para el nombre
-        /// </summary>
         private string nombre;
-
-        /// <summary>
-        /// campo tilizado para el privilego
-        /// </summary>
         private int privilegio;
-
-        /// <summary>
-        /// campo utilizado para apellido materno
-        /// </summary>
         private string apellidom;
-
-        /// <summary>
-        /// campo utilizado para apellido paterno
-        /// </summary>
         private string apellidop;
-
-        /// <summary>
-        /// campo utilizado telefono
-        /// </summary>
         private int telefono;
-
-        /// <summary>
-        /// campo utilizado calle
-        /// </summary>
         private string calle;
-
-        /// <summary>
-        /// campo utilizado para la colonia
-        /// </summary>
         private string colonia;
-
-        /// <summary>
-        /// campo utilizado para el numero exterior
-        /// </summary>
         private int numero;
-
-        /// <summary>
-        /// campo utilizadopara codigo postal
-        /// </summary>
         private int cp;
-
-        /// <summary>
-        /// campo utilizado para la contraseña
-        /// </summary>
         private string contraseña;
-
-        /// <summary>
-        /// campo utilizado para el tipo
-        /// </summary>
         private int tipo;
        
  
