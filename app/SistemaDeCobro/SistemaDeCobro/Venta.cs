@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Diagnostics;
+using System.IO;
+using System.Data.OleDb;
+
 
 namespace SistemaDeCobro
 {
@@ -16,6 +21,8 @@ namespace SistemaDeCobro
         double Total;
         double sub_prod;
         Usuario usu;
+		int total1;
+		string canti, arti, subt;
         //private Usuario usu;
         public Venta(Usuario u)
         {
@@ -141,8 +148,12 @@ namespace SistemaDeCobro
         {
             int idven;
             Total = sub_prod + Total;
+			canti = Cantidad.Text;
+			subt = Precio.Text;
+			arti = Nombre.Text;
             total_box.Text = Convert.ToString(Total);
-            try
+			total1 = Int32.Parse(Precio.Text) * Int32.Parse(Cantidad.Text);
+			try
             {
                 OleDbCommand cmd = new OleDbCommand();
 
@@ -278,7 +289,9 @@ namespace SistemaDeCobro
                 }
                 inserta_dat_detall();
             }
-        }
+			To_pdf();
+
+		}
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
@@ -312,5 +325,63 @@ namespace SistemaDeCobro
                 inserta_dat_detall();
             }
         }
-    }
+
+		private void To_pdf()
+		{
+			Document doc = new Document(PageSize.A5 , 10, 10, 10, 10);//Variable de tipo documento y su instancia
+			SaveFileDialog saveFileDialog1 = new SaveFileDialog();//instancia para guardar los datos
+			string path = Directory.GetCurrentDirectory();
+			saveFileDialog1.InitialDirectory = path;
+			saveFileDialog1.Title = "Boleto";//Titulo del documento
+			saveFileDialog1.DefaultExt = "pdf";//Extencion del documento
+			saveFileDialog1.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";//Tipo de archivo
+			saveFileDialog1.FilterIndex = 2;
+			saveFileDialog1.RestoreDirectory = true;
+
+			FileStream file = new FileStream("Boleto.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);//Creamos y escribimos en el PDF
+			PdfWriter.GetInstance(doc, file);
+			doc.Open();//Abrimos el docuemnto
+			string remito = "Empleado: " + ID_emp_tex.Text;
+			string fecha = "Fecha:" + DateTime.Now.ToString();
+
+			/*
+             *En las siguientes lineas creamos el diseño del boleto que se imprimira 
+             */
+			Chunk chunk = new Chunk("Tienda de abarrotes \"Los Pinos\" ", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD));
+			doc.Add(new Paragraph(chunk));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
+			doc.Add(new Paragraph("San Luis Potosi, San Luis Potosi"));
+			doc.Add(new Paragraph("Direccion: Zaragoza #523"));
+			doc.Add(new Paragraph("Telefono: (444)-507-66-83"));
+			doc.Add(new Paragraph("E-mail: LosPinosAbarrotes@gmail.com"));
+			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph(remito));
+			doc.Add(new Paragraph(fecha));
+			doc.Add(new Paragraph("Caja: 1"));
+			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("cantidad" + "     " + "Articulo" + "     " + "Subtotal"+"     "+ "Total"));
+			doc.Add(new Paragraph("                       "));			
+			doc.Add(new Paragraph("      " + canti + "      " + arti + "     " + subt + "     " + total1.ToString()));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("			Total de la venta: " + Total));
+			doc.Add(new Paragraph("			Pago un total de: " + total_box.Text));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("                       "));			
+			doc.AddCreationDate();
+			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("                       "));
+			doc.Add(new Paragraph("							Gracias Por su preferencia               "));
+			doc.Add(new Paragraph("___________________________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
+			doc.Close();
+			Process.Start("Boleto.pdf");//Esta parte se puede omitir, si solo se desea guardar el archivo, y que este no se ejecute al instante
+
+		}
+	}
 }

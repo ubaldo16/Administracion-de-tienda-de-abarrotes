@@ -54,7 +54,6 @@
 			this.ID_emp_tex = new System.Windows.Forms.TextBox();
 			this.Id_venta_tex = new System.Windows.Forms.TextBox();
 			this.Cambio_label = new System.Windows.Forms.Label();
-			this.Efectivo_label = new System.Windows.Forms.Label();
 			this.Fecha_label = new System.Windows.Forms.Label();
 			this.ID_venta_label = new System.Windows.Forms.Label();
 			this.ID_empl_label = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@
 			this.idDetalleVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.VentaTableAdapter();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).BeginInit();
@@ -149,7 +149,7 @@
             this.precioDataGridViewTextBoxColumn,
             this.perecederoDataGridViewTextBoxColumn});
 			this.tabla_uso.DataSource = this.inventarioBindingSource;
-			this.tabla_uso.Location = new System.Drawing.Point(461, 433);
+			this.tabla_uso.Location = new System.Drawing.Point(402, 407);
 			this.tabla_uso.Name = "tabla_uso";
 			this.tabla_uso.Size = new System.Drawing.Size(241, 45);
 			this.tabla_uso.TabIndex = 1;
@@ -209,7 +209,7 @@
 			// Subtotal_lab
 			// 
 			this.Subtotal_lab.AutoSize = true;
-			this.Subtotal_lab.Location = new System.Drawing.Point(454, 224);
+			this.Subtotal_lab.Location = new System.Drawing.Point(440, 237);
 			this.Subtotal_lab.Name = "Subtotal_lab";
 			this.Subtotal_lab.Size = new System.Drawing.Size(46, 13);
 			this.Subtotal_lab.TabIndex = 202;
@@ -218,7 +218,7 @@
 			// Subtotal_box
 			// 
 			this.Subtotal_box.Enabled = false;
-			this.Subtotal_box.Location = new System.Drawing.Point(505, 221);
+			this.Subtotal_box.Location = new System.Drawing.Point(491, 234);
 			this.Subtotal_box.Name = "Subtotal_box";
 			this.Subtotal_box.Size = new System.Drawing.Size(100, 20);
 			this.Subtotal_box.TabIndex = 201;
@@ -270,16 +270,6 @@
 			this.Cambio_label.TabIndex = 195;
 			this.Cambio_label.Text = "Cambio";
 			// 
-			// Efectivo_label
-			// 
-			this.Efectivo_label.AutoSize = true;
-			this.Efectivo_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.Efectivo_label.Location = new System.Drawing.Point(656, 204);
-			this.Efectivo_label.Name = "Efectivo_label";
-			this.Efectivo_label.Size = new System.Drawing.Size(89, 13);
-			this.Efectivo_label.TabIndex = 194;
-			this.Efectivo_label.Text = "Efectivo recibido:";
-			// 
 			// Fecha_label
 			// 
 			this.Fecha_label.AutoSize = true;
@@ -312,7 +302,7 @@
 			this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Cancelar.ForeColor = System.Drawing.Color.White;
-			this.Cancelar.Location = new System.Drawing.Point(676, 404);
+			this.Cancelar.Location = new System.Drawing.Point(666, 423);
 			this.Cancelar.Name = "Cancelar";
 			this.Cancelar.Size = new System.Drawing.Size(75, 23);
 			this.Cancelar.TabIndex = 190;
@@ -325,7 +315,7 @@
 			this.Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
 			this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Modificar.ForeColor = System.Drawing.Color.White;
-			this.Modificar.Location = new System.Drawing.Point(659, 346);
+			this.Modificar.Location = new System.Drawing.Point(558, 346);
 			this.Modificar.Name = "Modificar";
 			this.Modificar.Size = new System.Drawing.Size(92, 23);
 			this.Modificar.TabIndex = 189;
@@ -419,7 +409,7 @@
 			// total_box
 			// 
 			this.total_box.Enabled = false;
-			this.total_box.Location = new System.Drawing.Point(505, 257);
+			this.total_box.Location = new System.Drawing.Point(491, 270);
 			this.total_box.Name = "total_box";
 			this.total_box.Size = new System.Drawing.Size(100, 20);
 			this.total_box.TabIndex = 203;
@@ -427,7 +417,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(458, 260);
+			this.label1.Location = new System.Drawing.Point(444, 273);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(31, 13);
 			this.label1.TabIndex = 204;
@@ -491,12 +481,22 @@
 			// 
 			this.ventaTableAdapter.ClearBeforeFill = true;
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(598, 237);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(61, 13);
+			this.label2.TabIndex = 206;
+			this.label2.Text = "Efectivo ($)";
+			// 
 			// Venta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(771, 495);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.total_box);
 			this.Controls.Add(this.Subtotal_lab);
@@ -507,7 +507,6 @@
 			this.Controls.Add(this.ID_emp_tex);
 			this.Controls.Add(this.Id_venta_tex);
 			this.Controls.Add(this.Cambio_label);
-			this.Controls.Add(this.Efectivo_label);
 			this.Controls.Add(this.Fecha_label);
 			this.Controls.Add(this.ID_venta_label);
 			this.Controls.Add(this.ID_empl_label);
@@ -565,7 +564,6 @@
         private System.Windows.Forms.TextBox ID_emp_tex;
         private System.Windows.Forms.TextBox Id_venta_tex;
         private System.Windows.Forms.Label Cambio_label;
-        private System.Windows.Forms.Label Efectivo_label;
         private System.Windows.Forms.Label Fecha_label;
         private System.Windows.Forms.Label ID_venta_label;
         private System.Windows.Forms.Label ID_empl_label;
@@ -593,5 +591,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inventario_Id;
-    }
+		private System.Windows.Forms.Label label2;
+	}
 }
