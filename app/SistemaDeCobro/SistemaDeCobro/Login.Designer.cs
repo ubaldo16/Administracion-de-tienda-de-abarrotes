@@ -121,6 +121,7 @@
 			// textboxUser
 			// 
 			this.textboxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.textboxUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
 			this.textboxUser.Location = new System.Drawing.Point(290, 67);
 			this.textboxUser.MaxLength = 13;
 			this.textboxUser.Name = "textboxUser";

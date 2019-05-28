@@ -14,6 +14,7 @@ namespace SistemaDeCobro
 	public partial class Proveedores : Form
 	{
 		Boolean vis1 = false, vis2 = false;
+		string auxiliar = "";
 		public Proveedores()
 		{
 			
@@ -59,7 +60,7 @@ namespace SistemaDeCobro
 				DataTable results = new DataTable();
 				using (OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
 				{
-					OleDbCommand cmd = new OleDbCommand(@"Select * from PRoveedor", conexion);
+					OleDbCommand cmd = new OleDbCommand(@"Select * from Proveedor", conexion);
 					conexion.Open();
 					OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
 					adapter.Fill(results);
@@ -84,6 +85,7 @@ namespace SistemaDeCobro
 			ButDelete.Visible = true;
 			Modificar.Visible = true;
 			button1.Visible = true;
+			label1.Visible = true;
 		}
 		private void Provee()
 		{
@@ -104,7 +106,7 @@ namespace SistemaDeCobro
 			textTel.Visible = false;
 			buttonBuscar.Visible = false;
 			ButAdd.Visible = false;
-			label1.Visible = false;
+			label3.Visible = false;
 		}
 
 
@@ -128,11 +130,17 @@ namespace SistemaDeCobro
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			visibilidad();
+		}
+
+		public void visibilidad()
+		{
 			dataGridView1.Visible = false;
 			buttonSelection.Visible = false;
 			ButDelete.Visible = false;
 			Modificar.Visible = false;
 			button1.Visible = false;
+			label1.Visible = false;
 
 			pictureBox1.Visible = true;
 			label10.Visible = true;
@@ -151,7 +159,7 @@ namespace SistemaDeCobro
 			textTel.Visible = true;
 			buttonBuscar.Visible = true;
 			ButAdd.Visible = true;
-			label1.Visible = true;
+			label3.Visible = true;
 		}
 
 		private void textTel_KeyPress(object sender, KeyPressEventArgs e)
@@ -176,12 +184,105 @@ namespace SistemaDeCobro
 
         private void Modificar_Click(object sender, EventArgs e)
         {
+			
+			visibilidad();
+			llenarCampos();
+			Cancel.Visible = true;
+			button2.Visible = true;
+			ButAdd.Visible = false;
+			buttonBuscar.Visible = false;
+		}
 
-        }
+		private void textCP_TextChanged(object sender, EventArgs e)
+		{
 
-        private void ButAdd_Click(object sender, EventArgs e)
+		}
+
+		private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();
+		}
+
+		private void Cancel_Click(object sender, EventArgs e)
+		{
+			generateTable();
+			ListaProvee();
+			Provee();
+			Cancel.Visible = false;
+			button2.Visible = false;
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			update();
+			generateTable();
+			button2.Visible = false;
+			ListaProvee();
+			Provee();
+			Cancel.Visible = false;
+		}
+
+		private void update()
+		{
+			try
+			{
+				OleDbCommand cmd = new OleDbCommand();
+
+				OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB);
+				cmd.Connection = conexion;
+				conexion.Open();
+				string update = "UPDATE Proveedor SET RFC='" + textRFC.Text + "', Nombre='" + textNombre.Text + "', Calle='" + textCalle.Text + "', Colonia='" + textCol.Text + "', Numero='" + Int32.Parse(textNumExt.Text) + "',CP='" + Int32.Parse(textCP.Text) + "', Numero_Telefonico='" + textTel.Text + "' WHERE RFC='" + auxiliar + "';";
+				cmd.CommandText = @update;
+				cmd.ExecuteNonQuery();
+				MessageBox.Show("Registro Modificado");
+				conexion.Close();
+
+			}
+			catch (DBConcurrencyException ex)
+			{
+				MessageBox.Show("Error de concurrencia:\n" + ex.Message);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+
+		}
+
+		private void llenarCampos()
+		{
+			try
+
+			{
+				using (OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
+
+				{
+					conexion.Open();
+					string SqlActions = "SELECT * FROM  Proveedor WHERE RFC = @parametro";
+					OleDbCommand cmd = new OleDbCommand(SqlActions, conexion);
+					cmd.Parameters.AddWithValue("@parametro", dataGridView1.CurrentRow.Cells["RFC"].Value);
+					OleDbDataReader lector = cmd.ExecuteReader();
+
+					if (lector.Read())
+					{
+
+						textRFC.Text = lector["RFC"].ToString();
+						auxiliar = textRFC.Text;
+						textNombre.Text = lector["Nombre"].ToString();
+						textCalle.Text = lector["Calle"].ToString();
+						textCol.Text = lector["Colonia"].ToString();
+						textTel.Text = lector["Numero_Telefonico"].ToString();
+						textCP.Text = lector["CP"].ToString();
+						textNumExt.Text = lector["Numero"].ToString();
+						visibilidad();
+					}
+					conexion.Close();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }

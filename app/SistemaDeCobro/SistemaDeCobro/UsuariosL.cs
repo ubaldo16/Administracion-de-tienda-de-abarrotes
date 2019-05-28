@@ -79,8 +79,8 @@ namespace SistemaDeCobro
         private void Modificar_Click(object sender, EventArgs e)
         {
             TablaVisible(false, true);
-            llenarCampos(); 
-            
+            llenarCampos();
+			Cancel.Visible = true;
         }
 
         private void update()
@@ -200,6 +200,7 @@ namespace SistemaDeCobro
         {
             generateTable();
             TablaVisible(true, false);
-        }
+			Cancel.Visible = false;
+		}
     }
 }
