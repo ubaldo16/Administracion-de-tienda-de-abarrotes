@@ -202,7 +202,7 @@
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(93, 14);
 			this.label9.TabIndex = 138;
-			this.label9.Text = "Numero Exterior";
+			this.label9.Text = "Número Exterior";
 			// 
 			// textNumExt
 			// 
@@ -240,7 +240,7 @@
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(51, 14);
 			this.label7.TabIndex = 136;
-			this.label7.Text = "Telefono";
+			this.label7.Text = "Teléfono";
 			// 
 			// textTel
 			// 
