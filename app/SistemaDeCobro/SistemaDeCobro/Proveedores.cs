@@ -13,6 +13,9 @@ namespace SistemaDeCobro
 {
 	public partial class Proveedores : Form
 	{
+		/// <summary>
+		/// Declaracion de variables locales
+		/// </summary>
 		Boolean vis1 = false, vis2 = false;
 		string auxiliar = "";
 		public Proveedores()
@@ -23,7 +26,11 @@ namespace SistemaDeCobro
 
 		}
 
-
+		/// <summary>
+		/// Este metodo nos permite realizar el alta de proveedores
+		/// mediante su registro en el formulario 
+		/// realiza una coneccion a la base de datos en la tabla Provedor 
+		/// </summary>
 		private void WorkedRegister()
 		{
 			try
@@ -52,6 +59,11 @@ namespace SistemaDeCobro
 
 		}
 
+		/// <summary>
+		/// Metodo para generar la lista de proveedores
+		/// Realiza un aconeccion a la base de datos
+		/// los datos de la tabla de proveedor nos la muestra en un datagrid 
+		/// </summary>
 		private void generateTable()
 		{
 			try
@@ -78,6 +90,10 @@ namespace SistemaDeCobro
 			}
 		}
 
+		/// <summary>
+		/// metodo que nos permite visualizar la pantalla de
+		/// lista de prveedores 
+		/// </summary>
 		private void ListaProvee()
 		{
 			dataGridView1.Visible = true;
@@ -87,6 +103,12 @@ namespace SistemaDeCobro
 			button1.Visible = true;
 			label1.Visible = true;
 		}
+
+		/// <summary>
+		/// Este metodo trabaj en conjunto con ListaProvee
+		/// para pder visualizar la pantalla de 
+		/// lista de proveedores
+		/// </summary>
 		private void Provee()
 		{
 			pictureBox1.Visible = false;
@@ -115,6 +137,11 @@ namespace SistemaDeCobro
 
 		}
 
+		/// <summary>
+		/// Eento del boton buscar proveedores
+		/// este nos permite
+		/// mostrar la pantalla de lista de proveedores
+		/// </summary>
 		private void buttonBuscar_Click(object sender, EventArgs e)
 		{
 			vis1 = true;
@@ -128,11 +155,20 @@ namespace SistemaDeCobro
 
 		}
 
+		/// <summary>
+		/// Evento que nos permite regresar 
+		/// a la pantalla de registro de proveedores
+		/// </summary>
 		private void button1_Click(object sender, EventArgs e)
 		{
 			visibilidad();
 		}
 
+
+		/// <summary>
+		/// Metodo que permite visualizar
+		/// nueva mente la pantalla de registro de proveedores
+		/// </summary>
 		public void visibilidad()
 		{
 			dataGridView1.Visible = false;
@@ -162,26 +198,51 @@ namespace SistemaDeCobro
 			label3.Visible = true;
 		}
 
+		/// <summary>
+		/// Evento que permite reslizar
+		/// la validacion de que en el textbox del telefono solo
+		/// acepte numeros
+		/// </summary>
 		private void textTel_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			Validacion.SoloNumeros(e);
 		}
 
+		/// <summary>
+		/// Evento que permite reslizar
+		/// la validacion de que en el textbox del numero exterior solo
+		/// acepte numeros
+		/// </summary>
 		private void textNumExt_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			Validacion.SoloNumeros(e);
 		}
 
+		/// <summary>
+		/// Evento que permite reslizar
+		/// la validacion de que en el textbox del codigo postal solo
+		/// acepte numeros
+		/// </summary>
 		private void textCP_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			Validacion.SoloNumeros(e);
 		}
 
+
+		/// <summary>
+		/// Evento que permite reslizar
+		/// la validacion de que en el textbox del nombre solo
+		/// acepte letras
+		/// </summary>
 		private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			Validacion.SoloLetras(e);
 		}
 
+
+		/// <summary>
+		/// Evento para realizar la modificacion de algun proveedor
+		/// </summary>
         private void Modificar_Click(object sender, EventArgs e)
         {
 			
@@ -201,12 +262,22 @@ namespace SistemaDeCobro
 
 		}
 
+
+		/// <summary>
+		/// Este evento permite agregar un nuevo
+		/// proveedor a la lista de proveedores
+		/// </summary>
 		private void ButAdd_Click(object sender, EventArgs e)
 		{
 			WorkedRegister();
 			vaciaText();
 		}
 
+
+		/// <summary>
+		/// Evento que permite cancelar una modificacion
+		/// de los datos de algun proveedor
+		/// </summary>
 		private void Cancel_Click(object sender, EventArgs e)
 		{
 			generateTable();
@@ -217,6 +288,10 @@ namespace SistemaDeCobro
 			label4.Visible = false;
 		}
 
+		/// <summary>
+		/// Evento para guardar las modificaciones 
+		/// que se realizaron a los datos de algun proveedor
+		/// </summary>
 		private void button2_Click(object sender, EventArgs e)
 		{
 			update();
@@ -229,6 +304,12 @@ namespace SistemaDeCobro
 
 		}
 
+
+		/// <summary>
+		/// Metodo que se usa para 
+		/// guardar los datos de algun proveedor
+		/// en la base de datos
+		/// </summary>
 		private void update()
 		{
 			try
@@ -256,6 +337,12 @@ namespace SistemaDeCobro
 
 		}
 
+		/// <summary>
+		/// Una vez que se guardan los datos 
+		/// del nuevo proveedor 
+		/// los textbox se vacian
+		/// para un nuevo registro
+		/// </summary>
 		private void vaciaText()
 		{
 			textCalle.Text = "";
@@ -267,6 +354,11 @@ namespace SistemaDeCobro
 			textNumExt.Text = "";
 		}
 
+
+		/// <summary>
+		/// Metodo para llenar los campos con los datos
+		/// de un proveedor para asi modificarlos en el formulario
+		/// </summary>
 		private void llenarCampos()
 		{
 			try

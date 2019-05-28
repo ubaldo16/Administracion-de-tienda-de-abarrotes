@@ -328,6 +328,13 @@ namespace SistemaDeCobro
             }
         }
 
+		/// <summary>
+		/// Este metodo nos permite crear una archivo PDF 
+		/// con el ticket de compra donde mostramos 
+		/// los datos de la tineda
+		/// los aticulos vendidos 
+		/// etc.
+		/// </summary>
 		private void To_pdf()
 		{
 			Document doc = new Document(PageSize.A5 , 10, 10, 10, 10);//Variable de tipo documento y su instancia
