@@ -21,15 +21,14 @@ namespace SistemaDeCobro
         double Total;
         double sub_prod;
         Usuario usu;
-		int total1;
-		string canti, arti, subt;
+		int total1, cam, tota;
+		string canti, arti, subt, cambi;
 		string articulos = "";
         //private Usuario usu;
         public Venta(Usuario u)
         {
 
             usu = u;
-            Total = 0;
             sub_prod = 0;
 
             InitializeComponent();
@@ -152,9 +151,17 @@ namespace SistemaDeCobro
 			canti = Cantidad.Text;
 			subt = Precio.Text;
 			arti = Nombre.Text;
-			articulos += "      " + canti + "      " + arti + "     " + subt + "     " + total1.ToString() + "\n";
-			total_box.Text = Convert.ToString(Total);
 			total1 = Int32.Parse(Precio.Text) * Int32.Parse(Cantidad.Text);
+			tota += total1;
+			if (arti.Length <= 6)
+				arti += "            ";
+			if (arti.Length <= 10)
+				arti += "     ";
+			if (arti.Length > 10)
+				arti += "  ";
+			articulos += "      " + canti + "         " + arti + "      " + subt + "        " + total1.ToString() + "\n";
+			total_box.Text = Convert.ToString(Total);
+			
 			try
             {
                 OleDbCommand cmd = new OleDbCommand();
@@ -228,10 +235,11 @@ namespace SistemaDeCobro
         {
             int idven;
             DialogResult respuesta; //Guarda la accion del messageBox.
-
+			cam = Int32.Parse(efectiv_tex.Text) - tota;
+			cambi = cam.ToString();
             //Manda mensaje si está seguro de eliminar registro.
             respuesta = MessageBox.Show("Confirma pago", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
+			Cambio_tex.Text = cambi;
             if (respuesta == DialogResult.Yes)
             {
 
@@ -378,8 +386,9 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("                       "));			
 			doc.Add(new Paragraph(articulos));
 			doc.Add(new Paragraph("                       "));
-			doc.Add(new Paragraph("			Total de la venta: " + Total));
-			doc.Add(new Paragraph("			Pago un total de: " + total_box.Text));
+			doc.Add(new Paragraph("Total de la venta:  $ " + Total));
+			doc.Add(new Paragraph("Pago un total de:  $ " + total_box.Text));
+			doc.Add(new Paragraph("Cambio:  $ " + cambi));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));			
 			doc.AddCreationDate();
@@ -387,7 +396,7 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("							Gracias por su preferencia               "));
-			doc.Add(new Paragraph("_______________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
+			doc.Add(new Paragraph("__________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
 			doc.Close();
 			Process.Start("Ticket.pdf");//Esta parte se puede omitir, si solo se desea guardar el archivo, y que este no se ejecute al instante
 
