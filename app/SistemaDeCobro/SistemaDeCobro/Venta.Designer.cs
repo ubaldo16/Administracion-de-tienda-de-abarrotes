@@ -67,7 +67,6 @@
 			this.Precio = new System.Windows.Forms.TextBox();
 			this.Cantidad = new System.Windows.Forms.TextBox();
 			this.Nombre = new System.Windows.Forms.TextBox();
-			this.Id_producto = new System.Windows.Forms.TextBox();
 			this.total_box = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -80,6 +79,7 @@
 			this.ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.VentaTableAdapter();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).BeginInit();
@@ -381,11 +381,11 @@
 			this.ID_labe.AutoSize = true;
 			this.ID_labe.BackColor = System.Drawing.Color.Transparent;
 			this.ID_labe.Font = new System.Drawing.Font("Britannic Bold", 9F);
-			this.ID_labe.Location = new System.Drawing.Point(428, 71);
+			this.ID_labe.Location = new System.Drawing.Point(446, 35);
 			this.ID_labe.Name = "ID_labe";
-			this.ID_labe.Size = new System.Drawing.Size(76, 14);
+			this.ID_labe.Size = new System.Drawing.Size(54, 14);
 			this.ID_labe.TabIndex = 184;
-			this.ID_labe.Text = "Clv. Producto";
+			this.ID_labe.Text = "Producto";
 			// 
 			// Precio
 			// 
@@ -399,7 +399,7 @@
 			// 
 			this.Cantidad.Location = new System.Drawing.Point(502, 98);
 			this.Cantidad.Name = "Cantidad";
-			this.Cantidad.Size = new System.Drawing.Size(100, 20);
+			this.Cantidad.Size = new System.Drawing.Size(68, 20);
 			this.Cantidad.TabIndex = 182;
 			this.Cantidad.TextChanged += new System.EventHandler(this.Cantidad_TextChanged);
 			// 
@@ -410,14 +410,6 @@
 			this.Nombre.Name = "Nombre";
 			this.Nombre.Size = new System.Drawing.Size(100, 20);
 			this.Nombre.TabIndex = 181;
-			// 
-			// Id_producto
-			// 
-			this.Id_producto.Location = new System.Drawing.Point(510, 68);
-			this.Id_producto.Name = "Id_producto";
-			this.Id_producto.Size = new System.Drawing.Size(92, 20);
-			this.Id_producto.TabIndex = 180;
-			this.Id_producto.TextChanged += new System.EventHandler(this.Id_producto_TextChanged);
 			// 
 			// total_box
 			// 
@@ -517,12 +509,22 @@
 			this.label4.Text = "Venta";
 			this.label4.Visible = false;
 			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(449, 61);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 21);
+			this.comboBox1.TabIndex = 208;
+			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+			// 
 			// Venta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(771, 495);
+			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -548,7 +550,6 @@
 			this.Controls.Add(this.Precio);
 			this.Controls.Add(this.Cantidad);
 			this.Controls.Add(this.Nombre);
-			this.Controls.Add(this.Id_producto);
 			this.Controls.Add(this.tabla_uso);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.dataGridView2);
@@ -605,7 +606,6 @@
         private System.Windows.Forms.TextBox Precio;
         private System.Windows.Forms.TextBox Cantidad;
         private System.Windows.Forms.TextBox Nombre;
-        public System.Windows.Forms.TextBox Id_producto;
         private System.Windows.Forms.TextBox total_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -621,5 +621,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Inventario_Id;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.ComboBox comboBox1;
 	}
 }

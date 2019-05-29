@@ -34,7 +34,8 @@ namespace SistemaDeCobro
             InitializeComponent();
             inserta_dat_ventas();
             inserta_dat_detall();
-        }
+			llenaCombo();
+		}
 
         private void Venta_Load(object sender, EventArgs e)
         {
@@ -128,7 +129,6 @@ namespace SistemaDeCobro
             Cantidad.Text = "";
             Precio.Text = "";
             Nombre.Text = "";
-            Id_producto.Text = "";
         }
 
         private void Cantidad_TextChanged(object sender, EventArgs e)
@@ -144,7 +144,29 @@ namespace SistemaDeCobro
             }
         }
 
-        private void Insertar_Click(object sender, EventArgs e)
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			int band = 0;
+			int x;
+			ID_emp_tex.Text = usu.Nombre;
+			//   inserta_dat_Tabla();
+
+			Nombre.Text = Convert.ToString(tabla_uso.Rows[comboBox1.SelectedIndex].Cells[2].Value);
+			Precio.Text = Convert.ToString(tabla_uso.Rows[comboBox1.SelectedIndex].Cells[5].Value);
+
+
+		}
+
+		private void llenaCombo()
+		{
+			inserta_dat_Tabla();
+			for (int x = 0; x < tabla_uso.RowCount; x++)
+			{
+				comboBox1.Items.Add(Convert.ToString(tabla_uso.Rows[x].Cells[2].Value));
+			}
+		}
+
+		private void Insertar_Click(object sender, EventArgs e)
         {
             int idven;
             Total = sub_prod + Total;
@@ -161,48 +183,48 @@ namespace SistemaDeCobro
 				arti += "  ";
 			articulos += "      " + canti + "         " + arti + "      " + subt + "        " + total1.ToString() + "\n";
 			total_box.Text = Convert.ToString(Total);
-			
+
 			try
-            {
-                OleDbCommand cmd = new OleDbCommand();
+			{
+				OleDbCommand cmd = new OleDbCommand();
 
-                OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB);
-                cmd.Connection = conexion;
-                conexion.Open();
-                if (dataGridView2.RowCount > -1)
-                {
-                    
-                    idven = dataGridView2.RowCount ;
-                  //  MessageBox.Show("%d", Convert.ToString(idven));
-                    Id_venta_tex.Text = Convert.ToString(idven);
-                }
-                else
-                {
-                    idven = 1;
-                    Id_venta_tex.Text = Convert.ToString(idven);
-                }
-                string insertar = "INSERT INTO Detalle_venta(Id_DetalleVenta,Cantidad,Subtotal,Inventario_Id) VALUES ( '" + idven + "','" + Convert.ToDouble(Cantidad.Text) + "', '" + Convert.ToDouble(Subtotal_box.Text) + "', '" + Int32.Parse(Id_producto.Text) + "')";
-                cmd.CommandText = @insertar;
-                cmd.ExecuteNonQuery();
-                limpiarBoxes();
-                MessageBox.Show("Producto agregado", "Alta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //MessageBox.Show(""+monthCalendar1.SelectionEnd.ToShortDateString());
-                conexion.Close();
+				OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB);
+				cmd.Connection = conexion;
+				conexion.Open();
+				if (dataGridView2.RowCount > -1)
+				{
 
-            }
-            catch (DBConcurrencyException ex)
-            {
-                MessageBox.Show("Error de concurrencia:\n" + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            inserta_dat_detall();
+					idven = dataGridView2.RowCount;
+					//  MessageBox.Show("%d", Convert.ToString(idven));
+					Id_venta_tex.Text = Convert.ToString(idven);
+				}
+				else
+				{
+					idven = 1;
+					Id_venta_tex.Text = Convert.ToString(idven);
+				}
+				string insertar = "INSERT INTO Detalle_venta(Id_DetalleVenta,Cantidad,Subtotal,Inventario_Id) VALUES ( '" + idven + "','" + Convert.ToDouble(Cantidad.Text) + "', '" + Convert.ToDouble(Subtotal_box.Text) + "', '" + Convert.ToInt32(tabla_uso.Rows[comboBox1.SelectedIndex].Cells[0].Value) + "')";
+				cmd.CommandText = @insertar;
+				cmd.ExecuteNonQuery();
 
-        }
+				MessageBox.Show("Producto agregado", "Alta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				//MessageBox.Show(""+monthCalendar1.SelectionEnd.ToShortDateString());
+				conexion.Close();
 
-        private void Id_producto_TextChanged(object sender, EventArgs e)
+			}
+			catch (DBConcurrencyException ex)
+			{
+				MessageBox.Show("Error de concurrencia:\n" + ex.Message);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			inserta_dat_detall();
+
+		}
+
+        /*private void Id_producto_TextChanged(object sender, EventArgs e)
         {
             int band = 0;
             int x;
@@ -229,7 +251,7 @@ namespace SistemaDeCobro
                
                 
             }
-        }
+        }*/
 
         private void Modificar_Click(object sender, EventArgs e)
         {
