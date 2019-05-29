@@ -67,7 +67,6 @@
             this.Precio = new System.Windows.Forms.TextBox();
             this.Cantidad = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.TextBox();
-            this.Id_producto = new System.Windows.Forms.TextBox();
             this.total_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -79,6 +78,7 @@
             this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventaTableAdapter = new SistemaDeCobro.SDCDataSetTableAdapters.VentaTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleventaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sDCDataSet)).BeginInit();
@@ -149,9 +149,9 @@
             this.precioDataGridViewTextBoxColumn,
             this.perecederoDataGridViewTextBoxColumn});
             this.tabla_uso.DataSource = this.inventarioBindingSource;
-            this.tabla_uso.Location = new System.Drawing.Point(57, 458);
+            this.tabla_uso.Location = new System.Drawing.Point(77, 452);
             this.tabla_uso.Name = "tabla_uso";
-            this.tabla_uso.Size = new System.Drawing.Size(639, 56);
+            this.tabla_uso.Size = new System.Drawing.Size(647, 56);
             this.tabla_uso.TabIndex = 1;
             // 
             // idInventarioDataGridViewTextBoxColumn
@@ -248,7 +248,7 @@
             // ID_emp_tex
             // 
             this.ID_emp_tex.Enabled = false;
-            this.ID_emp_tex.Location = new System.Drawing.Point(150, 401);
+            this.ID_emp_tex.Location = new System.Drawing.Point(169, 401);
             this.ID_emp_tex.Name = "ID_emp_tex";
             this.ID_emp_tex.Size = new System.Drawing.Size(69, 20);
             this.ID_emp_tex.TabIndex = 197;
@@ -256,7 +256,7 @@
             // Id_venta_tex
             // 
             this.Id_venta_tex.Enabled = false;
-            this.Id_venta_tex.Location = new System.Drawing.Point(150, 375);
+            this.Id_venta_tex.Location = new System.Drawing.Point(169, 377);
             this.Id_venta_tex.Name = "Id_venta_tex";
             this.Id_venta_tex.Size = new System.Drawing.Size(69, 20);
             this.Id_venta_tex.TabIndex = 196;
@@ -398,14 +398,6 @@
             this.Nombre.Size = new System.Drawing.Size(100, 20);
             this.Nombre.TabIndex = 181;
             // 
-            // Id_producto
-            // 
-            this.Id_producto.Location = new System.Drawing.Point(471, 65);
-            this.Id_producto.Name = "Id_producto";
-            this.Id_producto.Size = new System.Drawing.Size(100, 20);
-            this.Id_producto.TabIndex = 180;
-            this.Id_producto.TextChanged += new System.EventHandler(this.Id_producto_TextChanged);
-            // 
             // total_box
             // 
             this.total_box.Enabled = false;
@@ -490,12 +482,22 @@
             this.label2.TabIndex = 206;
             this.label2.Text = "Efectivo ($)";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(469, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 207;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(771, 495);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.total_box);
@@ -520,7 +522,6 @@
             this.Controls.Add(this.Precio);
             this.Controls.Add(this.Cantidad);
             this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.Id_producto);
             this.Controls.Add(this.tabla_uso);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataGridView2);
@@ -577,7 +578,6 @@
         private System.Windows.Forms.TextBox Precio;
         private System.Windows.Forms.TextBox Cantidad;
         private System.Windows.Forms.TextBox Nombre;
-        public System.Windows.Forms.TextBox Id_producto;
         private System.Windows.Forms.TextBox total_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -592,5 +592,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inventario_Id;
 		private System.Windows.Forms.Label label2;
-	}
+        private System.Windows.Forms.ComboBox comboBox1;
+    }
 }
