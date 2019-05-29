@@ -54,7 +54,7 @@ namespace SistemaDeCobro
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message);
+				//MessageBox.Show(ex.Message);
 			}
 
 		}
@@ -269,6 +269,7 @@ namespace SistemaDeCobro
 		/// </summary>
 		private void ButAdd_Click(object sender, EventArgs e)
 		{
+			CamposLL();
 			WorkedRegister();
 			vaciaText();
 		}
@@ -294,6 +295,7 @@ namespace SistemaDeCobro
 		/// </summary>
 		private void button2_Click(object sender, EventArgs e)
 		{
+			CamposLL();
 			update();
 			generateTable();
 			button2.Visible = false;
@@ -332,7 +334,7 @@ namespace SistemaDeCobro
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message);
+				//MessageBox.Show(ex.Message);
 			}
 
 		}
@@ -393,6 +395,15 @@ namespace SistemaDeCobro
 			{
 				MessageBox.Show(ex.Message);
 			}
+		}
+
+		/// <summary>
+		/// Verifica si todos lo0s compos fueron llenados
+		/// </summary>
+		private void CamposLL()
+		{
+			if (textCalle.Text == "" && textCol.Text == "" && textCP.Text == "" && textNombre.Text == "" && textNumExt.Text == "" && textRFC.Text == "" && textTel.Text == "")
+				MessageBox.Show("Llene todos los capos!!");
 		}
 	}
 }
