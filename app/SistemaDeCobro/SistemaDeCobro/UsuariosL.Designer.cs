@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosL));
             this.buttonSelection = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -82,14 +82,14 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(118, 109);
             this.dataGridView1.Name = "dataGridView1";
@@ -193,6 +193,7 @@
             this.textCP.Name = "textCP";
             this.textCP.Size = new System.Drawing.Size(138, 20);
             this.textCP.TabIndex = 125;
+            this.textCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCP_KeyPress);
             // 
             // label9
             // 
@@ -212,6 +213,7 @@
             this.textNumExt.Name = "textNumExt";
             this.textNumExt.Size = new System.Drawing.Size(138, 20);
             this.textNumExt.TabIndex = 123;
+            this.textNumExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNumExt_KeyPress);
             // 
             // label8
             // 
@@ -250,6 +252,7 @@
             this.textTel.Name = "textTel";
             this.textTel.Size = new System.Drawing.Size(138, 20);
             this.textTel.TabIndex = 126;
+            this.textTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTel_KeyPress);
             // 
             // label3
             // 
@@ -269,6 +272,7 @@
             this.textApellidoP.Name = "textApellidoP";
             this.textApellidoP.Size = new System.Drawing.Size(138, 20);
             this.textApellidoP.TabIndex = 120;
+            this.textApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApellidoP_KeyPress);
             // 
             // label2
             // 
@@ -288,6 +292,7 @@
             this.textApellidoM.Name = "textApellidoM";
             this.textApellidoM.Size = new System.Drawing.Size(138, 20);
             this.textApellidoM.TabIndex = 121;
+            this.textApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApellidoM_KeyPress);
             // 
             // ButAdd
             // 
@@ -373,6 +378,7 @@
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(138, 20);
             this.textNombre.TabIndex = 119;
+            this.textNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNombre_KeyPress);
             // 
             // label13
             // 
@@ -381,9 +387,9 @@
             this.label13.ForeColor = System.Drawing.Color.MediumBlue;
             this.label13.Location = new System.Drawing.Point(283, 19);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(216, 31);
+            this.label13.Size = new System.Drawing.Size(317, 31);
             this.label13.TabIndex = 142;
-            this.label13.Text = "Modifica Usuario";
+            this.label13.Text = "Modificación de Usuarios";
             // 
             // Cancel
             // 

@@ -24,15 +24,7 @@ namespace SistemaDeCobro
 		int total1;
 		string canti, arti, subt;
 		string articulos = "";
-        /// <summary>
-        /// Constructor de la ventana recibe una variable de tipo USUARIO para extraer los el ID del empleado
-        /// 
-        /// Las funciones llamadas inician las consultas en las tablas y las inserta
-        /// inserta_dat_ventas();
-        /// inserta_dat_detall();
-        /// 
-        /// </summary>
-        /// <param name="u"></param>
+        //private Usuario usu;
         public Venta(Usuario u)
         {
 
@@ -43,7 +35,6 @@ namespace SistemaDeCobro
             InitializeComponent();
             inserta_dat_ventas();
             inserta_dat_detall();
-            llenaCombo();
         }
 
         private void Venta_Load(object sender, EventArgs e)
@@ -56,9 +47,7 @@ namespace SistemaDeCobro
             this.detalle_ventaTableAdapter.Fill(this.sDCDataSet.Detalle_venta);
 
         }
-        /// <summary>
-        /// Esta funcion consulta si existe algo el la tabla Detalles de venta, y lo muestra
-        /// </summary>
+
         private void inserta_dat_detall()
         {
             try
@@ -83,10 +72,6 @@ namespace SistemaDeCobro
                 MessageBox.Show(ex.Message);
             }
         }
-
-        /// <summary>
-        /// Hace las consultas en la tabla de Inventario para el uso 
-        /// </summary>
         private void inserta_dat_Tabla()
         {
             try
@@ -111,9 +96,7 @@ namespace SistemaDeCobro
                 MessageBox.Show(ex.Message);
             }
         }
-        /// <summary>
-        /// Esta funcion consulta si existe algo el la tabla Venta
-        /// </summary>
+
         private void inserta_dat_ventas()
         {
             try
@@ -139,32 +122,16 @@ namespace SistemaDeCobro
             }
         }
 
-        /// <summary>
-        /// limpia los campos de los cuadros de textos
-        /// </summary>
+
 
         private void limpiarBoxes()
         {
             Cantidad.Text = "";
             Precio.Text = "";
             Nombre.Text = "";
-           // Id_producto.Text = "";
-           
+            Id_producto.Text = "";
         }
-        private void limpiaPago()
-        {
-            Subtotal_box.Text = "";
-            total_box.Text = "";
-            efectiv_tex.Text = "";
-            Cambio_tex.Text = "";
-            Total = 0;
-        }
-        /// <summary>
-        /// Evento del cuadro de texto Cantidad
-        /// hace los calculos multiplicando la cantidad por el precio para tener un subtotal
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void Cantidad_TextChanged(object sender, EventArgs e)
         {
 
@@ -177,12 +144,7 @@ namespace SistemaDeCobro
                
             }
         }
-        /// <summary>
-        /// Evento del boton Agregar Producto
-        /// En esta funcion hace la insercion de los datos en la tabla de Detalles de venta de cada producto seleccionado
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void Insertar_Click(object sender, EventArgs e)
         {
             int idven;
@@ -212,10 +174,10 @@ namespace SistemaDeCobro
                     idven = 1;
                     Id_venta_tex.Text = Convert.ToString(idven);
                 }
-                string insertar = "INSERT INTO Detalle_venta(Id_DetalleVenta,Cantidad,Subtotal,Inventario_Id) VALUES ( '" + idven + "','" + Convert.ToDouble(Cantidad.Text) + "', '" + Convert.ToDouble(Subtotal_box.Text) + "', '" + Convert.ToInt32(tabla_uso.Rows[comboBox1.SelectedIndex].Cells[0].Value) + "')";
+                string insertar = "INSERT INTO Detalle_venta(Id_DetalleVenta,Cantidad,Subtotal,Inventario_Id) VALUES ( '" + idven + "','" + Convert.ToDouble(Cantidad.Text) + "', '" + Convert.ToDouble(Subtotal_box.Text) + "', '" + Int32.Parse(Id_producto.Text) + "')";
                 cmd.CommandText = @insertar;
                 cmd.ExecuteNonQuery();
-               
+                limpiarBoxes();
                 MessageBox.Show("Producto agregado", "Alta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //MessageBox.Show(""+monthCalendar1.SelectionEnd.ToShortDateString());
                 conexion.Close();
@@ -232,13 +194,8 @@ namespace SistemaDeCobro
             inserta_dat_detall();
 
         }
-        /// <summary>
-        /// Evento del boton del cuadro de texto del id del producto
-        /// esta funcion busca en la tablade inventario el producto utilizando el contenido que se ingreso en el cuadro de texto
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-      /*  private void Id_producto_TextChanged(object sender, EventArgs e)
+
+        private void Id_producto_TextChanged(object sender, EventArgs e)
         {
             int band = 0;
             int x;
@@ -250,51 +207,26 @@ namespace SistemaDeCobro
             }
             else
             {
-                for (x = 0; x < tabla_uso.RowCount; x++)
+                for (x = 0; x < tabla_uso.RowCount;x++)
                 {
                     if (Convert.ToString(tabla_uso.Rows[x].Cells[0].Value) == Id_producto.Text)
                     {
-                        // Nombre.Text = Convert.ToString(tabla_uso.Rows[x].Cells[2].Value);
-                        //Precio.Text = Convert.ToString(tabla_uso.Rows[x].Cells[5].Value);
-
-                        band = 1;
-                        break;
+                        Nombre.Text = Convert.ToString(tabla_uso.Rows[x].Cells[2].Value);
+                        Precio.Text = Convert.ToString(tabla_uso.Rows[x].Cells[5].Value);
+                       // band = 1;
+                        //break;
                     }
-
+                   
                 }
 
-                if (band == 1)
-                {
-                    MessageBox.Show("Producto agregado");
-                    Nombre.Text = Convert.ToString(tabla_uso.Rows[x].Cells[2].Value);
-                    Precio.Text = Convert.ToString(tabla_uso.Rows[x].Cells[5].Value);
-                }
-                else
-                {
-                    MessageBox.Show("No existe el producto, Introduce una clave valida");
-                    limpiarBoxes();
-                }
-
-
-
-
+               
+                
             }
-        }*/
+        }
 
-        /// <summary>
-        /// Este es el evento del boton de pagar
-        /// Esta funcion primero pide confirmacion del pago y si lo hace agrega los totales en la tabla de Venta con info del Empleado que lo hizo
-        /// tambien borra los productos de la tabla de detalle de venta
-        /// ademas arroja a pantalla un ticket
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Modificar_Click(object sender, EventArgs e)
         {
             int idven;
-            int cantidad_mod = 0;
-            int n1 = 0;
-            int n2 = 0;
             DialogResult respuesta; //Guarda la accion del messageBox.
 
             //Manda mensaje si está seguro de eliminar registro.
@@ -338,122 +270,31 @@ namespace SistemaDeCobro
                   MessageBox.Show(ex.Message);
               }
 
-              
-
-               
                 try
                 {
-                    OleDbCommand cmd = new OleDbCommand();
+                    using (OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
 
-                    OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB);
-                    cmd.Connection = conexion;
-                    conexion.Open();
-                    inserta_dat_detall();
-                    for (int x = 0; x < dataGridView1.RowCount; x++)
                     {
-                        MessageBox.Show("ID EN DETA"+Convert.ToString(dataGridView1.Rows[x].Cells[3].Value));
-                         n1 = Convert.ToInt32(dataGridView1.Rows[x].Cells[1].Value);
-
-                        for (int y = 0; y < tabla_uso.RowCount; y++)
-                        {
-                            MessageBox.Show("ID EN TABLA"+Convert.ToString(tabla_uso.Rows[x].Cells[0].Value));
-                            if (Convert.ToInt32(tabla_uso.Rows[y].Cells[0].Value) == Convert.ToInt32(dataGridView1.Rows[x].Cells[3].Value))
-                            {
-
-                                n2 = Convert.ToInt32(tabla_uso.Rows[y].Cells[3].Value);
-                                MessageBox.Show("CANTI EN TABLA" + Convert.ToString(tabla_uso.Rows[y].Cells[3].Value));
-                                cantidad_mod = n2 - n1;
-                                MessageBox.Show("Cantidad a insertar" + Convert.ToString(cantidad_mod));
-                                // string update = "UPDATE Inventario SET Cantidad='" + tabla_uso.Rows[x].Cells[3].Value + "' WHERE Id_Inventario='" + Convert.ToInt32(tabla_uso.Rows[y].Cells[0].Value) + "';";
-                                string update = "UPDATE Inventario SET Id_Proveedor='" + Convert.ToInt32(tabla_uso.Rows[x].Cells[1].Value) + "' , Nombre='" + Convert.ToString(tabla_uso.Rows[x].Cells[2].Value) + "', Cantidad='" + Convert.ToInt32(tabla_uso.Rows[x].Cells[3].Value) + "', Caducidad='" + tabla_uso.Rows[x].Cells[4].Value + "', Precio='" + Convert.ToDouble(tabla_uso.Rows[x].Cells[5].Value) + "', Perecedero='" + Convert.ToInt32(tabla_uso.Rows[x].Cells[6].Value) + "' WHERE Id_Inventario='" + Convert.ToInt32(tabla_uso.Rows[y].Cells[0].Value) + "';";
-
-                                cmd.CommandText = @update;
-                                cmd.ExecuteNonQuery();
-                            }
-                           
-                        }
-
+                        conexion.Open();
+                        string SqlActions = "DELETE * FROM  Detalle_venta";
+                        OleDbCommand cmd = new OleDbCommand(SqlActions, conexion);
+                        // cmd.Parameters.AddWithValue("@parametro", dataGridView1.SelectedCells);
+                        cmd.ExecuteNonQuery();
+                        conexion.Close();
+                        //MessageBox.Show("Producto Eliminado");
                     }
-
-                    MessageBox.Show("Producto Modificado", "Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conexion.Close();
-
-                }
-                catch (DBConcurrencyException ex)
-                {
-                    MessageBox.Show("Error de concurrencia:\n" + ex.Message);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+
                 }
+                inserta_dat_detall();
             }
 			To_pdf();
-            limpiaPago();
 
-            try
-            {
-                using (OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB))
+		}
 
-                {
-                    conexion.Open();
-                    string SqlActions = "DELETE * FROM  Detalle_venta";
-                    OleDbCommand cmd = new OleDbCommand(SqlActions, conexion);
-                    // cmd.Parameters.AddWithValue("@parametro", dataGridView1.SelectedCells);
-                    cmd.ExecuteNonQuery();
-                    conexion.Close();
-                    //MessageBox.Show("Producto Eliminado");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            inserta_dat_detall();
-
-        }
-
-        private void efectiv_tex_TextChanged(object sender, EventArgs e)
-        {
-            double s=0;
-            if (efectiv_tex.Text != "")
-            {
-                s = Convert.ToDouble(efectiv_tex.Text) - Total;
-                Cambio_tex.Text = Convert.ToString(s);
-            }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int band = 0;
-            int x;
-            ID_emp_tex.Text = usu.Nombre;
-         //   inserta_dat_Tabla();
-            
-         
-
-                    MessageBox.Show("Producto agregado");
-                    Nombre.Text = Convert.ToString(tabla_uso.Rows[comboBox1.SelectedIndex].Cells[2].Value);
-                    Precio.Text = Convert.ToString(tabla_uso.Rows[comboBox1.SelectedIndex].Cells[5].Value);
-
-            
-        }
-        private void llenaCombo()
-        {
-            inserta_dat_Tabla();
-            for (int x = 0; x < tabla_uso.RowCount; x++)
-            {
-                comboBox1.Items.Add(Convert.ToString(tabla_uso.Rows[x].Cells[2].Value));
-            }
-        }
-        /// <summary>
-        /// Este evento es del boton Cancelar
-        /// en esta funcion pide una confirmacion de cancelacion y si se quiere cancelar se borran los datos de Detalle de venta
-        /// y no se agrega nada a las tablas
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Cancelar_Click(object sender, EventArgs e)
         {
             DialogResult respuesta; //Guarda la accion del messageBox.
@@ -484,13 +325,16 @@ namespace SistemaDeCobro
 
                 }
                 inserta_dat_detall();
-                limpiarBoxes();
-                limpiaPago();
             }
         }
-        /// <summary>
-        /// Esta funcion es la que se utiliza para arrojar a pantalla el ticket
-        /// </summary>
+
+		/// <summary>
+		/// Este metodo nos permite crear una archivo PDF 
+		/// con el ticket de compra donde mostramos 
+		/// los datos de la tineda
+		/// los aticulos vendidos 
+		/// etc.
+		/// </summary>
 		private void To_pdf()
 		{
 			Document doc = new Document(PageSize.A5 , 10, 10, 10, 10);//Variable de tipo documento y su instancia
@@ -517,9 +361,9 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
-			doc.Add(new Paragraph("San Luis Potosi, San Luis Potosi"));
-			doc.Add(new Paragraph("Direccion: Zaragoza #523"));
-			doc.Add(new Paragraph("Telefono: (444)-507-66-83"));
+			doc.Add(new Paragraph("San Luis Potosí, San Luis Potosí"));
+			doc.Add(new Paragraph("Dirección: Zaragoza #523"));
+			doc.Add(new Paragraph("Teléfono: (444)-507-66-83"));
 			doc.Add(new Paragraph("E-mail: LosPinosAbarrotes@gmail.com"));
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
 			doc.Add(new Paragraph("                       "));
@@ -530,7 +374,7 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
-			doc.Add(new Paragraph("cantidad" + "     " + "Articulo" + "     " + "Subtotal"+"     "+ "Total"));
+			doc.Add(new Paragraph("Cantidad" + "     " + "Artículo" + "     " + "Subtotal"+"     "+ "Total"));
 			doc.Add(new Paragraph("                       "));			
 			doc.Add(new Paragraph(articulos));
 			doc.Add(new Paragraph("                       "));
@@ -542,7 +386,7 @@ namespace SistemaDeCobro
 			doc.Add(new Paragraph("------------------------------------------------------------------------------------------"));
 			doc.Add(new Paragraph("                       "));
 			doc.Add(new Paragraph("                       "));
-			doc.Add(new Paragraph("							Gracias Por su preferencia               "));
+			doc.Add(new Paragraph("							Gracias por su preferencia               "));
 			doc.Add(new Paragraph("_______________________________________", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD)));
 			doc.Close();
 			Process.Start("Ticket.pdf");//Esta parte se puede omitir, si solo se desea guardar el archivo, y que este no se ejecute al instante
