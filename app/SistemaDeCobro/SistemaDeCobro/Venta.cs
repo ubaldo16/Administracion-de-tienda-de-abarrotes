@@ -24,8 +24,16 @@ namespace SistemaDeCobro
 		int total1, cam, tota;
 		string canti, arti, subt, cambi;
 		string articulos = "";
-        //private Usuario usu;
-        public Venta(Usuario u)
+
+		/// <summary>
+		/// Constructor de la ventana recibe una variable de tipo USUARIO para extraer los el ID del empleado
+		/// 
+		/// Las funciones llamadas inician las consultas en las tablas y las inserta
+		/// inserta_dat_ventas();
+		/// inserta_dat_detall();
+		/// 
+		/// </summary>
+		public Venta(Usuario u)
         {
 
             usu = u;
@@ -48,7 +56,11 @@ namespace SistemaDeCobro
 
         }
 
-        private void inserta_dat_detall()
+
+		/// <summary>
+		/// Esta funcion consulta si existe algo el la tabla Detalles de venta, y lo muestra
+		/// </summary>
+		private void inserta_dat_detall()
         {
             try
             {
@@ -72,7 +84,11 @@ namespace SistemaDeCobro
                 MessageBox.Show(ex.Message);
             }
         }
-        private void inserta_dat_Tabla()
+
+		/// <summary>
+		/// Hace las consultas en la tabla de Inventario para el uso 
+		/// </summary>
+		private void inserta_dat_Tabla()
         {
             try
             {
@@ -97,7 +113,11 @@ namespace SistemaDeCobro
             }
         }
 
-        private void inserta_dat_ventas()
+
+		/// <summary>
+		/// Esta funcion consulta si existe algo el la tabla Venta
+		/// </summary>
+		private void inserta_dat_ventas()
         {
             try
             {
@@ -123,15 +143,21 @@ namespace SistemaDeCobro
         }
 
 
-
-        private void limpiarBoxes()
+		/// <summary>
+		/// limpia los campos de los cuadros de textos
+		/// </summary>
+		private void limpiarBoxes()
         {
             Cantidad.Text = "";
             Precio.Text = "";
             Nombre.Text = "";
         }
 
-        private void Cantidad_TextChanged(object sender, EventArgs e)
+		/// <summary>
+		/// Evento del cuadro de texto Cantidad
+		/// hace los calculos multiplicando la cantidad por el precio para tener un subtotal
+		/// </summary>
+		private void Cantidad_TextChanged(object sender, EventArgs e)
         {
 
             if (Cantidad.Text == "") { }
@@ -166,6 +192,10 @@ namespace SistemaDeCobro
 			}
 		}
 
+		/// <summary>
+		/// Evento del boton Agregar Producto
+		/// En esta funcion hace la insercion de los datos en la tabla de Detalles de venta de cada producto seleccionado
+		/// </summary>
 		private void Insertar_Click(object sender, EventArgs e)
         {
             int idven;
@@ -325,7 +355,13 @@ namespace SistemaDeCobro
 
 		}
 
-        private void Cancelar_Click(object sender, EventArgs e)
+
+		/// <summary>
+		/// Este evento es del boton Cancelar
+		/// en esta funcion pide una confirmacion de cancelacion y si se quiere cancelar se borran los datos de Detalle de venta
+		/// y no se agrega nada a las tablas
+		/// </summary>
+		private void Cancelar_Click(object sender, EventArgs e)
         {
             DialogResult respuesta; //Guarda la accion del messageBox.
 
