@@ -53,7 +53,7 @@ namespace SistemaDeCobro
                 OleDbConnection conexion = new OleDbConnection(Properties.Settings.Default.ConexionDB);
                 cmd.Connection = conexion;
                 conexion.Open();
-                string insertar = "INSERT INTO Empleado(RFC,Nombre,[Apellido Materno],[Apellido Paterno],Numero_Telefonico,Calle,Colonia,Numero_Exterior,CP,Contraseña,Privilegio) VALUES ( '" + textRFC.Text + "', '" + textNombre.Text + "' ,'" + textApellidoM.Text + "', '" + textApellidoP.Text + "', '" + Int32.Parse(textTel.Text) + "', '" + textCalle.Text + "','" + textCol.Text + "','" + Int32.Parse(textNumExt.Text) + "','" + Int32.Parse(textCP.Text) + "','" + Pass.Text + "', '" + Privilegio.SelectedIndex + "')";
+                string insertar = "INSERT INTO Empleado(RFC,Nombre,[Apellido Materno],[Apellido Paterno],Numero_Telefónico,Calle,Colonia,Numero_Exterior,CP,Contraseña,Privilegio) VALUES ( '" + textRFC.Text + "', '" + textNombre.Text + "' ,'" + textApellidoM.Text + "', '" + textApellidoP.Text + "', '" + Int32.Parse(textTel.Text) + "', '" + textCalle.Text + "','" + textCol.Text + "','" + Int32.Parse(textNumExt.Text) + "','" + Int32.Parse(textCP.Text) + "','" + Pass.Text + "', '" + Privilegio.SelectedIndex + "')";
                 cmd.CommandText = @insertar;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro guardado");
@@ -79,7 +79,77 @@ namespace SistemaDeCobro
         /// <param name="e"></param>
         private void ButAdd_Click(object sender, EventArgs e)
         {
-            WorkedRegister();
+            if (camposvacios() == true)
+            {
+                MessageBox.Show("Porfavor llene todos los campos obligatorios\n" + redcampos());
+            }
+            else
+            {
+
+                WorkedRegister();
+            }
+        }
+
+        private string redcampos()
+        {
+            string res = "";
+
+            if(textRFC.Text != "")
+            {
+                res += "* falta llenar el campo usuario\n";
+
+            }
+            if (textApellidoM.Text != "")
+            {
+                res += "* falta llenar el campo apellido materno\n";
+            }
+            if (textNombre.Text != "")
+            {
+                res += "* falta llenar el campo nombre\n";
+            }
+            if (textApellidoP.Text != "")
+            {
+                res += "* falta llenar el campo apellido paterno\n";
+            }
+            if (textCalle.Text!= "")
+            {
+                res += "* falta llenar el campo calle\n";
+            }
+            if (textCol.Text != "")
+            {
+                res += "* falta llenar el campo colonia\n";
+            }
+            if (textNumExt.Text != "")
+            {
+                res += "* falta llenar el campo numero exterior\n";
+            }
+            if (textCP.Text != "")
+            {
+                res += "* falta llenar el campo codigo postal\n";
+            }
+            if (textTel.Text != "")
+            {
+                res += "* falta llenar el campo télefono\n";
+            }
+            if (Pass.Text != "")
+            {
+                res += "* falta llenar el campo contraseña\n";
+            }
+
+            return res;
+
+        }
+
+        private bool camposvacios()
+        {
+            bool ban = false;
+
+            if(textRFC.Text!="" && textNombre.Text!="" && textApellidoM.Text!="" && textApellidoP.Text != "" && textCalle.Text!="" && textCol.Text!="" && textNumExt.Text!="" && textCP.Text!="" && textTel.Text != "" && Pass.Text!="")
+            {
+                ban = true;
+            }
+
+            return ban;
         }
 
         /// <summary>
@@ -90,6 +160,10 @@ namespace SistemaDeCobro
         private void textTel_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloNumeros(e);
+            if (!(e.KeyChar > 48 && e.KeyChar < 57))
+            {
+                MessageBox.Show("Este campo solo acepta numeros\nporfavor solo escriba los digitos del numero telefonico");
+            }
         }
 
         /// <summary>
@@ -100,6 +174,10 @@ namespace SistemaDeCobro
         private void textNumExt_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloNumeros(e);
+            if (!(e.KeyChar > 48 && e.KeyChar <57))
+            {
+                MessageBox.Show("Este campo solo acepta numeros\nporfavor solo escriba los digitos del numero exterior");
+            }
         }
 
         /// <summary>
@@ -110,6 +188,12 @@ namespace SistemaDeCobro
         private void textCP_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloNumeros(e);
+            
+            if(!(e.KeyChar>48 && e.KeyChar < 57))
+            {
+                MessageBox.Show("Este campo solo acepta numeros\nporfavor solo escriba los puros digitos del codigo postal");
+            }
+            
         }
 
 
@@ -121,6 +205,11 @@ namespace SistemaDeCobro
         private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloLetras(e);
+            if (e.KeyChar > 48 && e.KeyChar <57)
+            {
+                MessageBox.Show("Este campo solo acepta letras");
+            }
+
         }
 
         /// <summary>
@@ -131,6 +220,11 @@ namespace SistemaDeCobro
         private void textApellidoP_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloLetras(e);
+            if (e.KeyChar > 48 && e.KeyChar < 57)
+            {
+                MessageBox.Show("Este campo solo acepta letras");
+            }
+
         }
 
         /// <summary>
@@ -141,6 +235,10 @@ namespace SistemaDeCobro
         private void textApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloLetras(e);
+            if (e.KeyChar > 48 && e.KeyChar < 57)
+            {
+                MessageBox.Show("Este campo no acepta numeros");
+            }
         }
 
    

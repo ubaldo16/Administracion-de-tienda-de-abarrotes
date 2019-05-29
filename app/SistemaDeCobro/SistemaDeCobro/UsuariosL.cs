@@ -189,6 +189,7 @@ namespace SistemaDeCobro
                 label13.Visible = ban;
                 ButAdd.Visible = ban;
                 Cancel.Visible = ban;
+                obl.Visible = ban;
 
 
 
@@ -277,6 +278,10 @@ namespace SistemaDeCobro
         private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloLetras(e);
+            if (e.KeyChar > 48 && e.KeyChar < 57)
+            {
+                MessageBox.Show("Este campo solo acepta letras");
+            }
         }
 
         /// <summary>
@@ -287,6 +292,10 @@ namespace SistemaDeCobro
         private void textTel_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloNumeros(e);
+            if (!(e.KeyChar > 48 && e.KeyChar < 57))
+            {
+                MessageBox.Show("Este campo solo acepta numeros\nporfavor solo escriba los digitos del numero telefonico");
+            }
         }
 
 
@@ -298,6 +307,10 @@ namespace SistemaDeCobro
         private void textNumExt_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloNumeros(e);
+            if (!(e.KeyChar > 48 && e.KeyChar < 57))
+            {
+                MessageBox.Show("Este campo solo acepta numeros\nporfavor solo escriba los digitos del numero exterior");
+            }
         }
 
         /// <summary>
@@ -308,6 +321,10 @@ namespace SistemaDeCobro
         private void textCP_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloNumeros(e);
+            if (!(e.KeyChar > 48 && e.KeyChar < 57))
+            {
+                MessageBox.Show("Este campo solo acepta numeros\nporfavor solo escriba los puros digitos del codigo postal");
+            }
         }
 
 
@@ -319,6 +336,10 @@ namespace SistemaDeCobro
         private void textApellidoP_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloLetras(e);
+            if (e.KeyChar > 48 && e.KeyChar < 57)
+            {
+                MessageBox.Show("Este campo solo acepta letras");
+            }
         }
 
 
@@ -330,6 +351,10 @@ namespace SistemaDeCobro
         private void textApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.SoloLetras(e);
+            if (e.KeyChar > 48 && e.KeyChar < 57)
+            {
+                MessageBox.Show("Este campo no acepta numeros");
+            }
         }
     }
 }
