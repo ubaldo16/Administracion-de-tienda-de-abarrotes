@@ -158,7 +158,7 @@ namespace SistemaDeCobro
             
                 Modificar.Visible = ban2;
                 ButDelete.Visible = ban2;
-                buttonSelection.Visible = ban2;
+                //buttonSelection.Visible = ban2;
                 dataGridView1.Visible = ban2;
                 label1.Visible = ban2;
            

@@ -97,7 +97,7 @@ namespace SistemaDeCobro
 		private void ListaProvee()
 		{
 			dataGridView1.Visible = true;
-			buttonSelection.Visible = true;
+			//buttonSelection.Visible = true;
 			ButDelete.Visible = true;
 			Modificar.Visible = true;
 			button1.Visible = true;
@@ -129,6 +129,7 @@ namespace SistemaDeCobro
 			buttonBuscar.Visible = false;
 			ButAdd.Visible = false;
 			label3.Visible = false;
+			label6.Visible = false;
 		}
 
 
@@ -172,13 +173,14 @@ namespace SistemaDeCobro
 		public void visibilidad()
 		{
 			dataGridView1.Visible = false;
-			buttonSelection.Visible = false;
+			//buttonSelection.Visible = false;
 			ButDelete.Visible = false;
 			Modificar.Visible = false;
 			button1.Visible = false;
 			label1.Visible = false;
 
 			pictureBox1.Visible = true;
+			label6.Visible = true;
 			label10.Visible = true;
 			label11.Visible = true;
 			label2.Visible = true;
@@ -196,6 +198,7 @@ namespace SistemaDeCobro
 			buttonBuscar.Visible = true;
 			ButAdd.Visible = true;
 			label3.Visible = true;
+			label6.Visible = true;
 		}
 
 		/// <summary>
